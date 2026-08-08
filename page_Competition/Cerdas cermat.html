@@ -10,8 +10,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- CSS -->
+<!-- CSS -->
     <link rel="stylesheet" href="css/competition.css">
+    <link rel="stylesheet" href="../desain/submission.css">
+    <link rel="stylesheet" href="../desain/payment.css">
 </head>
 <body>
 
@@ -103,27 +105,31 @@
     <div class="card">
         <h2><span class="dot">•</span> FORM PENDAFTARAN TIM</h2>
 
-        <form onsubmit="alert('Pendaftaran Tim Cerdas Cermat berhasil dikirim!'); return false;">
+<form data-submit data-competition="cerdas_cermat">
             <div class="form-grid">
                 <div class="form-group">
                     <label>Nama Ketua Tim <span>*</span></label>
-                    <input type="text" required placeholder="Nama lengkap ketua">
+                    <input type="text" name="name" required placeholder="Nama lengkap ketua">
+                </div>
+                <div class="form-group">
+                    <label>Student ID / NISN Ketua <span>*</span></label>
+                    <input type="text" name="student_id" required placeholder="NIS / NISN ketua">
                 </div>
                 <div class="form-group">
                     <label>Asal Instansi / Sekolah <span>*</span></label>
-                    <input type="text" required placeholder="SMP ... / MTS ...">
+                    <input type="text" name="school_name" required placeholder="SMP ... / MTS ...">
                 </div>
                 <div class="form-group">
                     <label>Email Tim <span>*</span></label>
-                    <input type="email" required placeholder="contoh@email.com">
+                    <input type="email" name="email" required placeholder="contoh@email.com">
                 </div>
                 <div class="form-group">
                     <label>Nomor WA Ketua Tim <span>*</span></label>
-                    <input type="tel" required placeholder="08xxxxxxxxxx">
+                    <input type="tel" name="phone" required placeholder="08xxxxxxxxxx">
                 </div>
                 <div class="form-group full">
                     <label>Nama Tim <span>*</span></label>
-                    <input type="text" required placeholder="Nama kelompok/tim kamu">
+                    <input type="text" name="team_name" required placeholder="Nama kelompok/tim kamu">
                 </div>
             </div>
 
@@ -132,28 +138,28 @@
                 <div class="member-card">
                     <div class="member-title">Anggota 1 (Ketua Tim)</div>
                     <div class="member-grid">
-                        <div class="form-group"><label>Nama Lengkap <span>*</span></label><input type="text" required placeholder="Nama angggota"></div>
-                        <div class="form-group"><label>Kelas <span>*</span></label><input type="text" required placeholder="Contoh: 8A"></div>
+                        <div class="form-group"><label>Nama Lengkap <span>*</span></label><input type="text" name="member1_name" required placeholder="Nama anggota"></div>
+                        <div class="form-group"><label>Kelas <span>*</span></label><input type="text" name="member1_class" required placeholder="Contoh: 8A"></div>
+                        <div class="form-group"><label>Student ID <span>*</span></label><input type="text" name="member1_student_id" required placeholder="NIS/NISN"></div>
                     </div>
                 </div>
                 <div class="member-card">
                     <div class="member-title">Anggota 2</div>
                     <div class="member-grid">
-                        <div class="form-group"><label>Nama Lengkap <span>*</span></label><input type="text" required placeholder="Nama angggota"></div>
-                        <div class="form-group"><label>Kelas <span>*</span></label><input type="text" required placeholder="Contoh: 8A"></div>
+                        <div class="form-group"><label>Nama Lengkap <span>*</span></label><input type="text" name="member2_name" required placeholder="Nama anggota"></div>
+                        <div class="form-group"><label>Kelas <span>*</span></label><input type="text" name="member2_class" required placeholder="Contoh: 8A"></div>
+                        <div class="form-group"><label>Student ID <span>*</span></label><input type="text" name="member2_student_id" required placeholder="NIS/NISN"></div>
                     </div>
                 </div>
                 <div class="member-card">
                     <div class="member-title">Anggota 3</div>
                     <div class="member-grid">
-                        <div class="form-group"><label>Nama Lengkap <span>*</span></label><input type="text" required placeholder="Nama angggota"></div>
-                        <div class="form-group"><label>Kelas <span>*</span></label><input type="text" required placeholder="Contoh: 8A"></div>
+                        <div class="form-group"><label>Nama Lengkap <span>*</span></label><input type="text" name="member3_name" required placeholder="Nama anggota"></div>
+                        <div class="form-group"><label>Kelas <span>*</span></label><input type="text" name="member3_class" required placeholder="Contoh: 8A"></div>
+                        <div class="form-group"><label>Student ID <span>*</span></label><input type="text" name="member3_student_id" required placeholder="NIS/NISN"></div>
                     </div>
                 </div>
             </div>
-
-            <button type="submit" class="btn-submit">Daftarkan Tim Kamu ☁</button>
-            <p class="note">* Semua data anggota wajib diisi. Setelah mendaftar, tim akan dihubungi oleh panitia melalui WhatsApp.</p>
         </form>
     </div>
 </div>
@@ -165,6 +171,8 @@
 
 <!-- JavaScript -->
 <script src="js/hamburger.js"></script>
+<script src="../JavaScript/form-common.js"></script>
+<script src="../JavaScript/submission.js"></script>
 
 </body>
 </html>

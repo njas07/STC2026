@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Peserta - STC 2026</title>
+    <link rel="stylesheet" href="desain/dashboard.css">
+</head>
+<body>
+<div class="dashboard-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="dash-side">
+        <img src="foto/Logo STC.svg" alt="STC" class="logo">
+        <div class="brand">STC 2026<small>Dashboard Peserta</small></div>
+        <nav class="side-nav">
+            <a href="#" class="active">🏠 Beranda</a>
+            <a href="Landing_page/Index.html">🌐 Beranda Website</a>
+        </nav>
+        <div class="side-user">
+            <div class="avatar" id="avatarIni">P</div>
+            <p id="sideName">Peserta</p>
+            <span id="sideEmail">-</span>
+        </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="dash-main">
+        <div class="dash-topbar">
+            <h2 id="greet">Dashboard<small id="subGreet">Peserta</small></h2>
+            <button class="btn-logout" onclick="logout()">Logout</button>
+        </div>
+
+        <div class="welcome-card">
+            <h1 id="welcomeName">Selamat datang, Peserta!</h1>
+            <p id="welcomeText">Kelola dan pantau status pendaftaran lombamu di sini. Klik "Lihat Detail" untuk melihat rincian pendaftaran.</p>
+        </div>
+
+        <!-- Info pendaftaran -->
+        <div class="info-grid" id="infoGrid">
+            <div class="info-box"><div class="lbl">Nama Peserta</div><div class="val" id="iName">-</div></div>
+            <div class="info-box"><div class="lbl">Email</div><div class="val" id="iEmail">-</div></div>
+            <div class="info-box"><div class="lbl">Sekolah</div><div class="val" id="iSchool">-</div></div>
+            <div class="info-box"><div class="lbl">Lomba</div><div class="val" id="iCompetition">-</div></div>
+            <div class="info-box"><div class="lbl">Kode Pendaftaran</div><div class="val" id="iCode">-</div></div>
+        </div>
+
+        <!-- Status -->
+        <div class="card">
+            <h3>Status Pendaftaran</h3>
+            <div class="info-grid" style="grid-template-columns:repeat(auto-fit,minmax(160px,1fr));">
+                <div class="info-box"><div class="lbl">Status Pendaftaran</div><div class="val"><span class="badge pending" id="sReg">-</span></div></div>
+                <div class="info-box"><div class="lbl">Status Pembayaran</div><div class="val"><span class="badge pending" id="sPay">-</span></div></div>
+                <div class="info-box"><div class="lbl">Status Verifikasi</div><div class="val"><span class="badge pending" id="sVer">-</span></div></div>
+            </div>
+            <div id="rejectNote" class="reject-note"></div>
+            <div style="margin-top:24px;text-align:center;">
+                <button class="btn-view btn" style="padding:12px 26px;font-size:14px;" onclick="showDetail()">Lihat Detail Pendaftaran ☁</button>
+            </div>
+        </div>
+
+        <div class="empty" id="emptyState" style="display:none;">
+            <span class="big">☁️</span>
+            Belum ada pendaftaran. Silakan pilih lomba dan daftarkan dirimu.
+        </div>
+    </main>
+</div>
+
+<!-- MODAL DETAIL -->
+<div class="modal" id="detailModal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal('detailModal')">✕</button>
+        <h3>Detail Pendaftaran</h3>
+        <div id="detailBody"></div>
+    </div>
+</div>
+
+<script src="JavaScript/dashboard.js"></script>
+</body>
+</html>

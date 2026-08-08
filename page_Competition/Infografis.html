@@ -10,8 +10,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- CSS -->
+<!-- CSS -->
     <link rel="stylesheet" href="css/competition.css">
+    <link rel="stylesheet" href="../desain/submission.css">
+    <link rel="stylesheet" href="../desain/payment.css">
 </head>
 <body>
 
@@ -104,47 +106,48 @@
     <div class="card">
         <h2><span class="dot">•</span> FORM PENDAFTARAN</h2>
 
-        <form onsubmit="alert('Pendaftaran Infografis berhasil dikirim!'); return false;">
+<form data-submit data-competition="infografis">
             <div class="form-grid">
                 <div class="form-group">
                     <label>Nama Lengkap <span>*</span></label>
-                    <input type="text" required placeholder="Nama lengkap peserta">
+                    <input type="text" name="name" required placeholder="Nama lengkap peserta">
+                </div>
+                <div class="form-group">
+                    <label>Student ID / NISN <span>*</span></label>
+                    <input type="text" name="student_id" required placeholder="NIS / NISN kamu">
                 </div>
                 <div class="form-group">
                     <label>Asal Instansi / Sekolah <span>*</span></label>
-                    <input type="text" required placeholder="SMP ... / MTS ...">
+                    <input type="text" name="school_name" required placeholder="SMP ... / MTS ...">
                 </div>
                 <div class="form-group">
                     <label>Kelas <span>*</span></label>
-                    <input type="text" required placeholder="Contoh: 9B">
+                    <input type="text" name="school_class" required placeholder="Contoh: 9B">
                 </div>
                 <div class="form-group">
                     <label>Email <span>*</span></label>
-                    <input type="email" required placeholder="contoh@email.com">
+                    <input type="email" name="email" required placeholder="contoh@email.com">
                 </div>
                 <div class="form-group">
                     <label>Nomor WhatsApp <span>*</span></label>
-                    <input type="tel" required placeholder="08xxxxxxxxxx">
+                    <input type="tel" name="phone" required placeholder="08xxxxxxxxxx">
                 </div>
                 <div class="form-group">
-                    <label>Software Desain yang Dipakai</label>
-                    <select>
+                    <label>Software Desain yang Dipakai <span>*</span></label>
+                    <select name="software" required>
                         <option value="">Pilih software</option>
-                        <option>Canva</option>
-                        <option>Adobe Illustrator</option>
-                        <option>Figma</option>
-                        <option>CorelDRAW</option>
-                        <option>Lainnya</option>
+                        <option value="Canva">Canva</option>
+                        <option value="Adobe Illustrator">Adobe Illustrator</option>
+                        <option value="Figma">Figma</option>
+                        <option value="CorelDRAW">CorelDRAW</option>
+                        <option value="Lainnya">Lainnya</option>
                     </select>
                 </div>
                 <div class="form-group full">
                     <label>Alasan Mengikuti Lomba</label>
-                    <textarea placeholder="Ceritakan singkat motivasimu mengikuti lomba Infografis..."></textarea>
+                    <textarea name="reason" placeholder="Ceritakan singkat motivasimu mengikuti lomba Infografis..."></textarea>
                 </div>
             </div>
-
-            <button type="submit" class="btn-submit">Daftar Sekarang ☁</button>
-            <p class="note">* Semua data yang bertanda bintang wajib diisi. Setelah mendaftar, kamu akan dihubungi oleh panitia melalui WhatsApp.</p>
         </form>
     </div>
 </div>
@@ -156,6 +159,8 @@
 
 <!-- JavaScript -->
 <script src="js/hamburger.js"></script>
+<script src="../JavaScript/form-common.js"></script>
+<script src="../JavaScript/submission.js"></script>
 
 </body>
 </html>

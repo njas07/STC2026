@@ -10,8 +10,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- CSS -->
+<!-- CSS -->
     <link rel="stylesheet" href="css/competition.css">
+    <link rel="stylesheet" href="../desain/submission.css">
+    <link rel="stylesheet" href="../desain/payment.css">
 </head>
 <body>
 
@@ -104,45 +106,46 @@
     <div class="card">
         <h2><span class="dot">•</span> FORM PENDAFTARAN</h2>
 
-        <form onsubmit="alert('Pendaftaran Web Design berhasil dikirim!'); return false;">
+<form data-submit data-competition="web_design">
             <div class="form-grid">
                 <div class="form-group">
                     <label>Nama Lengkap <span>*</span></label>
-                    <input type="text" required placeholder="Nama lengkap peserta">
+                    <input type="text" name="name" required placeholder="Nama lengkap peserta">
+                </div>
+                <div class="form-group">
+                    <label>Student ID / NISN <span>*</span></label>
+                    <input type="text" name="student_id" required placeholder="NIS / NISN kamu">
                 </div>
                 <div class="form-group">
                     <label>Asal Instansi / Sekolah <span>*</span></label>
-                    <input type="text" required placeholder="SMP ... / MTS ...">
+                    <input type="text" name="school_name" required placeholder="SMP ... / MTS ...">
                 </div>
                 <div class="form-group">
                     <label>Kelas <span>*</span></label>
-                    <input type="text" required placeholder="Contoh: 8A">
+                    <input type="text" name="school_class" required placeholder="Contoh: 8A">
                 </div>
                 <div class="form-group">
                     <label>Email <span>*</span></label>
-                    <input type="email" required placeholder="contoh@email.com">
+                    <input type="email" name="email" required placeholder="contoh@email.com">
                 </div>
                 <div class="form-group">
                     <label>Nomor WhatsApp <span>*</span></label>
-                    <input type="tel" required placeholder="08xxxxxxxxxx">
+                    <input type="tel" name="phone" required placeholder="08xxxxxxxxxx">
                 </div>
                 <div class="form-group">
-                    <label>Pengalaman Web Design</label>
-                    <select>
+                    <label>Pengalaman Web Design <span>*</span></label>
+                    <select name="experience" required>
                         <option value="">Pilih tingkat</option>
-                        <option>Pemula</option>
-                        <option>Menengah</option>
-                        <option>Mahir</option>
+                        <option value="Pemula">Pemula</option>
+                        <option value="Menengah">Menengah</option>
+                        <option value="Mahir">Mahir</option>
                     </select>
                 </div>
                 <div class="form-group full">
                     <label>Alasan Mengikuti Lomba</label>
-                    <textarea placeholder="Ceritakan singkat motivasimu mengikuti lomba Web Design..."></textarea>
+                    <textarea name="reason" placeholder="Ceritakan singkat motivasimu mengikuti lomba Web Design..."></textarea>
                 </div>
             </div>
-
-            <button type="submit" class="btn-submit">Daftar Sekarang ☁</button>
-            <p class="note">* Semua data yang bertanda bintang wajib diisi. Setelah mendaftar, kamu akan dihubungi oleh panitia melalui WhatsApp.</p>
         </form>
     </div>
 </div>
@@ -154,6 +157,8 @@
 
 <!-- JavaScript -->
 <script src="js/hamburger.js"></script>
+<script src="../JavaScript/form-common.js"></script>
+<script src="../JavaScript/submission.js"></script>
 
 </body>
 </html>

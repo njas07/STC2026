@@ -10,8 +10,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- CSS -->
+<!-- CSS -->
     <link rel="stylesheet" href="css/freefire.css">
+    <link rel="stylesheet" href="../desain/submission.css">
+    <link rel="stylesheet" href="../desain/payment.css">
 </head>
 <body>
 
@@ -102,64 +104,50 @@
     <div class="card">
         <h2><span class="dot">•</span> FORM PENDAFTARAN SQUAD</h2>
 
-        <form onsubmit="alert('Pendaftaran Squad berhasil dikirim!'); return false;">
+<form data-submit data-competition="free_fire">
             <div class="form-grid">
                 <div class="form-group">
                     <label>Nama Kapten <span>*</span></label>
-                    <input type="text" required placeholder="Nama lengkap kapten">
+                    <input type="text" name="name" required placeholder="Nama lengkap kapten">
+                </div>
+                <div class="form-group">
+                    <label>Student ID / NISN Kapten <span>*</span></label>
+                    <input type="text" name="student_id" required placeholder="NIS / NISN kapten">
                 </div>
                 <div class="form-group">
                     <label>Asal Instansi / Sekolah <span>*</span></label>
-                    <input type="text" required placeholder="SMP ... / MTS ...">
+                    <input type="text" name="school_name" required placeholder="SMP ... / MTS ...">
                 </div>
                 <div class="form-group">
                     <label>Email <span>*</span></label>
-                    <input type="email" required placeholder="contoh@email.com">
+                    <input type="email" name="email" required placeholder="contoh@email.com">
                 </div>
                 <div class="form-group">
                     <label>Nomor WA Kapten <span>*</span></label>
-                    <input type="tel" required placeholder="08xxxxxxxxxx">
+                    <input type="tel" name="phone" required placeholder="08xxxxxxxxxx">
                 </div>
                 <div class="form-group">
                     <label>Nama Squad <span>*</span></label>
-                    <input type="text" required placeholder="Nama squad kamu">
-                </div>
-                <div class="form-group">
-                    <label>Jumlah Anggota Inti <span>*</span></label>
-                    <select required>
-                        <option value="">Pilih jumlah</option>
-                        <option value="4">4 pemain</option>
-                        <option value="5">4 pemain + 1 cadangan</option>
-                    </select>
+                    <input type="text" name="team_name" required placeholder="Nama squad kamu">
                 </div>
             </div>
 
             <div class="team-section">
-                <h3><span>4</span> Daftar Anggota Squad (Inti)</h3>
+                <h3><span>4</span> Daftar Anggota Squad (Inti + Cadangan)</h3>
                 <div id="memberList">
                     <div class="member-card" data-member>
                         <div class="member-title">Anggota 1 (Kapten)</div>
                         <div class="member-grid">
-                            <div class="form-group">
-                                <label>Nama Lengkap <span>*</span></label>
-                                <input type="text" required placeholder="Nama pemain">
-                            </div>
-                            <div class="form-group">
-                                <label>ID Game / Nickname <span>*</span></label>
-                                <input type="text" required placeholder="Nickname FF">
-                            </div>
-                            <div class="form-group">
-                                <label>Karakter Andalan</label>
-                                <input type="text" placeholder="Contoh: Alok, Hayato">
-                            </div>
+                            <div class="form-group"><label>Nama Lengkap <span>*</span></label><input type="text" name="player1_name" required placeholder="Nama pemain"></div>
+                            <div class="form-group"><label>Game ID <span>*</span></label><input type="text" name="player1_game_id" placeholder="ID FF"></div>
+                            <div class="form-group"><label>Nickname <span>*</span></label><input type="text" name="player1_nickname" required placeholder="Nickname FF"></div>
+                            <div class="form-group"><label>Role <span>*</span></label><select name="player1_role" required><option value="">Pilih role</option><option value="Rusher">Rusher</option><option value="Support">Support</option><option value="Sniper">Sniper</option><option value="IGL">IGL</option></select></div>
+                            <div class="form-group"><label>Karakter Andalan</label><input type="text" name="player1_character" placeholder="Contoh: Alok, Hayato"></div>
                         </div>
                     </div>
                 </div>
                 <button type="button" class="add-member" onclick="addMember()">+ Tambah Anggota</button>
             </div>
-
-            <button type="submit" class="btn-submit">Daftarkan Squad Kamu ☁</button>
-            <p class="note">* Semua data anggota wajib diisi. Setelah mendaftar, squad akan dihubungi oleh panitia melalui WhatsApp.</p>
         </form>
     </div>
 </div>
@@ -172,6 +160,8 @@
 <!-- JavaScript -->
 <script src="js/hamburger.js"></script>
 <script src="js/freefire.js"></script>
+<script src="../JavaScript/form-common.js"></script>
+<script src="../JavaScript/submission.js"></script>
 
 </body>
 </html>

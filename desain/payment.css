@@ -1,0 +1,8 @@
+/* =====================================================
+   STC 2026 - Pembayaran (ditambahkan pada form lomba)
+   ===================================================== */
+.payment-section{margin-top:30px;padding:24px;background:#F4F7FF;border:2px solid #B7D9F7;border-radius:14px;}
+.payment-section h4{font-size:17px;font-weight:700;color:#1d4ed8;margin-bottom:6px;}
+.payment-section>p{font-size:12px;color:#4a5a76;margin-bottom:20px;}
+.payment-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.payment-grid .form-group.full{grid-column:1/-1;}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - STC 2026</title>
+    <link rel="stylesheet" href="../desain/login.css">
+</head>
+<body>
+
+<div class="auth-sky">
+    <div class="sun"></div>
+    <div class="auth-cloud auth-cloud--1"></div>
+    <div class="auth-cloud auth-cloud--2"></div>
+    <div class="auth-cloud auth-cloud--3"></div>
+</div>
+
+<div class="auth-wrap">
+    <div class="auth-card">
+        <img src="../foto/Logo STC.svg" alt="STC" class="auth-logo">
+        <h1>LOGIN</h1>
+        <p class="auth-sub">Masuk ke akun STC 2026 kamu</p>
+
+        <div id="alertBox" class="alert"></div>
+
+        <form id="loginForm" novalidate>
+            <div class="form-group">
+                <label>Email <span>*</span></label>
+                <input type="email" name="email" placeholder="contoh@email.com" required>
+            </div>
+            <div class="form-group">
+                <label>Password <span>*</span></label>
+                <input type="password" name="password" placeholder="Password kamu" required>
+            </div>
+
+            <button type="submit" class="btn-auth">Login ☁</button>
+        </form>
+
+        <p class="auth-switch">Belum punya akun? <a href="Register.html">Daftar disini</a></p>
+        <a href="../Landing_page/Index.html" class="back-home">← Kembali ke Beranda</a>
+    </div>
+</div>
+
+<script src="../JavaScript/login.js"></script>
+</body>
+</html>

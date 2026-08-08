@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft Excel - STC 2026</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/competition.css">
+</head>
+<body>
+
+<!-- SKY -->
+<div class="sky">
+    <div class="sun"></div>
+    <div class="cloud cloud--1"></div>
+    <div class="cloud cloud--2"></div>
+    <div class="cloud cloud--3"></div>
+    <div class="cloud cloud--4"></div>
+</div>
+
+<!-- NAVBAR -->
+<header class="header">
+    <nav class="navbar">
+        <a href="../Landing_page/Index.html" class="logo"><img src="../foto/Logo STC.svg" alt="STC Logo"></a>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="../Landing_page/Index.html" class="nav-link">Home</a></li>
+            <li class="dropdown">
+                <a href="#" class="nav-link active">Competitions <span class="arrow">▼</span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="web Design.html">Web Design</a></li>
+                    <li><a href="Infografis.html">Infografis</a></li>
+                    <li><a href="Cerdas cermat.html">Cerdas Cermat</a></li>
+                    <li><a href="excel.html">Microsoft Excel</a></li>
+                    <li><a href="speed typing.html">Speed Typing</a></li>
+                    <li><a href="mobile legend.html">Mobile Legends</a></li>
+                    <li><a href="free fire.html">Free Fire</a></li>
+                </ul>
+            </li>
+            <li><a href="../multi_page/gallery.html" class="nav-link">Gallery</a></li>
+            <li><a href="../multi_page/school.html" class="nav-link">About Us</a></li>
+        </ul>
+        <a href="../multi_page/Login.html" class="login-btn">Login</a>
+        <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <img src="../foto/Logo STC.svg" alt="STC" class="hero-logo">
+    <h1>MICROSOFT EXCEL</h1>
+    <p class="sub">STIBAJRA Technology Competition 2026</p>
+    <span class="competition-badge">OFFICE · INDIVIDU</span>
+    <p class="desc">
+        Taklukkan data dengan formula dan logika! Lomba Microsoft Excel menguji
+        kemampuanmu dalam mengolah data, menggunakan formula, serta menyelesaikan
+        berbagai permasalahan secara cepat dan akurat.
+    </p>
+</section>
+
+<div class="wrap">
+    <!-- INFO -->
+    <div class="card">
+        <h2><span class="dot">•</span> GAMBARAN UMUM</h2>
+        <div class="info-grid">
+            <div class="info-box"><div class="val">1</div><div class="lbl">Peserta</div></div>
+            <div class="info-box"><div class="val">SMP/MTS</div><div class="lbl">Kategori</div></div>
+            <div class="info-box"><div class="val">Online</div><div class="lbl">Sistem</div></div>
+            <div class="info-box"><div class="val">Excel</div><div class="lbl">Software</div></div>
+        </div>
+    </div>
+
+    <!-- KETENTUAN -->
+    <div class="card">
+        <h2><span class="dot">•</span> KETENTUAN LOMBA</h2>
+        <ul>
+            <li>Peserta adalah pelajar <strong>SMP/MTS/Sederajat</strong> dan bersifat <strong>individu</strong> (1 peserta per pendaftaran).</li>
+            <li>Peserta mengerjakan studi kasus soal-soal pengolahan data menggunakan <strong>Microsoft Excel</strong>.</li>
+            <li>Materi meliputi <strong>format data, formula dasar (SUM, AVERAGE, IF), fungsi logika, lookup, serta pembuatan chart</strong>.</li>
+            <li>Pengerjaan dilakukan dalam waktu yang telah ditentukan oleh panitia.</li>
+            <li>Peserta wajib mematuhi aturan waktu dan tidak bekerja sama dengan peserta lain.</li>
+            <li>Penilaian berdasarkan <strong>ketepatan jawaban, kecepatan, dan kerapian hasil pekerjaan</strong>.</li>
+        </ul>
+    </div>
+
+    <!-- HADIAH -->
+    <div class="card">
+        <h2><span class="dot">•</span> HADIAH</h2>
+        <div class="info-grid">
+            <div class="info-box"><div class="val">🏆</div><div class="lbl">Juara 1</div></div>
+            <div class="info-box"><div class="val">🥈</div><div class="lbl">Juara 2</div></div>
+            <div class="info-box"><div class="val">🥉</div><div class="lbl">Juara 3</div></div>
+            <div class="info-box"><div class="val">📜</div><div class="lbl">Sertifikat</div></div>
+        </div>
+    </div>
+
+    <!-- FORM -->
+    <div class="card">
+        <h2><span class="dot">•</span> FORM PENDAFTARAN</h2>
+
+        <form onsubmit="alert('Pendaftaran Microsoft Excel berhasil dikirim!'); return false;">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Nama Lengkap <span>*</span></label>
+                    <input type="text" required placeholder="Nama lengkap peserta">
+                </div>
+                <div class="form-group">
+                    <label>Asal Instansi / Sekolah <span>*</span></label>
+                    <input type="text" required placeholder="SMP ... / MTS ...">
+                </div>
+                <div class="form-group">
+                    <label>Kelas <span>*</span></label>
+                    <input type="text" required placeholder="Contoh: 8C">
+                </div>
+                <div class="form-group">
+                    <label>Email <span>*</span></label>
+                    <input type="email" required placeholder="contoh@email.com">
+                </div>
+                <div class="form-group">
+                    <label>Nomor WhatsApp <span>*</span></label>
+                    <input type="tel" required placeholder="08xxxxxxxxxx">
+                </div>
+                <div class="form-group">
+                    <label>Tingkat Penguasaan Excel</label>
+                    <select>
+                        <option value="">Pilih tingkat</option>
+                        <option>Dasar</option>
+                        <option>Menengah</option>
+                        <option>Mahir</option>
+                    </select>
+                </div>
+                <div class="form-group full">
+                    <label>Alasan Mengikuti Lomba</label>
+                    <textarea placeholder="Ceritakan singkat motivasimu mengikuti lomba Excel..."></textarea>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-submit">Daftar Sekarang ☁</button>
+            <p class="note">* Semua data yang bertanda bintang wajib diisi. Setelah mendaftar, kamu akan dihubungi oleh panitia melalui WhatsApp.</p>
+        </form>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <p><strong>STIBAJRA Technology Competition 2026</strong><br>Beyond The Clouds To Chase Technology<br>© 2026 STC. All rights reserved.</p>
+</footer>
+
+<!-- JavaScript -->
+<script src="js/hamburger.js"></script>
+
+</body>
+</html>

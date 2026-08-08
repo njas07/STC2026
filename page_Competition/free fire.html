@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Fire - STC 2026</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/freefire.css">
+</head>
+<body>
+
+<!-- SKY -->
+<div class="sky">
+    <div class="sunset"></div>
+    <div class="cloud cloud--1"></div>
+    <div class="cloud cloud--2"></div>
+    <div class="cloud cloud--3"></div>
+    <div class="cloud cloud--4"></div>
+</div>
+
+<!-- NAVBAR -->
+<header class="header">
+    <nav class="navbar">
+        <a href="../Landing_page/Index.html" class="logo"><img src="../foto/Logo STC.svg" alt="STC Logo"></a>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="../Landing_page/Index.html" class="nav-link">Home</a></li>
+            <li class="dropdown">
+                <a href="#" class="nav-link active">Competitions <span class="arrow">▼</span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="web Design.html">Web Design</a></li>
+                    <li><a href="Infografis.html">Infografis</a></li>
+                    <li><a href="Cerdas cermat.html">Cerdas Cermat</a></li>
+                    <li><a href="excel.html">Microsoft Excel</a></li>
+                    <li><a href="speed typing.html">Speed Typing</a></li>
+                    <li><a href="mobile legend.html">Mobile Legends</a></li>
+                    <li><a href="free fire.html">Free Fire</a></li>
+                </ul>
+            </li>
+            <li><a href="../multi_page/gallery.html" class="nav-link">Gallery</a></li>
+            <li><a href="../multi_page/school.html" class="nav-link">About Us</a></li>
+        </ul>
+        <a href="../multi_page/Login.html" class="login-btn">Login</a>
+        <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <img src="../foto/Logo STC.svg" alt="STC" class="hero-logo">
+    <h1>FREE FIRE</h1>
+    <p class="sub">STIBAJRA Technology Competition 2026</p>
+    <span class="competition-badge">E-SPORTS · SQUAD 4</span>
+    <p class="desc">
+        Raih Booyah! Perlihatkan strategi, refleks, dan kerja sama squad-mu
+        di pertempuran battle royale Free Fire. Akankah timmu menjadi yang
+        terakhir berdiri?
+    </p>
+</section>
+
+<div class="wrap">
+    <!-- INFO -->
+    <div class="card">
+        <h2><span class="dot">•</span> GAMBARAN UMUM</h2>
+        <div class="info-grid">
+            <div class="info-box"><div class="val">4</div><div class="lbl">Anggota Tim</div></div>
+            <div class="info-box"><div class="val">SMP/SMA</div><div class="lbl">Peserta</div></div>
+            <div class="info-box"><div class="val">Squad</div><div class="lbl">Sistem</div></div>
+            <div class="info-box"><div class="val">Booyah</div><div class="lbl">Target</div></div>
+        </div>
+    </div>
+
+    <!-- KETENTUAN -->
+    <div class="card">
+        <h2><span class="dot">•</span> KETENTUAN LOMBA</h2>
+        <ul>
+            <li>Peserta adalah pelajar SMP/MTS/Sederajat dalam satu tim beranggotakan <strong>4 pemain inti</strong> dan maksimal <strong>1 cadangan</strong>.</li>
+            <li>Pertandingan dimainkan dalam mode <strong>Squad (4 vs 4)</strong> melalui custom room yang dibagikan panitia.</li>
+            <li>Setiap pemain wajib menggunakan akun Free Fire pribadi dan hadir tepat waktu pada sesi pertandingan.</li>
+            <li>Dilarang menggunakan cheat, emulator yang dilarang, hacking, serta kerja sama antar tim yang tidak sportif.</li>
+            <li>Penilaian juara berdasarkan <strong>peringkat dan total kill</strong> dari ronde yang dipertandingkan.</li>
+            <li>Panitia berhak mendiskualifikasi tim yang terbukti melakukan kecurangan.</li>
+        </ul>
+    </div>
+
+    <!-- HADIAH -->
+    <div class="card">
+        <h2><span class="dot">•</span> HADIAH</h2>
+        <div class="info-grid">
+            <div class="info-box"><div class="val">🏆</div><div class="lbl">Juara 1</div></div>
+            <div class="info-box"><div class="val">🥈</div><div class="lbl">Juara 2</div></div>
+            <div class="info-box"><div class="val">🥉</div><div class="lbl">Juara 3</div></div>
+        </div>
+    </div>
+
+    <!-- FORM -->
+    <div class="card">
+        <h2><span class="dot">•</span> FORM PENDAFTARAN SQUAD</h2>
+
+        <form onsubmit="alert('Pendaftaran Squad berhasil dikirim!'); return false;">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Nama Kapten <span>*</span></label>
+                    <input type="text" required placeholder="Nama lengkap kapten">
+                </div>
+                <div class="form-group">
+                    <label>Asal Instansi / Sekolah <span>*</span></label>
+                    <input type="text" required placeholder="SMP ... / MTS ...">
+                </div>
+                <div class="form-group">
+                    <label>Email <span>*</span></label>
+                    <input type="email" required placeholder="contoh@email.com">
+                </div>
+                <div class="form-group">
+                    <label>Nomor WA Kapten <span>*</span></label>
+                    <input type="tel" required placeholder="08xxxxxxxxxx">
+                </div>
+                <div class="form-group">
+                    <label>Nama Squad <span>*</span></label>
+                    <input type="text" required placeholder="Nama squad kamu">
+                </div>
+                <div class="form-group">
+                    <label>Jumlah Anggota Inti <span>*</span></label>
+                    <select required>
+                        <option value="">Pilih jumlah</option>
+                        <option value="4">4 pemain</option>
+                        <option value="5">4 pemain + 1 cadangan</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="team-section">
+                <h3><span>4</span> Daftar Anggota Squad (Inti)</h3>
+                <div id="memberList">
+                    <div class="member-card" data-member>
+                        <div class="member-title">Anggota 1 (Kapten)</div>
+                        <div class="member-grid">
+                            <div class="form-group">
+                                <label>Nama Lengkap <span>*</span></label>
+                                <input type="text" required placeholder="Nama pemain">
+                            </div>
+                            <div class="form-group">
+                                <label>ID Game / Nickname <span>*</span></label>
+                                <input type="text" required placeholder="Nickname FF">
+                            </div>
+                            <div class="form-group">
+                                <label>Karakter Andalan</label>
+                                <input type="text" placeholder="Contoh: Alok, Hayato">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="add-member" onclick="addMember()">+ Tambah Anggota</button>
+            </div>
+
+            <button type="submit" class="btn-submit">Daftarkan Squad Kamu ☁</button>
+            <p class="note">* Semua data anggota wajib diisi. Setelah mendaftar, squad akan dihubungi oleh panitia melalui WhatsApp.</p>
+        </form>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <p><strong>STIBAJRA Technology Competition 2026</strong><br>Beyond The Clouds To Chase Technology<br>© 2026 STC. All rights reserved.</p>
+</footer>
+
+<!-- JavaScript -->
+<script src="js/hamburger.js"></script>
+<script src="js/freefire.js"></script>
+
+</body>
+</html>

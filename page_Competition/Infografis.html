@@ -28,6 +28,91 @@
     <link rel="stylesheet" href="/desain/Home/competition.css">
     <link rel="stylesheet" href="/desain/components/Button.css">
 
+
+    <style>
+        /* ==================================================
+           FIX INSTAGRAM FORM
+        ================================================== */
+
+        .instagram-form-section {
+            width: 100%;
+        }
+
+        .instagram-intro {
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .instagram-follow-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 24px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .instagram-follow-column {
+            min-width: 0;
+        }
+
+        .instagram-follow-box {
+            padding: 20px;
+            border: 1px solid #c7d8ff;
+            border-radius: 12px;
+            background: #f8faff;
+            box-sizing: border-box;
+        }
+
+        .instagram-follow-box label {
+            display: block;
+            margin-bottom: 8px;
+            color: #475569;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .instagram-username {
+            display: block;
+            width: fit-content;
+            margin: 4px 0 10px;
+            color: #2563eb;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .instagram-username:hover {
+            text-decoration: underline;
+        }
+
+        .instagram-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 180px;
+            padding: 10px 18px;
+            margin-top: 4px;
+            border-radius: 30px;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+
+        .instagram-follow-column .upload-group {
+            margin-top: 16px;
+        }
+
+        @media (max-width: 650px) {
+            .instagram-follow-grid {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+
+            .instagram-btn {
+                width: 100%;
+            }
+        }
+    </style>
+
 </head>
 
 
@@ -801,206 +886,121 @@
                         </div>
 
                     </div>
+        <!-- ==================================================
+             INSTAGRAM
+        ================================================== -->
+        <div class="form-section instagram-form-section">
 
+            <h4>Follow Instagram (Wajib)</h4>
 
+            <p class="instagram-intro">
+                Peserta wajib mengikuti Instagram sekolah dan Instagram STC 2026.
+                Setelah mengikuti akun, unggah bukti follow pada kolom yang sesuai.
+            </p>
 
-                    <!-- ==================================================
-                         INSTAGRAM
-                    ================================================== -->
+            <div class="instagram-follow-grid">
 
-                    <div class="form-section">
+                <!-- INSTAGRAM SEKOLAH -->
+                <div class="instagram-follow-column">
 
-                        <h4>
-                            Follow Instagram (Wajib)
-                        </h4>
-
-
-                        <p>
-                            Peserta wajib mengikuti Instagram sekolah
-                            dan Instagram STC 2026.
-                        </p>
-
-
-                        <!-- INSTAGRAM SEKOLAH -->
-
-                        <div class="instagram-item">
-
-                            <label>
-                                Instagram Sekolah
-                                <span>*</span>
-                            </label>
-
-
-                            <a
-                                href="https://www.instagram.com/smktibgjimbaran/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="instagram-link"
-                            >
-                                @smktibgjimbaran
-                            </a>
-
-                        </div>
-
-
-                        <!-- INSTAGRAM STC -->
-
-                        <div class="instagram-item">
-
-                            <label>
-                                Instagram STC
-                                <span>*</span>
-                            </label>
-
-
-                            <a
-                                href="https://www.instagram.com/stcstibajraa/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="instagram-link"
-                            >
-                                @stcstibajraa
-                            </a>
-
-                        </div>
-
-
-                        <!-- BUKTI FOLLOW SEKOLAH -->
-
-                        <div class="upload-group">
-
-                            <label>
-                                Bukti Follow IG Sekolah
-                                <span>*</span>
-                            </label>
-
-
-                            <input
-                                class="file-input"
-                                type="file"
-                                name="proof_instagram_school"
-                                accept=".jpg,.jpeg,.png,.webp"
-                                required
-                            >
-
-
-                            <div class="file-info">
-                                Format:
-                                <strong>
-                                    JPG/JPEG/PNG/WEBP
-                                </strong>.
-                                Maksimal ukuran
-                                <strong>
-                                    2MB
-                                </strong>.
-                            </div>
-
-                        </div>
-
-
-                        <!-- BUKTI FOLLOW STC -->
-
-                        <div class="upload-group">
-
-                            <label>
-                                Bukti Follow IG STC
-                                <span>*</span>
-                            </label>
-
-
-                            <input
-                                class="file-input"
-                                type="file"
-                                name="proof_instagram_stc"
-                                accept=".jpg,.jpeg,.png,.webp"
-                                required
-                            >
-
-
-                            <div class="file-info">
-                                Format:
-                                <strong>
-                                    JPG/JPEG/PNG/WEBP
-                                </strong>.
-                                Maksimal ukuran
-                                <strong>
-                                    2MB
-                                </strong>.
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- ==================================================
-                         LEMBAR ORISINALITAS
-                    ================================================== -->
-
-                    <div class="form-section">
-
-                        <h4>
-                            Lembar Orisinalitas
-                        </h4>
-
-
-                        <p>
-                            Lembar orisinalitas wajib ditandatangani
-                            secara basah dan dikumpulkan dalam bentuk
-                            JPG hasil scan.
-                        </p>
-
+                    <div class="instagram-follow-box">
+                        <label>Instagram Sekolah</label>
 
                         <a
-                            class="document-link"
-                            href="https://bit.ly/SuratPernyataanOrisinalitasKaryaSTC2024"
+                            href="https://www.instagram.com/smktibgjimbaran/"
                             target="_blank"
                             rel="noopener noreferrer"
+                            class="instagram-username"
                         >
-                            Lihat Lembar Orisinalitas
+                            @smktibgjimbaran
                         </a>
 
-
-                        <div class="upload-group">
-
-                            <label for="originality">
-                                Upload Lembar Orisinalitas
-                                <span>*</span>
-                            </label>
-
-
-                            <input
-                                class="file-input"
-                                id="originality"
-                                type="file"
-                                name="originality"
-                                accept=".jpg,.jpeg,.png"
-                                required
-                            >
-
-
-                            <div class="file-info">
-
-                                Format:
-                                <strong>
-                                    JPG/JPEG/PNG
-                                </strong>.
-
-                                Maksimal ukuran
-                                <strong>
-                                    2MB
-                                </strong>.
-
-                            </div>
-
-                        </div>
-
+                        <a
+                            href="https://www.instagram.com/smktibgjimbaran/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn-primary instagram-btn"
+                        >
+                            Buka Instagram
+                        </a>
                     </div>
 
+                    <div class="upload-group">
+                        <label>
+                            Bukti Follow IG Sekolah
+                            <span>*</span>
+                        </label>
 
+                        <input
+                            class="file-input"
+                            type="file"
+                            name="proof_instagram_school"
+                            accept=".jpg,.jpeg,.png,.webp"
+                            required
+                        >
 
-                    <!-- ==================================================
+                        <div class="file-info">
+                            Format:
+                            <strong>JPG/JPEG/PNG/WEBP</strong>.
+                            Maksimal ukuran
+                            <strong>2MB</strong>.
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- INSTAGRAM STC -->
+                <div class="instagram-follow-column">
+
+                    <div class="instagram-follow-box">
+                        <label>Instagram STC</label>
+
+                        <a
+                            href="https://www.instagram.com/stcstibajraa/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="instagram-username"
+                        >
+                            @stcstibajraa
+                        </a>
+
+                        <a
+                            href="https://www.instagram.com/stcstibajraa/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn-primary instagram-btn"
+                        >
+                            Buka Instagram
+                        </a>
+                    </div>
+
+                    <div class="upload-group">
+                        <label>
+                            Bukti Follow IG STC
+                            <span>*</span>
+                        </label>
+
+                        <input
+                            class="file-input"
+                            type="file"
+                            name="proof_instagram_stc"
+                            accept=".jpg,.jpeg,.png,.webp"
+                            required
+                        >
+
+                        <div class="file-info">
+                            Format:
+                            <strong>JPG/JPEG/PNG/WEBP</strong>.
+                            Maksimal ukuran
+                            <strong>2MB</strong>.
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+<!-- ==================================================
                          DATA PEMBAYARAN
                     ================================================== -->
 
@@ -1483,9 +1483,7 @@
     ================================================== -->
 
     <script src="../JavaScript/hamburger.js"></script>
-    <script src="../JavaScript/form-common.js"></script>
-    <script src="../JavaScript/submission.js"></script>
-    <script src="../JavaScript/infografis.js"></script>
+        <script src="../JavaScript/submission.js"></script>
 
 </body>
 

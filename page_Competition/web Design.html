@@ -17,9 +17,10 @@
     >
 
     <!-- CSS -->
-    <link rel="stylesheet" href="/desain/navbar.css">
-    <link rel="stylesheet" href="/desain/Home/competition.css">
-    <link rel="stylesheet" href="/desain/components/Button.css">
+    <link rel="stylesheet" href="../desain/navbar.css">
+    <link rel="stylesheet" href="../desain/Home/competition.css">
+    <link rel="stylesheet" href="../desain/components/Button.css">
+    <link rel="stylesheet" href="../desain/responsive.css">
 </head>
 
 <body>
@@ -27,38 +28,91 @@
     <!-- =====================================================
          NAVBAR
     ====================================================== -->
+    <header class="header">
+        <nav class="navbar">
 
-    <header class="navbar">
-        <div class="navbar-container">
-
-            <a href="/index.html" class="logo">
-                <img
-                    src="/foto/logo.png"
-                    alt="STC 2026"
-                >
+            <a href="../Landing_page/Index.html" class="logo">
+                <img src="../foto/LOGOSTC.png" alt="STC Logo">
             </a>
 
-            <nav>
-                <a href="/index.html">Home</a>
+            <ul class="nav-menu" id="navMenu">
 
-                <a href="/page_Competition/competition.html"
-                   class="active">
-                    Competitions
-                </a>
+                <li>
+                    <a href="../Landing_page/Index.html" class="nav-link">
+                        Home
+                    </a>
+                </li>
 
-                <a href="/page_Gallery/gallery.html">
-                    Gallery
-                </a>
-            </nav>
+                <li class="dropdown">
+                    <a href="#" class="nav-link active">
+                        Competitions <span class="arrow">▼</span>
+                    </a>
 
-            <a
-                href="/page_Login/login.html"
-                class="login-btn"
-            >
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="web Design.html" class="active">
+                                Web Design
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Infografis.html">
+                                Infografis
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Cerdas cermat.html">
+                                Cerdas Cermat
+                            </a>
+                        </li>
+                        <li>
+                            <a href="excel.html">
+                                Microsoft Excel
+                            </a>
+                        </li>
+                        <li>
+                            <a href="speed typing.html">
+                                Speed Typing
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mobile legend.html">
+                                Mobile Legends
+                            </a>
+                        </li>
+                        <li>
+                            <a href="free fire.html">
+                                Free Fire
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="../multi_page/gallery.html" class="nav-link">
+                        Gallery
+                    </a>
+                </li>
+
+            </ul>
+
+            <a href="../multi_page/Login.html" class="login-btn">
                 Login
             </a>
 
-        </div>
+            <button
+                type="button"
+                class="hamburger"
+                id="hamburger"
+                aria-label="Buka menu"
+                aria-controls="navMenu"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </nav>
     </header>
 
 
@@ -72,12 +126,28 @@
              JUDUL LOMBA
         ================================================== -->
 
-        <section class="competition-hero">
+        <section class="hero">
+
+            <img
+                src="../foto/LOGOSTC.png"
+                alt="STC"
+                class="hero-logo"
+            >
 
             <h1>WEB DESIGN</h1>
 
-            <p>
+            <p class="sub">
                 STIBAJRA Technology Competition 2026
+            </p>
+
+            <span class="competition-badge">
+                DESIGN · INDIVIDU
+            </span>
+
+            <p class="desc">
+                Tunjukkan kreativitasmu dalam merancang dan mengembangkan
+                website yang menarik, responsif, dan inovatif sesuai dengan
+                tema STC 2026.
             </p>
 
         </section>
@@ -771,8 +841,108 @@
          JAVASCRIPT DIPISAH
     ====================================================== -->
 
-    <script src="/JavaScript/navbar.js"></script>
-    <script src="/JavaScript/competitions.js"></script>
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+    <footer>
+        <div class="footer-container">
+
+            <!-- BRAND -->
+            <div class="footer-brand">
+                <img
+                    src="../foto/LOGOSTC.png"
+                    alt="STC Logo"
+                >
+
+                <p>
+                    STIBAJRA Technology Competition (STC) 2026 —
+                    wadah bagi generasi muda untuk berinovasi,
+                    berkolaborasi, dan mengejar masa depan
+                    melalui teknologi.
+                </p>
+            </div>
+
+            <!-- QUICK LINKS -->
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+
+                <ul>
+                    <li>
+                        <a href="../index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="../page_Gallery/gallery.html">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="../page_Login/login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- COMPETITIONS -->
+            <div class="footer-col">
+                <h4>Competitions</h4>
+
+                <ul>
+                    <li><a href="web Design.html">Web Design</a></li>
+                    <li><a href="Infografis.html">Infografis</a></li>
+                    <li><a href="excel.html">Microsoft Excel</a></li>
+                    <li><a href="speed typing.html">Speed Typing</a></li>
+                    <li><a href="mobile legend.html">Mobile Legends</a></li>
+                    <li><a href="free fire.html">Free Fire</a></li>
+                    <li><a href="Cerdas cermat.html">Cerdas Cermat</a></li>
+                </ul>
+            </div>
+
+            <!-- NEWSLETTER -->
+            <div class="footer-col footer-newsletter">
+                <h4>Newsletter</h4>
+
+                <p>
+                    Dapatkan info terbaru tentang STC
+                    langsung ke email-mu.
+                </p>
+
+                <form
+                    class="newsletter-form"
+                    onsubmit="return false;"
+                >
+                    <input
+                        type="email"
+                        placeholder="Masukkan email"
+                    >
+                    <button type="button">Kirim</button>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- FOOTER BOTTOM -->
+        <div class="footer-bottom">
+            <span>
+                © 2026 STIBAJRA Technology Competition.
+                All rights reserved.
+            </span>
+
+            <div class="social-links">
+                <a
+                    href="https://www.instagram.com/stcstibajraa/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Instagram"
+                >📷</a>
+
+                <a href="#" title="YouTube">▶</a>
+                <a href="#" title="WhatsApp">💬</a>
+                <a href="#" title="Email">✉</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../JavaScript/navbar.js"></script>
+
+    <script src="../JavaScript/submission.js"></script>
 
 </body>
 

@@ -1413,3 +1413,127 @@ lain dari halaman competition.
     color: #1d4ed8;
     transform: translateX(3px);
 }
+
+/* =========================================================
+   FREE FIRE / SHARED FORM COMPONENTS
+   ---------------------------------------------------------
+   Layout tambahan untuk komponen yang dipakai halaman lomba.
+   Tidak menggunakan inline style di HTML.
+   ========================================================= */
+
+.competition-container .add-member {
+  margin-top: 4px;
+  border: 0;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+}
+
+.competition-container .add-member:hover {
+  transform: translateY(-3px) scale(1.02);
+}
+
+.competition-container .instagram-intro {
+  margin: -8px 0 28px;
+  color: #475569;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.competition-container .instagram-follow-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+  width: 100%;
+  margin-top: 0;
+}
+
+.competition-container .instagram-follow-column {
+  min-width: 0;
+}
+
+.competition-container .instagram-follow-box {
+  min-height: 190px;
+  padding: 24px 28px;
+  border: 1px solid #c7d8ff;
+  border-radius: 12px;
+  background: #f8faff;
+  box-sizing: border-box;
+}
+
+.competition-container .instagram-follow-box label {
+  display: block;
+  margin-bottom: 8px;
+  color: #1e293b;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.competition-container .instagram-follow-box label span {
+  color: #ef4444;
+}
+
+.competition-container .instagram-follow-box .instagram-username {
+  display: block;
+  width: fit-content;
+  margin: 0 0 18px;
+  color: #4169d8;
+  font-size: 17px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.competition-container .instagram-follow-box .instagram-username:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+.competition-container .instagram-follow-box .instagram-btn {
+  width: min(100%, 330px);
+  min-width: 0;
+  margin-top: 0;
+  text-align: center;
+}
+
+.competition-container .instagram-follow-column .upload-group {
+  margin-top: 26px;
+}
+
+.competition-container .instagram-follow-column .upload-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #1e293b;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.competition-container .instagram-follow-column .upload-group label span {
+  color: #ef4444;
+}
+
+.competition-container .instagram-follow-column .file-info {
+  margin-top: 7px;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+@media (max-width: 650px) {
+  .competition-container .instagram-follow-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .competition-container .instagram-follow-box {
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .competition-container .instagram-follow-box .instagram-btn {
+    width: 100%;
+  }
+
+  .competition-container .add-member {
+    width: 100%;
+    text-align: center;
+  }
+}

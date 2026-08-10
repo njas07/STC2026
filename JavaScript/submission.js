@@ -1,6 +1,5 @@
 /* =====================================================
-   STC 2026 - Submission Utility
-   Dipakai untuk form pendaftaran lomba
+   STC 2026 - SUBMISSION + TEAM MEMBERS
    ===================================================== */
 
 const API_BASE = 'http://localhost/stc2026/api';
@@ -28,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     /* ==============================
        SEMBUNYIKAN HASIL SUBMIT
-       ============================== */
+    ============================== */
 
     document.querySelectorAll('.submission-result').forEach(function (result) {
         result.style.display = 'none';
@@ -37,19 +36,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
     /* ==============================
        FORM SUBMIT
-       ============================== */
+    ============================== */
 
     document.querySelectorAll('form[data-submit]').forEach(function (form) {
 
         form.addEventListener('submit', function (e) {
-
             e.preventDefault();
 
             handleSubmit(this);
-
         });
 
     });
+
+
+    /* ==============================
+       TEAM MEMBERS
+    ============================== */
+
+    initTeamMembers();
 
 });
 
@@ -69,7 +73,7 @@ function previewFile(input) {
 
     /* ==============================
        MAKSIMAL 2 MB
-       ============================== */
+    ============================== */
 
     if (file.size > 2 * 1024 * 1024) {
 
@@ -87,7 +91,7 @@ function previewFile(input) {
 
     /* ==============================
        FORMAT FILE
-       ============================== */
+    ============================== */
 
     const validTypes = [
         'image/jpeg',
@@ -114,7 +118,7 @@ function previewFile(input) {
 
     /* ==============================
        PREVIEW GAMBAR
-       ============================== */
+    ============================== */
 
     const previewId =
         input.getAttribute('data-preview');
@@ -124,11 +128,6 @@ function previewFile(input) {
             ? document.getElementById(previewId)
             : null;
 
-
-    /*
-       PDF tidak bisa ditampilkan
-       sebagai preview gambar.
-    */
 
     if (
         preview &&
@@ -155,6 +154,7 @@ function previewFile(input) {
 
 
     return true;
+
 }
 
 
@@ -196,7 +196,7 @@ async function handleSubmit(form) {
 
     /* ==============================
        CEK CHECKBOX
-       ============================== */
+    ============================== */
 
     const checks =
         form.querySelectorAll(
@@ -220,7 +220,7 @@ async function handleSubmit(form) {
 
     /* ==============================
        TOMBOL SUBMIT
-       ============================== */
+    ============================== */
 
     const btn =
         form.querySelector(
@@ -246,7 +246,7 @@ async function handleSubmit(form) {
 
     /* ==============================
        FORM DATA
-       ============================== */
+    ============================== */
 
     const formData =
         new FormData(form);
@@ -254,7 +254,7 @@ async function handleSubmit(form) {
 
     /* ==============================
        USER ID
-       ============================== */
+    ============================== */
 
     try {
 
@@ -281,7 +281,7 @@ async function handleSubmit(form) {
 
     /* ==============================
        NAMA LOMBA
-       ============================== */
+    ============================== */
 
     const competition =
         form.getAttribute(
@@ -291,7 +291,7 @@ async function handleSubmit(form) {
 
     /* ==============================
        DATA TAMBAHAN
-       ============================== */
+    ============================== */
 
     const extra =
         collectExtra(form);
@@ -311,7 +311,7 @@ async function handleSubmit(form) {
 
     /* =================================================
        KIRIM KE BACKEND
-       ================================================= */
+    ================================================= */
 
     try {
 
@@ -332,14 +332,13 @@ async function handleSubmit(form) {
 
         /* ==============================
            BERHASIL
-           ============================== */
+        ============================== */
 
         if (json.success) {
 
 
             /*
-               Jangan menyembunyikan seluruh form.
-               Hanya tombol submit yang disembunyikan.
+               Sembunyikan tombol submit.
             */
 
             form
@@ -355,8 +354,7 @@ async function handleSubmit(form) {
 
 
             /*
-               Nonaktifkan input
-               setelah berhasil.
+               Nonaktifkan input.
             */
 
             form
@@ -372,7 +370,7 @@ async function handleSubmit(form) {
 
             /* ==============================
                TAMPILKAN HASIL
-               ============================== */
+            ============================== */
 
             showResult(
                 json.data
@@ -383,7 +381,7 @@ async function handleSubmit(form) {
 
         /* ==============================
            GAGAL
-           ============================== */
+        ============================== */
 
         else {
 
@@ -407,7 +405,7 @@ async function handleSubmit(form) {
 
     /* ==============================
        ERROR SERVER
-       ============================== */
+    ============================== */
 
     catch (error) {
 
@@ -451,7 +449,7 @@ function collectExtra(form) {
 
             /* ==============================
                FILE TIDAK MASUK JSON
-               ============================== */
+            ============================== */
 
             if (el.type === 'file') {
                 return;
@@ -460,7 +458,7 @@ function collectExtra(form) {
 
             /* ==============================
                CHECKBOX TIDAK MASUK JSON
-               ============================== */
+            ============================== */
 
             if (el.type === 'checkbox') {
                 return;
@@ -474,7 +472,7 @@ function collectExtra(form) {
 
             /* ==============================
                FIELD UTAMA
-               ============================== */
+            ============================== */
 
             const mainFields = [
 
@@ -528,7 +526,7 @@ function collectExtra(form) {
 
             /* ==============================
                SIMPAN DATA LAIN
-               ============================== */
+            ============================== */
 
             obj[el.name] =
                 el.value;
@@ -575,7 +573,7 @@ function showResult(data) {
 
     /* ==============================
        TAMPILKAN HASIL
-       ============================== */
+    ============================== */
 
     result.style.display =
         'block';
@@ -588,7 +586,7 @@ function showResult(data) {
 
     /* ==============================
        SCROLL KE HASIL
-       ============================== */
+    ============================== */
 
     result.scrollIntoView({
 
@@ -597,5 +595,598 @@ function showResult(data) {
         block: 'center'
 
     });
+
+}
+
+
+/* =====================================================
+   TEAM MEMBERS
+   =====================================================
+   
+   FREE FIRE
+   4 PEMAIN INTI + 1 CADANGAN = 5
+   
+   MOBILE LEGENDS
+   5 PEMAIN INTI + 1 CADANGAN = 6
+   
+   ===================================================== */
+
+function initTeamMembers() {
+
+
+    /*
+       Cari form Mobile Legends atau Free Fire.
+    */
+
+    const form =
+        document.querySelector(
+            '#mobileLegendsForm, #freeFireForm'
+        );
+
+
+    if (!form) {
+        return;
+    }
+
+
+    /*
+       Ambil daftar anggota.
+    */
+
+    const memberList =
+        form.querySelector(
+            '#memberList'
+        );
+
+
+    /*
+       Ambil tombol tambah anggota.
+    */
+
+    const addMemberBtn =
+        form.querySelector(
+            '#addMemberBtn'
+        );
+
+
+    if (
+        !memberList ||
+        !addMemberBtn
+    ) {
+        return;
+    }
+
+
+    /*
+       Cek jenis lomba.
+    */
+
+    const competition =
+        form.dataset.competition;
+
+
+    /* =================================================
+       KONFIGURASI LOMBA
+    ================================================= */
+
+    const config = {
+
+
+        /* =============================================
+           MOBILE LEGENDS
+           5 INTI + 1 CADANGAN
+        ============================================= */
+
+        mobile_legends: {
+
+            maxPlayers: 6,
+
+            corePlayers: 5,
+
+            roles: [
+
+                'EXP Lane',
+
+                'Jungle',
+
+                'Mid Lane',
+
+                'Gold Lane',
+
+                'Roam'
+
+            ],
+
+            extraLabel:
+                'Hero Andalan',
+
+            extraName:
+                'hero',
+
+            extraPlaceholder:
+                'Contoh: Chou, Lunox',
+
+            gameIdPlaceholder:
+                'ID Mobile Legends',
+
+            nicknamePlaceholder:
+                'Nickname MLBB'
+
+        },
+
+
+        /* =============================================
+           FREE FIRE
+           4 INTI + 1 CADANGAN
+        ============================================= */
+
+        free_fire: {
+
+            maxPlayers: 5,
+
+            corePlayers: 4,
+
+            roles: [
+
+                'Rusher',
+
+                'Support',
+
+                'Sniper',
+
+                'IGL'
+
+            ],
+
+            extraLabel:
+                'Karakter Andalan',
+
+            extraName:
+                'character',
+
+            extraPlaceholder:
+                'Contoh: Alok, Hayato',
+
+            gameIdPlaceholder:
+                'ID Free Fire',
+
+            nicknamePlaceholder:
+                'Nickname Free Fire'
+
+        }
+
+    };
+
+
+    /*
+       Ambil konfigurasi sesuai lomba.
+    */
+
+    const settings =
+        config[competition];
+
+
+    if (!settings) {
+        return;
+    }
+
+
+    /*
+       Hitung anggota yang sudah ada.
+    */
+
+    let memberCount =
+        memberList.querySelectorAll(
+            '[data-member]'
+        ).length;
+
+
+    /* =================================================
+       BUAT CARD ANGGOTA
+    ================================================= */
+
+    function createMemberCard(
+        playerNumber
+    ) {
+
+
+        /*
+           Tentukan pemain cadangan.
+        */
+
+        const isReserve =
+            playerNumber >
+            settings.corePlayers;
+
+
+        /*
+           Anggota pertama = Kapten.
+        */
+
+        const isCaptain =
+            playerNumber === 1;
+
+
+        /*
+           Judul anggota.
+        */
+
+        let title =
+            `Anggota ${playerNumber}`;
+
+
+        if (isCaptain) {
+
+            title +=
+                ' (Kapten)';
+
+        }
+
+        else if (isReserve) {
+
+            title +=
+                ' (Cadangan)';
+
+        }
+
+        else {
+
+            title +=
+                ' (Pemain Inti)';
+
+        }
+
+
+        /*
+           Buat pilihan role.
+        */
+
+        const roleOptions =
+            settings.roles
+                .map(function (role) {
+
+                    return `
+                        <option value="${role}">
+                            ${role}
+                        </option>
+                    `;
+
+                })
+                .join('');
+
+
+        /*
+           Buat card.
+        */
+
+        const card =
+            document.createElement(
+                'div'
+            );
+
+
+        card.className =
+            'member-card';
+
+
+        card.setAttribute(
+            'data-member',
+            ''
+        );
+
+
+        card.setAttribute(
+            'data-player',
+            playerNumber
+        );
+
+
+        /* =================================================
+           ISI CARD
+        ================================================= */
+
+        card.innerHTML = `
+
+            <div class="member-title">
+
+                ${title}
+
+            </div>
+
+
+            <div class="member-grid">
+
+
+                <!-- NAMA -->
+
+                <div class="form-group">
+
+                    <label>
+
+                        Nama Lengkap
+
+                        <span>*</span>
+
+                    </label>
+
+
+                    <input
+                        type="text"
+                        name="player${playerNumber}_name"
+                        required
+                        placeholder="Nama pemain"
+                    >
+
+                </div>
+
+
+                <!-- NIS -->
+
+                <div class="form-group">
+
+                    <label>
+
+                        NIS / NISN
+
+                        <span>*</span>
+
+                    </label>
+
+
+                    <input
+                        type="text"
+                        name="player${playerNumber}_student_id"
+                        required
+                        placeholder="NIS / NISN"
+                    >
+
+                </div>
+
+
+                <!-- GAME ID -->
+
+                <div class="form-group">
+
+                    <label>
+
+                        Game ID
+
+                        <span>*</span>
+
+                    </label>
+
+
+                    <input
+                        type="text"
+                        name="player${playerNumber}_game_id"
+                        required
+                        placeholder="${settings.gameIdPlaceholder}"
+                    >
+
+                </div>
+
+
+                <!-- NICKNAME -->
+
+                <div class="form-group">
+
+                    <label>
+
+                        Nickname
+
+                        <span>*</span>
+
+                    </label>
+
+
+                    <input
+                        type="text"
+                        name="player${playerNumber}_nickname"
+                        required
+                        placeholder="${settings.nicknamePlaceholder}"
+                    >
+
+                </div>
+
+
+                <!-- ROLE -->
+
+                <div class="form-group">
+
+                    <label>
+
+                        Role
+
+                        <span>*</span>
+
+                    </label>
+
+
+                    <select
+                        name="player${playerNumber}_role"
+                        required
+                    >
+
+                        <option value="">
+                            Pilih role
+                        </option>
+
+                        ${roleOptions}
+
+                    </select>
+
+                </div>
+
+
+                <!-- HERO / KARAKTER -->
+
+                <div class="form-group">
+
+                    <label>
+
+                        ${settings.extraLabel}
+
+                    </label>
+
+
+                    <input
+                        type="text"
+                        name="player${playerNumber}_${settings.extraName}"
+                        placeholder="${settings.extraPlaceholder}"
+                    >
+
+                </div>
+
+
+            </div>
+
+        `;
+
+
+        return card;
+
+    }
+
+
+    /* =================================================
+       UPDATE TOMBOL
+    ================================================= */
+
+    function updateButton() {
+
+
+        const currentPlayers =
+            memberList.querySelectorAll(
+                '[data-member]'
+            ).length;
+
+
+        const remaining =
+            settings.maxPlayers -
+            currentPlayers;
+
+
+        /*
+           Jika sudah maksimal.
+        */
+
+        if (
+            currentPlayers >=
+            settings.maxPlayers
+        ) {
+
+            addMemberBtn.disabled =
+                true;
+
+
+            addMemberBtn.textContent =
+                `✓ Maksimal ${settings.maxPlayers} Anggota`;
+
+
+            return;
+
+        }
+
+
+        /*
+           Tombol masih bisa digunakan.
+        */
+
+        addMemberBtn.disabled =
+            false;
+
+
+        addMemberBtn.textContent =
+            `+ Tambah Anggota (${remaining} slot tersisa)`;
+
+    }
+
+
+    /* =================================================
+       TOMBOL TAMBAH ANGGOTA
+    ================================================= */
+
+    addMemberBtn.addEventListener(
+        'click',
+        function () {
+
+
+            const currentPlayers =
+                memberList.querySelectorAll(
+                    '[data-member]'
+                ).length;
+
+
+            /*
+               Cegah lebih dari maksimal.
+            */
+
+            if (
+                currentPlayers >=
+                settings.maxPlayers
+            ) {
+
+                updateButton();
+
+                return;
+
+            }
+
+
+            /*
+               Nomor anggota berikutnya.
+            */
+
+            memberCount =
+                currentPlayers + 1;
+
+
+            /*
+               Buat anggota.
+            */
+
+            const newMember =
+                createMemberCard(
+                    memberCount
+                );
+
+
+            /*
+               Masukkan ke member list.
+            */
+
+            memberList.appendChild(
+                newMember
+            );
+
+
+            /*
+               Update tombol.
+            */
+
+            updateButton();
+
+
+            /*
+               Scroll ke anggota baru.
+            */
+
+            newMember.scrollIntoView({
+
+                behavior: 'smooth',
+
+                block: 'center'
+
+            });
+
+        }
+    );
+
+
+    /*
+       Update tombol saat halaman dibuka.
+    */
+
+    updateButton();
 
 }

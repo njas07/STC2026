@@ -1,0 +1,109 @@
+/* =========================================================
+   STC 2026
+   HOME — HERO
+   Merged from: style(1)(1).css + style_rapih(1).css
+   ========================================================= */
+
+#hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    #4a90e2 0%,
+    #6db3f2 25%,
+    #a7d3f6 55%,
+    #d6ecff 78%,
+    #f4f9ff 100%
+  );
+  background-size: 150% 150%;
+  animation: skyShift 18s ease infinite;
+  isolation: isolate;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 950px;
+  padding: 120px 20px 60px;
+}
+
+.hero-logo {
+  width: 230px;
+  margin: 0 auto 35px;
+  animation: floatY 4s ease-in-out infinite;
+  filter: drop-shadow(0 18px 35px rgba(20, 60, 120, 0.25));
+}
+
+.hero-content h1 {
+  font-size: clamp(40px, 6vw, 68px);
+  font-weight: 800;
+  color: #0a1b3d;
+  line-height: 1.15;
+  letter-spacing: 0.5px;
+  text-shadow: 0 4px 30px rgba(255, 255, 255, 0.4);
+  background: linear-gradient(90deg, #0a2b66, #1d4ed8, #0a2b66);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textShine 7s linear infinite;
+}
+
+.hero-content p {
+  margin-top: 22px;
+  font-size: clamp(16px, 2.2vw, 21px);
+  color: #123c6e;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.hero-btn {
+  margin-top: 45px;
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: #0a2b66;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.mouse {
+  width: 26px;
+  height: 42px;
+  border: 2px solid #0a2b66;
+  border-radius: 14px;
+  position: relative;
+}
+
+.mouse::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 8px;
+  background: #0a2b66;
+  border-radius: 4px;
+  animation: scrollWheel 1.6s infinite;
+}

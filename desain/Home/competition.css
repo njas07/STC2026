@@ -1,0 +1,1415 @@
+/* =========================================================
+    STC 2026
+    SHARED COMPETITION STYLE
+    ---------------------------------------------------------
+    Gunakan file ini untuk SEMUA halaman lomba:
+    - Web Design
+    - Infografis
+    - Microsoft Excel
+    - Speed Typing
+    - Cerdas Cermat
+    - Mobile Legends
+    - Free Fire
+
+    HTML cukup memakai struktur/class competition yang sama.
+    Tidak ada CSS khusus landing page di file ini.
+    ========================================================= */
+
+/* =========================================
+   GLOBAL RESET
+========================================= */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+/* =========================================================
+    2. MAIN COMPETITION
+    ========================================================= */
+
+main.competition-container {
+  width: min(950px, calc(100% - 40px));
+  margin: 0 auto;
+
+  padding-top: 145px;
+  padding-bottom: 70px;
+
+  display: block;
+  position: relative;
+}
+
+/* =========================================================
+    3. HERO / HEADER LOMBA
+    ========================================================= */
+
+.competition-container .hero {
+  width: 100%;
+  margin: 0 auto 45px;
+  padding: 10px 0 0;
+
+  text-align: center;
+}
+
+.competition-container .hero-logo {
+  display: block;
+
+  width: 110px;
+  max-width: 100%;
+  height: auto;
+
+  margin: 0 auto 15px;
+}
+
+.competition-container .hero h1 {
+  margin: 0 0 8px;
+
+  color: #0d1b2a;
+
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.competition-container .hero .sub {
+  margin: 0 0 12px;
+
+  color: #334155;
+
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.competition-container .competition-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 14px;
+  padding: 7px 16px;
+
+  background: linear-gradient(135deg, #4f91d8, #2563eb);
+  color: #ffffff;
+
+  border-radius: 50px;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.competition-container .hero .desc {
+  max-width: 850px;
+  margin: 0 auto;
+
+  color: #475569;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+/* =========================================================
+    4. CONTENT WRAPPER
+    ========================================================= */
+
+.competition-container .wrap {
+  width: 100%;
+}
+
+/* =========================================================
+    5. STANDARD CARD
+    ========================================================= */
+
+.competition-container .card {
+  position: relative;
+
+  width: 100%;
+  margin: 0 0 40px;
+  padding: 45px;
+
+  background: #ffffff;
+
+  border: 2px solid #83b4ec;
+  border-radius: 16px;
+
+  box-shadow: 0 15px 35px rgba(65, 105, 216, 0.1);
+
+  overflow: hidden;
+}
+
+.competition-container .card::before {
+  content: "";
+
+  position: absolute;
+  top: -1px;
+  left: 38px;
+
+  width: 58px;
+  height: 18px;
+
+  background: #83b4ec;
+
+  clip-path: polygon(0 0, 100% 0, 78% 100%, 0 100%);
+}
+
+.competition-container .card::after {
+  content: "";
+
+  position: absolute;
+  right: 38px;
+  bottom: -1px;
+
+  width: 58px;
+  height: 18px;
+
+  background: #83b4ec;
+
+  clip-path: polygon(22% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/* =========================================================
+    6. CARD TITLE
+    ========================================================= */
+
+.competition-container .card h2 {
+  margin: 0 0 35px;
+
+  text-align: center;
+
+  color: #82abe0;
+
+  font-size: clamp(25px, 4vw, 32px);
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.competition-container .card h2 .dot {
+  color: #4169d8;
+}
+
+/* =========================================================
+    7. GAMBARAN UMUM / INFO GRID
+    ========================================================= */
+
+.competition-container .info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 16px;
+  width: 100%;
+}
+
+.competition-container .info-box {
+  min-height: 120px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 18px 12px;
+
+  background: #eef5ff;
+
+  border: 2px solid #83b4ec;
+  border-radius: 10px;
+
+  text-align: center;
+}
+
+.competition-container .info-box .val {
+  margin-bottom: 8px;
+
+  color: #3857c8;
+
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.competition-container .info-box .lbl {
+  color: #475569;
+
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+    8. KETENTUAN / LIST
+    ========================================================= */
+
+.competition-container .card > ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.competition-container .card > ul li {
+  position: relative;
+
+  margin-bottom: 17px;
+  padding-left: 25px;
+
+  color: #64748b;
+
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.competition-container .card > ul li::before {
+  content: "☁";
+
+  position: absolute;
+  left: 0;
+  top: 2px;
+
+  color: #82b1e8;
+
+  font-size: 13px;
+}
+
+.competition-container .card strong {
+  color: #475569;
+  font-weight: 700;
+}
+
+/* =========================================================
+    9. FORM
+    ========================================================= */
+
+.competition-container form {
+  width: 100%;
+}
+
+.competition-container .form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 22px;
+  width: 100%;
+
+  margin-bottom: 35px;
+}
+
+.competition-container .form-group {
+  width: 100%;
+}
+
+.competition-container .form-group.full {
+  grid-column: 1 / -1;
+}
+
+.competition-container .form-group label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #1e293b;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.competition-container .form-group label span {
+  color: #ef4444;
+}
+
+.competition-container .form-group input,
+.competition-container .form-group select,
+.competition-container .form-group textarea {
+  width: 100%;
+  min-height: 48px;
+
+  padding: 12px 15px;
+
+  background: #ffffff;
+
+  border: 2px solid #bfdbfe;
+  border-radius: 9px;
+
+  outline: none;
+
+  color: #334155;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.competition-container .form-group textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.competition-container .form-group input:focus,
+.competition-container .form-group select:focus,
+.competition-container .form-group textarea:focus {
+  border-color: #5b82e8;
+
+  box-shadow: 0 0 0 3px rgba(65, 105, 216, 0.1);
+}
+
+.competition-container .form-group input::placeholder,
+.competition-container .form-group textarea::placeholder {
+  color: #94a3b8;
+}
+
+/* =========================================================
+    10. TEAM / MEMBER
+    ========================================================= */
+
+.competition-container .team-section {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.competition-container .team-section h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin: 0 0 20px;
+
+  color: #3857c8;
+
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.competition-container .team-section h3 span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+
+  background: #4169d8;
+  color: #ffffff;
+
+  border-radius: 50%;
+
+  font-size: 14px;
+}
+
+.competition-container .member-card {
+  margin-bottom: 20px;
+  padding: 22px;
+
+  background: #f5f8ff;
+
+  border: 1.5px solid #c7ddfa;
+  border-radius: 12px;
+}
+
+.competition-container .member-title {
+  margin-bottom: 18px;
+
+  color: #3857c8;
+
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.competition-container .member-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 16px;
+}
+
+/* =========================================================
+    11. FILE UPLOAD / IMAGE PREVIEW
+    ========================================================= */
+
+.competition-container input[type="file"] {
+  width: 100%;
+  max-width: 100%;
+
+  padding: 10px;
+
+  background: #f8fbff;
+
+  border: 2px dashed #83b4ec;
+  border-radius: 9px;
+
+  color: #475569;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+}
+
+.competition-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* =========================================================
+    12. CHECKBOX / AGREEMENT
+    ========================================================= */
+
+.competition-container .agreement,
+.competition-container .checkbox-group {
+  width: 100%;
+}
+
+.competition-container .agreement label,
+.competition-container .checkbox-group label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+
+  width: 100%;
+
+  margin-bottom: 10px;
+  padding: 14px 16px;
+
+  background: #f5f8ff;
+
+  border: 1px solid #c7ddfa;
+  border-radius: 10px;
+
+  color: #334155;
+
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.competition-container .agreement input[type="checkbox"],
+.competition-container .checkbox-group input[type="checkbox"] {
+  flex: 0 0 auto;
+
+  width: 18px;
+  height: 18px;
+
+  margin-top: 2px;
+
+  accent-color: #4169d8;
+}
+
+/* =========================================================
+    13. FORM ACTION / SUBMIT
+    ========================================================= */
+
+.competition-container .form-actions {
+  width: 100%;
+
+  margin: 32px 0 0;
+
+  text-align: center;
+}
+
+.competition-container .btn-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  width: 100%;
+  min-height: 58px;
+
+  margin: 0;
+  padding: 15px 28px;
+
+  border: 0;
+  border-radius: 50px;
+
+  background: linear-gradient(135deg, #2563eb, #5b8fe0);
+
+  color: #ffffff;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.2;
+
+  cursor: pointer;
+
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.22);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.competition-container .btn-submit:hover {
+  transform: translateY(-2px);
+
+  background: linear-gradient(135deg, #1d4ed8, #4f91d8);
+
+  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.3);
+}
+
+.competition-container .btn-submit:active {
+  transform: translateY(0);
+
+  box-shadow: 0 7px 15px rgba(37, 99, 235, 0.18);
+}
+
+.competition-container .btn-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* =========================================================
+    14. SUBMISSION RESULT
+    ========================================================= */
+
+.competition-container .submission-result {
+  width: 100%;
+
+  margin-top: 28px;
+  padding: 24px;
+
+  background: #f5f8ff;
+
+  border: 1.5px solid #c7ddfa;
+  border-radius: 12px;
+}
+
+.competition-container .submission-result h3 {
+  margin: 0 0 14px;
+
+  color: #3857c8;
+
+  font-size: 18px;
+  font-weight: 800;
+}
+
+/* =========================================================
+    15. FOOTER - SAME THEME FOR ALL COMPETITIONS
+    ========================================================= */
+
+footer {
+  position: relative;
+
+  width: 100%;
+  max-width: 100%;
+
+  flex: 0 0 auto;
+
+  margin: 0;
+  padding: 70px 0 30px;
+
+  background: #0a1230;
+  color: #bcd2ee;
+
+  overflow: hidden;
+}
+
+footer::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 4px;
+
+  background: linear-gradient(90deg, #2563eb, #7cb9e8, #2563eb);
+}
+
+.footer-container {
+  width: min(1200px, 90%);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+
+  gap: 40px;
+
+  padding-bottom: 40px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-brand img {
+  width: 130px;
+  height: auto;
+
+  margin-bottom: 15px;
+
+  object-fit: contain;
+}
+
+.footer-brand p {
+  max-width: 360px;
+  margin: 0;
+
+  color: #bcd2ee;
+
+  font-size: 14px;
+  line-height: 1.8;
+
+  opacity: 0.85;
+}
+
+.footer-col h4 {
+  position: relative;
+
+  margin: 0 0 20px;
+  padding-bottom: 10px;
+
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.footer-col h4::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 35px;
+  height: 3px;
+
+  background: #2563eb;
+
+  border-radius: 3px;
+}
+
+.footer-col ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+  color: #bcd2ee;
+
+  font-size: 14px;
+  opacity: 0.8;
+
+  text-decoration: none;
+
+  transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #7cb9e8;
+  opacity: 1;
+  padding-left: 6px;
+}
+
+.footer-newsletter p {
+  margin: 0 0 15px;
+
+  color: #bcd2ee;
+
+  font-size: 13px;
+  line-height: 1.7;
+
+  opacity: 0.8;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 8px;
+
+  width: 100%;
+}
+
+.newsletter-form input {
+  flex: 1;
+  min-width: 0;
+
+  padding: 12px 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  color: #ffffff;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+
+  outline: none;
+
+  transition: 0.3s;
+}
+
+.newsletter-form input::placeholder {
+  color: #7d93b8;
+}
+
+.newsletter-form input:focus {
+  border-color: #2563eb;
+}
+
+.newsletter-form button {
+  padding: 12px 22px;
+
+  border: none;
+  border-radius: 50px;
+
+  background: linear-gradient(90deg, #2563eb, #4f91d8);
+
+  color: #ffffff;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.newsletter-form button:hover {
+  transform: scale(1.05);
+}
+
+.footer-bottom {
+  width: min(1200px, 90%);
+  margin: 0 auto;
+
+  padding-top: 30px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 10px;
+
+  color: #bcd2ee;
+
+  font-size: 13px;
+
+  opacity: 0.8;
+
+  flex-wrap: wrap;
+}
+
+.social-links {
+  display: flex;
+  gap: 12px;
+}
+
+.social-links a {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+
+  color: #bcd2ee;
+
+  font-size: 15px;
+
+  text-decoration: none;
+
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  color: #ffffff;
+
+  border-color: #2563eb;
+  background: rgba(37, 99, 235, 0.15);
+
+  transform: translateY(-3px);
+}
+
+/* =========================================================
+    16. FOOTER - SIMPLE FALLBACK
+    Untuk HTML lomba lama yang footer-nya hanya <p>.
+    ========================================================= */
+
+footer > p:only-child {
+  width: min(1200px, calc(100% - 40px));
+
+  margin: 0 auto;
+
+  color: #bcd2ee;
+
+  text-align: left;
+}
+
+footer > p:only-child strong {
+  color: #ffffff;
+}
+
+/* =========================================================
+    17. TABLET
+    ========================================================= */
+
+@media (max-width: 900px) {
+  main.competition-container {
+    width: min(700px, calc(100% - 32px));
+    padding-top: 125px;
+  }
+
+  .competition-container .info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .competition-container .member-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .competition-container .member-grid .form-group:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .competition-container .card {
+    padding: 38px 30px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+  }
+}
+
+/* =========================================================
+    18. MOBILE
+    ========================================================= */
+
+@media (max-width: 650px) {
+  main.competition-container {
+    width: calc(100% - 24px);
+
+    padding-top: 105px;
+    padding-bottom: 45px;
+  }
+
+  .competition-container .hero {
+    margin-bottom: 30px;
+  }
+
+  .competition-container .hero-logo {
+    width: 85px;
+    margin-bottom: 10px;
+  }
+
+  .competition-container .hero h1 {
+    font-size: 30px;
+  }
+
+  .competition-container .hero .sub {
+    font-size: 14px;
+  }
+
+  .competition-container .hero .desc {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .competition-container .card {
+    margin-bottom: 25px;
+    padding: 32px 20px;
+    border-radius: 13px;
+  }
+
+  .competition-container .card h2 {
+    margin-bottom: 25px;
+    font-size: 24px;
+  }
+
+  .competition-container .info-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .competition-container .info-box {
+    min-height: 105px;
+    padding: 14px 8px;
+  }
+
+  .competition-container .info-box .val {
+    font-size: 18px;
+  }
+
+  .competition-container .info-box .lbl {
+    font-size: 9px;
+  }
+
+  .competition-container .card > ul li {
+    margin-bottom: 14px;
+    padding-left: 22px;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .competition-container .form-grid {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  .competition-container .form-group.full {
+    grid-column: auto;
+  }
+
+  .competition-container .member-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .competition-container .member-grid .form-group:last-child {
+    grid-column: auto;
+  }
+
+  .competition-container .member-card {
+    padding: 18px;
+  }
+
+  .competition-container .member-title {
+    font-size: 14px;
+  }
+
+  .competition-container .btn-submit {
+    min-height: 50px;
+    font-size: 13px;
+  }
+
+  footer {
+    padding: 50px 0 25px;
+  }
+
+  .footer-container {
+    width: calc(100% - 32px);
+
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+
+    padding-bottom: 30px;
+  }
+
+  .footer-brand p {
+    max-width: 100%;
+  }
+
+  .footer-bottom {
+    width: calc(100% - 32px);
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding-top: 25px;
+  }
+
+  .social-links {
+    margin-top: 5px;
+  }
+
+  .newsletter-form {
+    max-width: 100%;
+  }
+}
+
+/* =========================================================
+    19. SMALL MOBILE
+    ========================================================= */
+
+@media (max-width: 400px) {
+  main.competition-container {
+    width: calc(100% - 18px);
+    padding-top: 95px;
+  }
+
+  .competition-container .hero h1 {
+    font-size: 26px;
+  }
+
+  .competition-container .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .competition-container .card {
+    padding: 28px 16px;
+  }
+
+  .competition-container .card h2 {
+    font-size: 21px;
+  }
+
+  .competition-container .card::before {
+    left: 25px;
+    width: 45px;
+  }
+
+  .competition-container .card::after {
+    right: 25px;
+    width: 45px;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-form button {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+    FINAL FOOTER / CARD GAP FIX
+    ---------------------------------------------------------
+    Card terakhir tidak diberi margin tambahan.
+    Jarak menuju footer diatur dari competition-container
+    agar konsisten dan tidak menempel.
+    ========================================================= */
+
+main.competition-container {
+  padding-bottom: 70px !important;
+}
+
+main.competition-container .wrap {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+main.competition-container .card:last-child,
+main.competition-container .wrap > .card:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+  main.competition-container {
+    padding-bottom: 45px !important;
+  }
+}
+
+/* =========================================================
+21. RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+  main.competition-container {
+    width: min(700px, calc(100% - 32px));
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 650px) {
+  main.competition-container {
+    width: calc(100% - 24px);
+    max-width: none;
+  }
+}
+
+@media (max-width: 400px) {
+  main.competition-container {
+    width: calc(100% - 18px);
+    max-width: none;
+  }
+}
+
+/* =========================================================
+22. HOME FOOTER COMPATIBILITY FIX
+---------------------------------------------------------
+Footer halaman competition harus sama dengan footer Home.
+At desktop: 4 kolom.
+At mobile: 1 kolom.
+Selector dibuat lebih spesifik agar tidak tertimpa style
+lain dari halaman competition.
+========================================================= */
+
+@media (min-width: 651px) {
+  body > footer,
+  main + footer,
+  footer {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 70px 0 30px !important;
+    background: #0a1230 !important;
+    color: #bcd2ee !important;
+    overflow: hidden !important;
+    display: block !important;
+    box-sizing: border-box !important;
+  }
+
+  footer .footer-container {
+    width: min(1200px, 90%) !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+
+    display: grid !important;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr !important;
+    gap: 40px !important;
+
+    padding-bottom: 40px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  }
+
+  footer .footer-brand,
+  footer .footer-col,
+  footer .footer-newsletter {
+    width: auto !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    display: block !important;
+  }
+
+  footer .footer-brand img {
+    display: block !important;
+    width: 130px !important;
+    max-width: 130px !important;
+    height: auto !important;
+    margin: 0 0 15px !important;
+  }
+
+  footer .footer-brand p {
+    max-width: 360px !important;
+    margin: 0 !important;
+    line-height: 1.8 !important;
+  }
+
+  footer .footer-col h4,
+  footer .footer-newsletter h4 {
+    margin: 0 0 20px !important;
+  }
+
+  footer .footer-col ul {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+  }
+
+  footer .footer-col ul li {
+    display: block !important;
+    margin-bottom: 12px !important;
+  }
+
+  footer .newsletter-form {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 8px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  footer .newsletter-form input {
+    flex: 1 1 auto !important;
+    width: auto !important;
+    min-width: 0 !important;
+  }
+
+  footer .newsletter-form button {
+    flex: 0 0 auto !important;
+    width: auto !important;
+  }
+
+  footer .footer-bottom {
+    width: min(1200px, 90%) !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding-top: 30px !important;
+
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 10px !important;
+  }
+
+  footer .social-links {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 12px !important;
+    margin: 0 !important;
+  }
+}
+
+/* Tablet */
+@media (min-width: 651px) and (max-width: 900px) {
+  footer .footer-container {
+    width: calc(100% - 48px) !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 35px !important;
+  }
+
+  footer .footer-bottom {
+    width: calc(100% - 48px) !important;
+  }
+}
+
+/* Mobile tetap mengikuti desain Home */
+@media (max-width: 650px) {
+  footer .footer-container {
+    width: calc(100% - 32px) !important;
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+  }
+
+  footer .newsletter-form {
+    display: flex !important;
+    flex-direction: row !important;
+    width: 100% !important;
+  }
+
+  footer .newsletter-form input {
+    min-width: 0 !important;
+    flex: 1 1 auto !important;
+  }
+
+  footer .newsletter-form button {
+    flex: 0 0 auto !important;
+  }
+
+  footer .footer-bottom {
+    width: calc(100% - 32px) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+}
+
+/* =========================================================
+   INSTAGRAM SECTION
+   ========================================================= */
+
+.instagram-section {
+    width: 100%;
+    margin-top: 30px;
+    padding-top: 10px;
+}
+
+.instagram-title {
+    margin: 0 0 8px;
+    color: #475569;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.instagram-note {
+    margin: 0 0 20px;
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.instagram-item {
+    margin-bottom: 22px;
+}
+
+.instagram-item label {
+    display: block;
+    margin-bottom: 8px;
+    color: #475569;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.instagram-item label span {
+    color: #ef4444;
+}
+
+.instagram-link {
+    display: inline-block;
+    color: #2563eb;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.instagram-link:hover {
+    color: #1d4ed8;
+    transform: translateX(3px);
+}/* =========================================================
+   INSTAGRAM SECTION
+   ========================================================= */
+
+.instagram-section {
+    width: 100%;
+    margin-top: 30px;
+    padding-top: 10px;
+}
+
+.instagram-title {
+    margin: 0 0 8px;
+    color: #475569;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.instagram-note {
+    margin: 0 0 20px;
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.instagram-item {
+    margin-bottom: 22px;
+}
+
+.instagram-item label {
+    display: block;
+    margin-bottom: 8px;
+    color: #475569;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.instagram-item label span {
+    color: #ef4444;
+}
+
+.instagram-link {
+    display: inline-block;
+    color: #2563eb;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.instagram-link:hover {
+    color: #1d4ed8;
+    transform: translateX(3px);
+}

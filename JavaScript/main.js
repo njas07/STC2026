@@ -4,55 +4,36 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
-  /*==============================
-   PRELOADER
-  ==============================*/
-  const preloader = document.getElementById('preloader');
-  window.addEventListener('load', function () {
-    setTimeout(function () {
-      if (preloader) preloader.classList.add('hidden');
-    }, 600);
-  });
+/*==============================
+  PRELOADER
+==============================*/
 
-  /*==============================
-   HEADER SCROLLED
-  ==============================*/
-  const header = document.querySelector('.header');
-  window.addEventListener('scroll', function () {
-    if (header) {
-      header.classList.toggle('scrolled', window.scrollY > 40);
-    }
-  });
+const preloader = document.getElementById('preloader');
 
-  /*==============================
-   HAMBURGER MENU (MOBILE)
-  ==============================*/
-  const hamburger = document.querySelector('.hamburger');
-  const navMenu = document.querySelector('.nav-menu');
-  const dropdown = document.querySelector('.dropdown');
+if (preloader) {
 
-  if (hamburger && navMenu) {
-    hamburger.addEventListener('click', function () {
-      hamburger.classList.toggle('active');
-      navMenu.classList.toggle('active');
+    // Beri browser waktu untuk menampilkan
+    // animasi preloader terlebih dahulu.
+    requestAnimationFrame(() => {
+
+        setTimeout(() => {
+
+            preloader.classList.add('hidden');
+
+            // Hapus setelah fade-out selesai
+            setTimeout(() => {
+
+                if (preloader) {
+                    preloader.remove();
+                }
+
+            }, 700);
+
+        }, 1400);
+
     });
 
-    navMenu.querySelectorAll('.nav-link').forEach(function (link) {
-      link.addEventListener('click', function () {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-      });
-    });
-
-    if (dropdown) {
-      dropdown.addEventListener('click', function (e) {
-        if (window.innerWidth <= 900) {
-          e.preventDefault();
-          dropdown.classList.toggle('active');
-        }
-      });
-    }
-  }
+}
 
   /*==============================
    COMPETITION FILTER

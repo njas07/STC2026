@@ -1,0 +1,389 @@
+/* =========================================================
+   STC 2026
+   HOME — COMPETITIONS
+   ========================================================= */
+
+#competitions {
+  position: relative;
+  width: 100%;
+  padding: 120px 0;
+  background: linear-gradient(
+    180deg,
+    #f4f9ff,
+    #e8f2ff 40%,
+    #dfeeff
+  );
+  overflow: hidden;
+}
+
+.competition-container {
+  width: min(1150px, 90%);
+  margin: 0 auto;
+}
+
+/* HEADER */
+
+.competition-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.competition-header h2 {
+  margin: 0;
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 800;
+  color: #0d1b2a;
+}
+
+.competition-header h2 span {
+  margin-right: 8px;
+  color: #2563eb;
+}
+
+.competition-header h2 small {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #4a5a76;
+  margin-top: 8px;
+}
+
+/* FILTER */
+
+.competition-filter {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 8px;
+  border-radius: 50px;
+  backdrop-filter: blur(6px);
+}
+
+/* CARD */
+
+.competition-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 35% 65%;
+  width: 100%;
+  min-height: 300px;
+  margin-bottom: 45px;
+
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid rgba(111, 175, 231, 0.35);
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  box-shadow: 0 18px 45px rgba(31, 62, 108, 0.1);
+
+  transition:
+    transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.45s;
+
+  backdrop-filter: blur(6px);
+}
+
+.competition-card:hover {
+  transform: translateY(-8px) scale(1.005);
+  box-shadow: 0 35px 70px rgba(37, 99, 235, 0.18);
+}
+
+/* IMAGE */
+
+.competition-image {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 45px;
+
+  border-right: 2px solid rgba(111, 175, 231, 0.3);
+
+  background:
+    radial-gradient(
+      circle at 30% 30%,
+      rgba(124, 185, 232, 0.25),
+      transparent 60%
+    ),
+    linear-gradient(
+      135deg,
+      #eaf4ff,
+      #f7fbff
+    );
+
+  overflow: hidden;
+}
+
+.competition-image::before {
+  content: "";
+
+  position: absolute;
+
+  width: 120%;
+  height: 120%;
+
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(124, 185, 232, 0.12),
+    transparent 50%
+  );
+
+  animation: rotate 14s linear infinite;
+}
+
+.competition-image img {
+  width: 160px;
+  height: 160px;
+
+  object-fit: contain;
+
+  position: relative;
+  z-index: 1;
+
+  transition:
+    transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  filter: drop-shadow(
+    0 12px 25px rgba(79, 145, 216, 0.35)
+  );
+}
+
+.competition-card:hover .competition-image img {
+  transform: scale(1.12) rotate(-3deg);
+}
+
+/* CONTENT */
+
+.competition-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 40px 45px;
+}
+
+.competition-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  margin-bottom: 18px;
+
+  flex-wrap: wrap;
+}
+
+.competition-title h3 {
+  margin: 0;
+
+  font-size: 26px;
+  font-weight: 800;
+
+  color: #1d4ed8;
+
+  letter-spacing: 1px;
+
+  position: relative;
+}
+
+/* BADGE */
+
+.competition-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  padding: 6px 14px;
+
+  background: linear-gradient(
+    90deg,
+    #4f91d8,
+    #2563eb
+  );
+
+  border-radius: 50px;
+
+  color: #fff;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  box-shadow:
+    0 6px 15px rgba(37, 99, 235, 0.25);
+}
+
+/* DESCRIPTION */
+
+.competition-content p {
+  margin: 0 0 22px;
+
+  color: #475569;
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* BUTTON */
+
+.competition-btn {
+  width: fit-content;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 11px 26px;
+
+  background: linear-gradient(
+    90deg,
+    #2563eb,
+    #4f91d8
+  );
+
+  border-radius: 50px;
+
+  color: #fff;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  box-shadow:
+    0 10px 25px rgba(37, 99, 235, 0.25);
+
+  transition:
+    transform 0.35s,
+    box-shadow 0.35s;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.competition-btn::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -120%;
+
+  width: 60%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+
+  transform: skewX(-25deg);
+
+  animation: shine 3.5s infinite;
+}
+
+.competition-btn:hover {
+  transform: translateY(-3px) scale(1.03);
+
+  box-shadow:
+    0 16px 35px rgba(37, 99, 235, 0.35);
+}
+
+/* DECORASI CARD */
+
+.competition-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: -1px;
+  left: -1px;
+
+  width: 55px;
+  height: 22px;
+
+  background: #4f91d8;
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    75% 100%,
+    0 100%
+  );
+
+  z-index: 5;
+}
+
+.competition-card::after {
+  content: "";
+
+  position: absolute;
+
+  bottom: -1px;
+  right: -1px;
+
+  width: 55px;
+  height: 22px;
+
+  background: #4f91d8;
+
+  clip-path: polygon(
+    25% 0,
+    100% 0,
+    100% 100%,
+    0 100%
+  );
+
+  z-index: 5;
+}
+
+.competition-card:hover .competition-image img {
+  transform: scale(1.06);
+}
+
+/* =========================================================
+   FIX LANDING PAGE + FOOTER
+   ========================================================= */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    min-height: 100vh;
+}
+
+/* Pastikan section competition tidak membuat ruang tambahan */
+#competitions {
+    margin: 0;
+}
+
+/* Footer tidak boleh mempunyai jarak kosong di bawah */
+footer {
+    margin-bottom: 0 !important;
+}
+
+/* Jika footer menggunakan section/div pembungkus */
+.footer {
+    margin-bottom: 0 !important;
+}
+
+/* Hilangkan kemungkinan inline whitespace dari elemen terakhir */
+main {
+    margin-bottom: 0;
+}
+
+main > section:last-child {
+    margin-bottom: 0;
+}

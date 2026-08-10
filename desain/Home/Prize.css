@@ -1,0 +1,103 @@
+/* =========================================================
+   STC 2026
+   HOME — PRIZE
+   Merged from: style(1)(1).css + style_rapih(1).css
+   ========================================================= */
+
+#prize {
+  padding: 120px 0;
+  background: linear-gradient(180deg, #dfeeff, #d5e8ff);
+  position: relative;
+  overflow: hidden;
+}
+
+.prize-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  width: min(1100px, 90%);
+  margin: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.prize-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 45px 35px;
+  text-align: center;
+  box-shadow: 0 25px 50px rgba(31, 62, 108, 0.12);
+  border: 2px solid rgba(124, 185, 232, 0.3);
+  transition:
+    transform 0.45s,
+    box-shadow 0.45s;
+  position: relative;
+  overflow: hidden;
+}
+
+.prize-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(236, 201, 75, 0.18),
+    transparent 60%
+  );
+  transition: transform 0.6s;
+  transform: scale(0);
+}
+
+.prize-card:hover::before {
+  transform: scale(1);
+}
+
+.prize-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 35px 70px rgba(37, 99, 235, 0.2);
+}
+
+.prize-card .medal {
+  font-size: 56px;
+  animation: floatY 4s ease-in-out infinite;
+  position: relative;
+}
+
+.prize-card.one {
+  border-color: rgba(236, 201, 75, 0.6);
+}
+
+.prize-card.two {
+  border-color: rgba(180, 190, 200, 0.6);
+}
+
+.prize-card.three {
+  border-color: rgba(205, 127, 50, 0.6);
+}
+
+.prize-card.one .medal {
+  animation-delay: 0s;
+}
+
+.prize-card.two .medal {
+  animation-delay: 0.7s;
+}
+
+.prize-card.three .medal {
+  animation-delay: 1.3s;
+}
+
+.prize-card h3 {
+  margin: 25px 0 10px;
+  font-size: 30px;
+  font-weight: 800;
+  color: #1d4ed8;
+}
+
+.prize-card p {
+  color: #4a5a76;
+  font-size: 15px;
+}

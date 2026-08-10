@@ -1,0 +1,59 @@
+/* =========================================================
+   STC 2026
+   GLOBAL — reset, typography, scrollbar
+   ========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #eaf4ff;
+  color: #0d1b2a;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #dcebff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#7cb9e8, #4f91d8);
+  border-radius: 10px;
+}
+
+.countdown {
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: center;
+
+  gap: clamp(10px, 2vw, 20px);
+}

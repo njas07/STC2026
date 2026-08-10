@@ -1,0 +1,84 @@
+/* =========================================================
+   STC 2026
+   ANIMATIONS — reveal, float, cloud, glow, sponsor scroll, etc.
+   ========================================================= */
+
+.reveal{
+    opacity:0;
+    transform:translateY(50px);
+    transition:opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1);
+    will-change:opacity,transform;
+}
+
+.reveal.revealed{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.reveal-left{
+    transform:translateX(-60px);
+}
+
+.reveal-right{
+    transform:translateX(60px);
+}
+
+.reveal-zoom{
+    transform:scale(.85);
+}
+
+.reveal-left.revealed,
+.reveal-right.revealed,
+.reveal-zoom.revealed{
+    transform:translate(0) scale(1);
+}
+
+@keyframes spin{to{transform:rotate(360deg);}}
+
+@keyframes floatY{0%,100%{transform:translateY(0);}50%{transform:translateY(-18px);}}
+
+@keyframes cloudDrift{
+    0%{transform:translateX(0);}
+    100%{transform:translateX(calc(100vw + 400px));}
+}
+
+@keyframes orbFloat{
+    0%,100%{transform:translateY(0) translateX(0) scale(1);}
+    25%{transform:translateY(-35px) translateX(20px) scale(1.1);}
+    50%{transform:translateY(10px) translateX(-18px) scale(.95);}
+    75%{transform:translateY(-20px) translateX(15px) scale(1.05);}
+}
+
+@keyframes glowPulse{
+    0%,100%{opacity:.5;transform:scale(1);}
+    50%{opacity:1;transform:scale(1.08);}
+}
+
+@keyframes skyShift{
+    0%,100%{background-position:0% 0%;}
+    50%{background-position:100% 100%;}
+}
+
+@keyframes textShine{
+    0%{background-position:0% center;}
+    100%{background-position:200% center;}
+}
+
+@keyframes shine{
+    0%{left:-120%;}
+    60%{left:130%;}
+    100%{left:130%;}
+}
+
+@keyframes rotate{to{transform:rotate(360deg);}}
+
+@keyframes scrollWheel{
+    0%{opacity:1;transform:translate(-50%,0);}
+    70%{opacity:0;transform:translate(-50%,12px);}
+    100%{opacity:0;}
+}
+
+@keyframes sponsorScroll{
+    from{transform:translateX(0);}
+    to{transform:translateX(calc(-50% - 12.5px));}
+}

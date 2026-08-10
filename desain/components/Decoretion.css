@@ -1,0 +1,265 @@
+/* =========================================================
+   STC 2026
+   COMPONENTS — DECORATIONS
+   Merged from: style(1)(1).css + style_rapih(1).css
+   ========================================================= */
+
+.sky-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.cloud {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 100px;
+  filter: blur(1px);
+  box-shadow: 0 20px 50px rgba(30, 80, 140, 0.15);
+  animation: cloudDrift linear infinite;
+  opacity: 0.9;
+}
+
+.cloud::before,
+.cloud::after {
+  content: "";
+  position: absolute;
+  background: inherit;
+  border-radius: 50%;
+}
+
+.cloud.c1 {
+  top: 12%;
+  left: -180px;
+  width: 150px;
+  height: 45px;
+  animation-duration: 60s;
+  animation-delay: -10s;
+}
+
+.cloud.c1::before {
+  width: 60px;
+  height: 60px;
+  top: -30px;
+  left: 25px;
+}
+
+.cloud.c1::after {
+  width: 75px;
+  height: 75px;
+  top: -40px;
+  left: 60px;
+}
+
+.cloud.c2 {
+  top: 30%;
+  left: -200px;
+  width: 190px;
+  height: 55px;
+  animation-duration: 85s;
+  animation-delay: -45s;
+}
+
+.cloud.c2::before {
+  width: 70px;
+  height: 70px;
+  top: -35px;
+  left: 35px;
+}
+
+.cloud.c2::after {
+  width: 90px;
+  height: 90px;
+  top: -50px;
+  left: 75px;
+}
+
+.cloud.c3 {
+  top: 55%;
+  left: -160px;
+  width: 130px;
+  height: 40px;
+  animation-duration: 70s;
+  animation-delay: -25s;
+}
+
+.cloud.c3::before {
+  width: 55px;
+  height: 55px;
+  top: -28px;
+  left: 20px;
+}
+
+.cloud.c3::after {
+  width: 65px;
+  height: 65px;
+  top: -35px;
+  left: 52px;
+}
+
+.cloud.c4 {
+  top: 70%;
+  left: -170px;
+  width: 170px;
+  height: 50px;
+  animation-duration: 95s;
+  animation-delay: -60s;
+}
+
+.cloud.c4::before {
+  width: 65px;
+  height: 65px;
+  top: -32px;
+  left: 30px;
+}
+
+.cloud.c4::after {
+  width: 80px;
+  height: 80px;
+  top: -45px;
+  left: 68px;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(255, 255, 255, 0.9),
+    rgba(124, 185, 232, 0.25)
+  );
+  filter: blur(1px);
+  animation: orbFloat ease-in-out infinite;
+  opacity: 0.6;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.orb.o1 {
+  width: 30px;
+  height: 30px;
+  top: 20%;
+  left: 12%;
+  animation-duration: 9s;
+}
+
+.orb.o2 {
+  width: 16px;
+  height: 16px;
+  top: 35%;
+  left: 75%;
+  animation-duration: 7s;
+}
+
+.orb.o3 {
+  width: 24px;
+  height: 24px;
+  top: 65%;
+  left: 20%;
+  animation-duration: 11s;
+}
+
+.orb.o4 {
+  width: 12px;
+  height: 12px;
+  top: 78%;
+  left: 55%;
+  animation-duration: 8s;
+}
+
+.orb.o5 {
+  width: 20px;
+  height: 20px;
+  top: 15%;
+  left: 55%;
+  animation-duration: 10s;
+}
+
+.orb.o6 {
+  width: 14px;
+  height: 14px;
+  top: 60%;
+  left: 80%;
+  animation-duration: 7.5s;
+}
+
+.orb.o7 {
+  width: 26px;
+  height: 26px;
+  top: 40%;
+  left: 35%;
+  animation-duration: 12s;
+}
+
+.orb.o8 {
+  width: 10px;
+  height: 10px;
+  top: 85%;
+  left: 88%;
+  animation-duration: 6.5s;
+}
+
+.sun-glow {
+  position: absolute;
+  top: -100px;
+  right: 8%;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 240, 200, 0.9),
+    rgba(255, 220, 150, 0.3),
+    transparent 70%
+  );
+  filter: blur(8px);
+  animation: glowPulse 5s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.about-decoration {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.about-decoration-top {
+  width: 350px;
+  top: 0;
+  left: -60px;
+  animation: floatY 6s ease-in-out infinite;
+}
+
+.about-decoration-bottom {
+    width: 380px;
+    right: -60px;
+    bottom: -60px;
+
+    transform: scaleX(-1);
+
+    animation: aboutDecorationFloat 7s ease-in-out infinite;
+}
+
+.sponsor-decoration {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.decoration-top {
+  width: 280px;
+  top: -40px;
+  left: -30px;
+  animation: floatY 6s ease-in-out infinite;
+}
+
+.decoration-bottom {
+  width: 320px;
+  bottom: -80px;
+  right: -40px;
+  transform: rotate(180deg);
+  animation: floatY 7s ease-in-out infinite reverse;
+}

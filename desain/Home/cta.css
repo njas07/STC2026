@@ -1,0 +1,254 @@
+/* =========================================================
+   STC 2026
+   HOME — CTA & COUNTDOWN
+   Merged from: style(1)(1).css + style_rapih(1).css
+   ========================================================= */
+
+#cta {
+  position: relative;
+  padding: 120px 0;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1d4ed8, #2563eb, #4f91d8);
+  text-align: center;
+  isolation: isolate;
+}
+
+#cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(
+      circle at 20% 30%,
+      rgba(255, 255, 255, 0.15),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(255, 255, 255, 0.1),
+      transparent 40%
+    );
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2;
+  width: min(800px, 90%);
+  margin: auto;
+  color: #fff;
+}
+
+.cta-content h2 {
+  font-size: clamp(30px, 5vw, 48px);
+  font-weight: 800;
+  margin-bottom: 18px;
+  text-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+}
+
+.cta-content p {
+  font-size: 17px;
+  opacity: 0.9;
+  margin-bottom: 35px;
+  line-height: 1.7;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 16px 46px;
+  background: #fff;
+  color: #1d4ed8;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 50px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  transition:
+    transform 0.35s,
+    box-shadow 0.35s;
+}
+
+.cta-btn:hover {
+  transform: translateY(-5px) scale(1.04);
+  box-shadow: 0 20px 45px rgba(255, 255, 255, 0.3);
+}
+
+#countdown {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.cd-box {
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  padding: 18px 24px;
+  min-width: 90px;
+  text-align: center;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  animation: glowPulse 4s ease-in-out infinite;
+}
+
+.cd-box:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.cd-box:nth-child(5) {
+  animation-delay: 1s;
+}
+
+.cd-box:nth-child(7) {
+  animation-delay: 1.5s;
+}
+
+.cd-num {
+  display: block;
+  font-size: 34px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+}
+
+.cd-label {
+  display: block;
+  margin-top: 6px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.cd-sep {
+  font-size: 34px;
+  font-weight: 800;
+  color: #fff;
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+.countdown-msg {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffd966;
+  padding: 15px 30px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50px;
+}
+
+.countdown-section {
+  display: flex;
+  width: 100%;
+  padding: 60px 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-top: 10px solid rgb(111, 175, 231);
+  border-bottom: 10px solid rgb(111, 175, 231);
+
+  background: rgba(255, 255, 255, 0.867);
+
+  margin-top: 40px;
+}
+
+.countdown-title {
+  margin-bottom: 20px;
+
+  text-align: center;
+
+  font-family: Superstar, sans-serif;
+  font-size: clamp(28px, 4vw, 48px);
+  font-style: normal;
+  font-weight: 400;
+
+  line-height: normal;
+  letter-spacing: 2.4px;
+
+  /* Outline Oxford Blue */
+  -webkit-text-stroke: 1.5px rgb(25, 35, 56);
+
+  /* Jordy Blue → YInMn Blue */
+  background: linear-gradient(rgb(143, 179, 226) 0%, rgb(49, 72, 122) 100%);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+.time-item {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+}
+
+.time-number {
+  text-align: center;
+
+  font-family: Superstar, sans-serif;
+  font-size: clamp(40px, 6vw, 96px);
+
+  font-style: normal;
+  font-weight: 400;
+
+  line-height: normal;
+  letter-spacing: 4.8px;
+
+  /* Outline Oxford Blue */
+  -webkit-text-stroke: 2px rgb(25, 35, 56);
+
+  /* Jordy Blue → YInMn Blue */
+  background: linear-gradient(rgb(143, 179, 226) 0%, rgb(49, 72, 122) 100%);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+.separator {
+  text-align: center;
+
+  font-family: Superstar, sans-serif;
+  font-size: clamp(40px, 6vw, 96px);
+
+  font-style: normal;
+  font-weight: 400;
+
+  line-height: normal;
+  letter-spacing: 4.8px;
+
+  margin-top: -4px;
+
+  /* Outline Oxford Blue */
+  -webkit-text-stroke: 2px rgb(25, 35, 56);
+
+  /* Jordy Blue → YInMn Blue */
+  background: linear-gradient(rgb(143, 179, 226) 0%, rgb(49, 72, 122) 100%);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+.time-label {
+  /* YInMn Blue */
+  color: rgb(49, 72, 122);
+
+  text-align: center;
+
+  font-family: Poppins, sans-serif;
+  font-size: clamp(10px, 1.5vw, 14px);
+
+  font-style: normal;
+  font-weight: 600;
+
+  line-height: normal;
+  text-transform: uppercase;
+
+  margin-top: 4px;
+}

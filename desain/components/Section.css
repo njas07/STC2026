@@ -1,0 +1,43 @@
+/* =========================================================
+   STC 2026
+   COMPONENTS — SHARED SECTION HEADINGS
+   Merged from: style(1)(1).css + style_rapih(1).css
+   ========================================================= */
+
+.section-head {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-head .kicker {
+  display: inline-block;
+  padding: 6px 22px;
+  background: rgba(37, 99, 235, 0.1);
+  color: #1d4ed8;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.section-head h2 {
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 800;
+  color: #0d1b2a;
+  position: relative;
+  display: inline-block;
+}
+
+.section-head h2::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #2563eb, #7cb9e8);
+}

@@ -1,0 +1,166 @@
+/* =========================================================
+   STC 2026
+   COMPONENTS — BUTTONS
+   Merged from: style(1)(1).css + style_rapih(1).css
+   ========================================================= */
+
+.btn-primary,
+.btn-secondary {
+  position: relative;
+  display: inline-block;
+  padding: 16px 44px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 15px;
+  overflow: hidden;
+  transition:
+    transform 0.35s,
+    box-shadow 0.35s;
+  z-index: 1;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #1d4ed8, #2563eb);
+  color: #fff;
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.35);
+}
+
+.btn-primary::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+  transform: skewX(-25deg);
+  animation: shine 3.2s infinite;
+  z-index: 2;
+}
+
+.btn-primary:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 16px 40px rgba(37, 99, 235, 0.45);
+}
+
+.btn-secondary {
+  border: 2px solid #fff;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+}
+
+.btn-secondary:hover {
+  background: #fff;
+  color: #1d4ed8;
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(255, 255, 255, 0.35);
+}
+
+.filter-btn {
+  padding: 11px 22px;
+  background: transparent;
+  border: none;
+  border-radius: 50px;
+  color: #4f91d8;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.35s;
+}
+
+.filter-btn:hover {
+  background: rgba(37, 99, 235, 0.1);
+  transform: translateY(-2px);
+}
+
+.filter-btn.active {
+  background: linear-gradient(90deg, #2563eb, #4f91d8);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+}
+
+/* =========================================================
+   INSTAGRAM BUTTON
+========================================================= */
+
+.instagram-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: auto;
+    min-width: 220px;
+
+    padding: 11px 22px;
+
+    margin-top: 8px;
+
+    border-radius: 30px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    box-sizing: border-box;
+}
+
+
+/* Username Instagram */
+
+.instagram-username {
+    margin: 8px 0 4px;
+
+    color: #2563eb;
+
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+/* Container */
+
+.instagram-follow-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 22px;
+
+    margin-top: 20px;
+}
+
+
+.instagram-follow-box {
+    padding: 20px;
+
+    border: 1px solid #c7d8ff;
+
+    border-radius: 12px;
+
+    background: #f8faff;
+
+    box-sizing: border-box;
+}
+
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+    .instagram-follow-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .instagram-btn {
+        width: 100%;
+    }
+
+}

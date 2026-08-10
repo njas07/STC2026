@@ -1,0 +1,155 @@
+/* =========================================================
+   STC 2026
+   HOME — SPONSORS
+   Merged from: style(1)(1).css + style_rapih(1).css
+   ========================================================= */
+
+#sponsors {
+  position: relative;
+  overflow: hidden;
+  padding: 110px 0 130px;
+  background: linear-gradient(#e8f2ff, #dfeeff);
+}
+
+.sponsors-container {
+  width: min(1200px, 90%);
+  margin: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.sponsors-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 25px;
+  margin-bottom: 45px;
+  border-bottom: 3px solid rgba(124, 185, 232, 0.4);
+}
+
+.sponsors-header h2 {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 800;
+  color: #1d4ed8;
+  letter-spacing: 1px;
+}
+
+.sponsors-header h2 span {
+  margin-right: 8px;
+  color: #2563eb;
+}
+
+.sponsor-btn {
+  padding: 14px 32px;
+  background: linear-gradient(90deg, #4f91d8, #2563eb);
+  color: #fff;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+  transition:
+    transform 0.35s,
+    box-shadow 0.35s;
+  position: relative;
+  overflow: hidden;
+}
+
+.sponsor-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transform: skewX(-25deg);
+  animation: shine 3s infinite;
+}
+
+.sponsor-btn:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 16px 35px rgba(37, 99, 235, 0.4);
+}
+
+.sponsors-slider {
+  width: 100%;
+  overflow: hidden;
+  padding: 5px 0 20px;
+  position: relative;
+}
+
+.sponsors-slider::before,
+.sponsors-slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.sponsors-slider::before {
+  left: 0;
+  background: linear-gradient(90deg, #dfeeff, transparent);
+}
+
+.sponsors-slider::after {
+  right: 0;
+  background: linear-gradient(-90deg, #dfeeff, transparent);
+}
+
+.sponsor-track {
+  display: flex;
+  width: max-content;
+  gap: 25px;
+  animation: sponsorScroll 30s linear infinite;
+}
+
+.sponsor-track:hover {
+  animation-play-state: paused;
+}
+
+.sponsor-card {
+  width: 210px;
+  height: 110px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid rgba(124, 185, 232, 0.5);
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(31, 62, 108, 0.08);
+  transition:
+    transform 0.4s,
+    box-shadow 0.4s,
+    border-color 0.4s;
+  cursor: pointer;
+}
+
+.sponsor-card img {
+  max-width: 150px;
+  max-height: 65px;
+  object-fit: contain;
+  filter: grayscale(30%);
+  transition:
+    filter 0.4s,
+    transform 0.4s;
+}
+
+.sponsor-card:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 20px 45px rgba(37, 99, 235, 0.2);
+  border-color: #2563eb;
+}
+
+.sponsor-card:hover img {
+  filter: grayscale(0);
+  transform: scale(1.08);
+}

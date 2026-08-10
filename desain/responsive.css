@@ -1,0 +1,220 @@
+/* =========================================
+   RESPONSIVE CSS - STC 2026
+   ========================================= */
+
+/* =========================
+   TABLET
+   ========================= */
+@media (max-width: 992px) {
+
+    .container {
+        width: 90%;
+        max-width: 100%;
+    }
+
+    /* NAVBAR */
+    .navbar {
+        padding: 15px 25px;
+    }
+
+    .nav-menu {
+        gap: 20px;
+    }
+
+    /* HERO */
+    .hero-content {
+        padding: 0 40px;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 52px;
+        line-height: 1.1;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+
+    /* ABOUT */
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about-image {
+        text-align: center;
+    }
+
+    /* STATISTICS */
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    /* SPONSOR */
+    .sponsor-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* FOOTER */
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+@media (max-width: 768px) {
+
+    /* GLOBAL */
+    body {
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: 92%;
+    }
+
+    /* NAVBAR */
+    .navbar {
+        padding: 12px 18px;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+        background: #ffffff;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+    }
+
+    .hamburger span {
+        width: 25px;
+        height: 3px;
+        border-radius: 5px;
+        background: currentColor;
+    }
+
+    /* HERO */
+    .hero {
+        min-height: 100vh;
+    }
+
+    .hero-content {
+        padding: 30px 20px;
+    }
+
+    .hero-title {
+        font-size: 38px;
+        line-height: 1.15;
+    }
+
+    .hero-subtitle {
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .hero-buttons a {
+        width: 180px;
+        text-align: center;
+    }
+
+    /* ABOUT */
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-title {
+        font-size: 32px;
+    }
+
+    /* STATISTICS */
+    .stats-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    /* COMPETITION */
+    .competition-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* SPONSOR */
+    .sponsor-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    /* CTA */
+    .cta-content {
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    /* FOOTER */
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+   ========================= */
+@media (max-width: 480px) {
+
+    .hero-title {
+        font-size: 30px;
+    }
+
+    .hero-subtitle {
+        font-size: 12px;
+        letter-spacing: 1.5px;
+    }
+
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+
+    .sponsor-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about-title {
+        font-size: 28px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .hero-buttons a {
+        width: 160px;
+    }
+}

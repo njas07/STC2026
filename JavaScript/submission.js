@@ -1,140 +1,601 @@
 /* =====================================================
-   STC 2026 - Submission Utility (dipakai semua form lomba)
-   - Preview gambar kartu pelajar / bukti
-   - Submit via fetch() + FormData ke API
+   STC 2026 - Submission Utility
+   Dipakai untuk form pendaftaran lomba
    ===================================================== */
 
 const API_BASE = 'http://localhost/stc2026/api';
 const SITE = API_BASE.replace('/api', '');
 
+
+/* =====================================================
+   SAAT HALAMAN SELESAI DIMUAT
+   ===================================================== */
+
 document.addEventListener('DOMContentLoaded', function () {
-    // Preview gambar untuk semua input file bertipe image
+
+    /* ==============================
+       VALIDASI FILE
+    ============================== */
+
     document.querySelectorAll('input[type="file"]').forEach(function (input) {
+
         input.addEventListener('change', function () {
             previewFile(this);
         });
+
     });
 
-    // Submit handler untuk form dengan data-submit
-    document.querySelectorAll('form[data-submit]').forEach(function (form) {
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
-            handleSubmit(this);
-        });
+
+    /* ==============================
+       SEMBUNYIKAN HASIL SUBMIT
+       ============================== */
+
+    document.querySelectorAll('.submission-result').forEach(function (result) {
+        result.style.display = 'none';
     });
+
+
+    /* ==============================
+       FORM SUBMIT
+       ============================== */
+
+    document.querySelectorAll('form[data-submit]').forEach(function (form) {
+
+        form.addEventListener('submit', function (e) {
+
+            e.preventDefault();
+
+            handleSubmit(this);
+
+        });
+
+    });
+
 });
 
+
+/* =====================================================
+   PREVIEW + VALIDASI FILE
+   ===================================================== */
+
 function previewFile(input) {
-    const previewId = input.getAttribute('data-preview');
-    if (!previewId) return;
-    const preview = document.getElementById(previewId);
-    if (!preview || !input.files || !input.files[0]) return;
+
+    if (!input.files || !input.files[0]) {
+        return true;
+    }
 
     const file = input.files[0];
 
-    // Validasi ukuran (2MB)
+
+    /* ==============================
+       MAKSIMAL 2 MB
+       ============================== */
+
     if (file.size > 2 * 1024 * 1024) {
-        alert('Ukuran file melebihi 2MB. Silakan pilih file yang lebih kecil.');
+
+        alert(
+            'Ukuran file melebihi 2MB. Silakan pilih file yang lebih kecil.'
+        );
+
         input.value = '';
-        preview.classList.remove('show');
-        return;
+
+        hidePreview(input);
+
+        return false;
     }
 
-    // Validasi tipe
-    const validTypes = ['image/jpeg', 'image/png', 'image/jpg', 'image/webp'];
+
+    /* ==============================
+       FORMAT FILE
+       ============================== */
+
+    const validTypes = [
+        'image/jpeg',
+        'image/png',
+        'image/jpg',
+        'image/webp',
+        'application/pdf'
+    ];
+
+
     if (validTypes.indexOf(file.type) === -1) {
-        alert('Format tidak diizinkan. Gunakan JPG/PNG/WEBP.');
+
+        alert(
+            'Format tidak diizinkan. Gunakan JPG, PNG, WEBP, atau PDF.'
+        );
+
         input.value = '';
-        preview.classList.remove('show');
+
+        hidePreview(input);
+
+        return false;
+    }
+
+
+    /* ==============================
+       PREVIEW GAMBAR
+       ============================== */
+
+    const previewId =
+        input.getAttribute('data-preview');
+
+    const preview =
+        previewId
+            ? document.getElementById(previewId)
+            : null;
+
+
+    /*
+       PDF tidak bisa ditampilkan
+       sebagai preview gambar.
+    */
+
+    if (
+        preview &&
+        file.type !== 'application/pdf'
+    ) {
+
+        const reader = new FileReader();
+
+        reader.onload = function (event) {
+
+            preview.src = event.target.result;
+
+            preview.classList.add('show');
+
+        };
+
+        reader.readAsDataURL(file);
+
+    } else {
+
+        hidePreview(input);
+
+    }
+
+
+    return true;
+}
+
+
+/* =====================================================
+   HAPUS PREVIEW
+   ===================================================== */
+
+function hidePreview(input) {
+
+    const previewId =
+        input.getAttribute('data-preview');
+
+    if (!previewId) {
         return;
     }
 
-    const reader = new FileReader();
-    reader.onload = function (ev) {
-        preview.src = ev.target.result;
-        preview.classList.add('show');
-    };
-    reader.readAsDataURL(file);
+
+    const preview =
+        document.getElementById(previewId);
+
+
+    if (preview) {
+
+        preview.src = '';
+
+        preview.classList.remove('show');
+
+    }
+
 }
+
+
+/* =====================================================
+   HANDLE SUBMIT
+   ===================================================== */
 
 async function handleSubmit(form) {
-    // Cek checkbox persetujuan
-    const checks = form.querySelectorAll('input[type="checkbox"][required]');
+
+
+    /* ==============================
+       CEK CHECKBOX
+       ============================== */
+
+    const checks =
+        form.querySelectorAll(
+            'input[type="checkbox"][required]'
+        );
+
+
     for (let i = 0; i < checks.length; i++) {
+
         if (!checks[i].checked) {
-            alert('Centang semua persetujuan sebelum mengirim.');
+
+            alert(
+                'Centang semua persetujuan sebelum mengirim.'
+            );
+
             return;
         }
+
     }
 
-    const btn = form.querySelector('button[type="submit"]');
+
+    /* ==============================
+       TOMBOL SUBMIT
+       ============================== */
+
+    const btn =
+        form.querySelector(
+            'button[type="submit"]'
+        );
+
+
+    if (!btn) {
+        return;
+    }
+
+
     btn.disabled = true;
-    const btnText = btn.textContent;
-    btn.textContent = 'Mengirim...';
 
-    const formData = new FormData(form);
 
-    // Ambil user id dari localStorage
+    const btnText =
+        btn.textContent;
+
+
+    btn.textContent =
+        'Mengirim...';
+
+
+    /* ==============================
+       FORM DATA
+       ============================== */
+
+    const formData =
+        new FormData(form);
+
+
+    /* ==============================
+       USER ID
+       ============================== */
+
     try {
-        const user = JSON.parse(localStorage.getItem('stc_user') || 'null');
-        formData.append('user_id', user ? user.id : 0);
-    } catch (e) {
-        formData.append('user_id', 0);
+
+        const user =
+            JSON.parse(
+                localStorage.getItem('stc_user') || 'null'
+            );
+
+
+        formData.append(
+            'user_id',
+            user ? user.id : 0
+        );
+
+    } catch (error) {
+
+        formData.append(
+            'user_id',
+            0
+        );
+
     }
 
-    const competition = form.getAttribute('data-competition');
 
-    // Kumpulkan data khusus lomba menjadi JSON
-    const extra = collectExtra(form);
-    formData.append('data', JSON.stringify(extra));
-    formData.append('competition', competition || 'umum');
+    /* ==============================
+       NAMA LOMBA
+       ============================== */
+
+    const competition =
+        form.getAttribute(
+            'data-competition'
+        );
+
+
+    /* ==============================
+       DATA TAMBAHAN
+       ============================== */
+
+    const extra =
+        collectExtra(form);
+
+
+    formData.append(
+        'data',
+        JSON.stringify(extra)
+    );
+
+
+    formData.append(
+        'competition',
+        competition || 'umum'
+    );
+
+
+    /* =================================================
+       KIRIM KE BACKEND
+       ================================================= */
 
     try {
-        const res = await fetch(API_BASE + '/registrations/create.php', {
-            method: 'POST',
-            body: formData
-        });
-        const json = await res.json();
+
+        const res =
+            await fetch(
+                API_BASE +
+                '/registrations/create.php',
+                {
+                    method: 'POST',
+                    body: formData
+                }
+            );
+
+
+        const json =
+            await res.json();
+
+
+        /* ==============================
+           BERHASIL
+           ============================== */
 
         if (json.success) {
-            form.style.display = 'none';
-            showResult(json.data);
-        } else {
-            alert(json.message || 'Pendaftaran gagal.');
-            btn.disabled = false;
-            btn.textContent = btnText;
+
+
+            /*
+               Jangan menyembunyikan seluruh form.
+               Hanya tombol submit yang disembunyikan.
+            */
+
+            form
+                .querySelectorAll(
+                    '.form-actions'
+                )
+                .forEach(function (actions) {
+
+                    actions.style.display =
+                        'none';
+
+                });
+
+
+            /*
+               Nonaktifkan input
+               setelah berhasil.
+            */
+
+            form
+                .querySelectorAll(
+                    'input, select, textarea, button'
+                )
+                .forEach(function (field) {
+
+                    field.disabled = true;
+
+                });
+
+
+            /* ==============================
+               TAMPILKAN HASIL
+               ============================== */
+
+            showResult(
+                json.data
+            );
+
         }
-    } catch (err) {
-        alert('Gagal terhubung ke server. Pastikan backend berjalan.');
-        btn.disabled = false;
-        btn.textContent = btnText;
+
+
+        /* ==============================
+           GAGAL
+           ============================== */
+
+        else {
+
+            alert(
+                json.message ||
+                'Pendaftaran gagal.'
+            );
+
+
+            btn.disabled =
+                false;
+
+
+            btn.textContent =
+                btnText;
+
+        }
+
     }
+
+
+    /* ==============================
+       ERROR SERVER
+       ============================== */
+
+    catch (error) {
+
+        console.error(
+            'Submission error:',
+            error
+        );
+
+
+        alert(
+            'Gagal terhubung ke server. ' +
+            'Pastikan backend berjalan.'
+        );
+
+
+        btn.disabled =
+            false;
+
+
+        btn.textContent =
+            btnText;
+
+    }
+
 }
 
-// Kumpulkan input bertanda data-field dan kolom umum menjadi objek JSON
+
+/* =====================================================
+   KUMPULKAN DATA TAMBAHAN
+   ===================================================== */
+
 function collectExtra(form) {
+
     const obj = {};
-    form.querySelectorAll('[name]').forEach(function (el) {
-        if (el.type === 'file' || el.type === 'checkbox') return;
-        if (!el.name) return;
-        if (['user_id', 'competition', 'name', 'student_id', 'school_name',
-             'school_class', 'email', 'phone', 'student_card',
-             'instagram_school', 'instagram_school_proof', 'instagram_stc',
-             'instagram_stc_proof', 'payment_method', 'amount',
-             'transaction_date', 'payment_proof'].indexOf(el.name) !== -1) {
-            return; // sudah disimpan di kolom utama
-        }
-        obj[el.name] = el.value;
-    });
+
+
+    form
+        .querySelectorAll('[name]')
+        .forEach(function (el) {
+
+
+            /* ==============================
+               FILE TIDAK MASUK JSON
+               ============================== */
+
+            if (el.type === 'file') {
+                return;
+            }
+
+
+            /* ==============================
+               CHECKBOX TIDAK MASUK JSON
+               ============================== */
+
+            if (el.type === 'checkbox') {
+                return;
+            }
+
+
+            if (!el.name) {
+                return;
+            }
+
+
+            /* ==============================
+               FIELD UTAMA
+               ============================== */
+
+            const mainFields = [
+
+                'user_id',
+
+                'competition',
+
+                'name',
+
+                'student_id',
+
+                'school_name',
+
+                'school_class',
+
+                'email',
+
+                'phone',
+
+                'student_card',
+
+                'instagram_school',
+
+                'instagram_school_proof',
+
+                'instagram_stc',
+
+                'instagram_stc_proof',
+
+                'payment_method',
+
+                'amount',
+
+                'transaction_date',
+
+                'payment_proof'
+
+            ];
+
+
+            if (
+                mainFields.indexOf(
+                    el.name
+                ) !== -1
+            ) {
+
+                return;
+
+            }
+
+
+            /* ==============================
+               SIMPAN DATA LAIN
+               ============================== */
+
+            obj[el.name] =
+                el.value;
+
+        });
+
+
     return obj;
+
 }
+
+
+/* =====================================================
+   HASIL PENDAFTARAN
+   ===================================================== */
 
 function showResult(data) {
-    let result = document.getElementById('submitResult');
-    if (result) {
-        document.getElementById('resultCode').textContent = data.code || '-';
-        result.classList.add('show');
+
+
+    const result =
+        document.getElementById(
+            'submitResult'
+        );
+
+
+    if (!result) {
+        return;
     }
-    // auto scroll ke hasil
-    if (result) result.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+
+    const resultCode =
+        document.getElementById(
+            'resultCode'
+        );
+
+
+    if (resultCode) {
+
+        resultCode.textContent =
+            data.code || '-';
+
+    }
+
+
+    /* ==============================
+       TAMPILKAN HASIL
+       ============================== */
+
+    result.style.display =
+        'block';
+
+
+    result.classList.add(
+        'show'
+    );
+
+
+    /* ==============================
+       SCROLL KE HASIL
+       ============================== */
+
+    result.scrollIntoView({
+
+        behavior: 'smooth',
+
+        block: 'center'
+
+    });
+
 }

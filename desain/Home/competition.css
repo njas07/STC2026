@@ -881,7 +881,8 @@ footer > p:only-child strong {
   }
 
   .competition-container .info-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
   }
 
   .competition-container .member-grid {
@@ -948,21 +949,22 @@ footer > p:only-child strong {
   }
 
   .competition-container .info-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
   }
 
   .competition-container .info-box {
     min-height: 105px;
-    padding: 14px 8px;
+    padding: 18px 10px;
+    border-radius: 11px;
   }
 
   .competition-container .info-box .val {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .competition-container .info-box .lbl {
-    font-size: 9px;
+    display: none;
   }
 
   .competition-container .card > ul li {
@@ -1055,6 +1057,7 @@ footer > p:only-child strong {
 
   .competition-container .info-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
 
   .competition-container .card {

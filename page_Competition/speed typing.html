@@ -1,1033 +1,642 @@
 <!doctype html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cerdas Cermat - STC 2026</title>
 
-    <title>Speed Typing - STC 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-    <!-- GOOGLE FONT -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../desain/navbar.css" />
+    <link rel="stylesheet" href="../desain/Home/competition.css" />
+    <link rel="stylesheet" href="../desain/components/Button.css" />
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet"
-    >
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
 
-    <!-- CSS SHARED -->
-    <link rel="stylesheet" href="/desain/navbar.css">
-    <link rel="stylesheet" href="/desain/Home/competition.css">
-    <link rel="stylesheet" href="/desain/components/Button.css">
-</head>
-
-<body>
-
-<!-- ==================================================
-     NAVBAR
-================================================== -->
-
-<header class="header">
-
-    <nav class="navbar">
-
+  <body>
+    <!-- NAVBAR -->
+    <header class="header">
+      <nav class="navbar">
         <a href="../Landing_page/Index.html" class="logo">
-            <img src="../foto/LOGOSTC.png" alt="STC Logo">
+          <img src="../foto/LOGOSTC.png" alt="STC Logo" />
         </a>
 
         <ul class="nav-menu" id="navMenu">
+          <li>
+            <a href="../Landing_page/Index.html" class="nav-link">Home</a>
+          </li>
 
-            <li>
-                <a
-                    href="../Landing_page/Index.html"
-                    class="nav-link"
-                >
-                    Home
-                </a>
-            </li>
+          <li class="dropdown">
+            <a href="#" class="nav-link active">
+              Competitions <span class="arrow">▼</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="web Design.html">Web Design</a></li>
+              <li><a href="Infografis.html">Infografis</a></li>
+              <li>
+                <a href="Cerdas cermat.html" class="active">Cerdas Cermat</a>
+              </li>
+              <li><a href="excel.html">Microsoft Excel</a></li>
+              <li><a href="speed typing.html">Speed Typing</a></li>
+              <li><a href="mobile legend.html">Mobile Legends</a></li>
+              <li><a href="free fire.html">Free Fire</a></li>
+            </ul>
+          </li>
 
-            <li class="dropdown">
-
-                <a href="#" class="nav-link active">
-                    Competitions
-                    <span class="arrow">▼</span>
-                </a>
-
-                <ul class="dropdown-menu">
-
-                    <li>
-                        <a href="web Design.html">
-                            Web Design
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="Infografis.html">
-                            Infografis
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="Cerdas cermat.html">
-                            Cerdas Cermat
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="excel.html">
-                            Microsoft Excel
-                        </a>
-                    </li>
-
-                    <li>
-                        <a
-                            href="speed typing.html"
-                            class="active"
-                        >
-                            Speed Typing
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="mobile legend.html">
-                            Mobile Legends
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="free fire.html">
-                            Free Fire
-                        </a>
-                    </li>
-
-                </ul>
-
-            </li>
-
-            <li>
-                <a
-                    href="../multi_page/gallery.html"
-                    class="nav-link"
-                >
-                    Gallery
-                </a>
-            </li>
-
+          <li>
+            <a href="../multi_page/gallery.html" class="nav-link">Gallery</a>
+          </li>
         </ul>
 
-        <a
-            href="../multi_page/Login.html"
-            class="login-btn"
-        >
-            Login
-        </a>
+        <a href="../multi_page/Login.html" class="login-btn">Login</a>
 
         <button
-            type="button"
-            class="hamburger"
-            id="hamburger"
-            aria-label="Buka menu"
-            aria-controls="navMenu"
-            aria-expanded="false"
+          type="button"
+          class="hamburger"
+          id="hamburger"
+          aria-label="Buka menu"
+          aria-controls="navMenu"
+          aria-expanded="false"
         >
-            <span></span>
-            <span></span>
-            <span></span>
+          <span></span><span></span><span></span>
         </button>
+      </nav>
+    </header>
 
-    </nav>
-
-</header>
-
-
-<!-- ==================================================
-     MAIN
-================================================== -->
-
-<main class="competition-container">
-
-    <!-- ==================================================
-         HERO
-    ================================================== -->
-
-    <section class="hero">
-
-        <img
-            src="../foto/LOGOSTC.png"
-            alt="STC"
-            class="hero-logo"
-        >
-
-        <h1>
-            SPEED TYPING
-        </h1>
-
-        <p class="sub">
-            STIBAJRA Technology Competition 2026
-        </p>
-
-        <span class="competition-badge">
-            SPEED TYPING · INDIVIDU
-        </span>
-
+    <main class="competition-container">
+      <!-- HERO -->
+      <section class="hero">
+        <img src="../foto/LOGOSTC.png" alt="STC" class="hero-logo" />
+        <h1>CERDAS CERMAT</h1>
+        <p class="sub">STIBAJRA Technology Competition 2026</p>
+        <span class="competition-badge">QUIZ · TIM 3 ORANG</span>
         <p class="desc">
-            Uji kecepatan, ketepatan, dan konsentrasi mengetikmu
-            dalam kompetisi Speed Typing STC 2026.
+          Adu cerdas dan kecepatan berpikirmu! Lomba Cerdas Cermat menguji
+          wawasan, ketangkasan menjawab, dan kerja sama tim dalam menjawab
+          berbagai pertanyaan menantang.
         </p>
+      </section>
 
-    </section>
-
-
-    <div class="wrap">
-
-        <!-- ==================================================
-             KETENTUAN LOMBA
-        ================================================== -->
-
+      <div class="wrap">
+        <!-- GAMBARAN UMUM -->
         <section class="card">
-
-            <h2>
-                <span class="dot">•</span>
-                KETENTUAN LOMBA
-            </h2>
-
-            <ul>
-
-                <li>
-                    Peserta akan memasuki ruangan
-                    <strong>Lab SMK TI Bali Global Jimbaran</strong>
-                    dengan mengikuti arahan dari panitia.
-                </li>
-
-                <li>
-                    Peserta akan mengakses website
-                    <strong>MonkeyType.com</strong>
-                    pada komputer yang telah disediakan oleh panitia.
-                </li>
-
-                <li>
-                    Peserta akan melakukan pengetikan sebanyak
-                    <strong>100 kata dalam waktu 60 detik</strong>
-                    menggunakan
-                    <strong>Bahasa Indonesia</strong>.
-                </li>
-
-                <li>
-                    Peralatan berupa
-                    <strong>komputer dan mouse</strong>
-                    akan disediakan oleh panitia.
-                    Peserta diperbolehkan membawa
-                    <strong>keyboard sendiri</strong>.
-                </li>
-
-                <li>
-                    Peserta
-                    <strong>tidak diperbolehkan melakukan restart text</strong>.
-                    Apabila diketahui melakukan restart text,
-                    peserta akan
-                    <strong>didiskualifikasi</strong>.
-                </li>
-
-                <li>
-                    Setelah peserta selesai melakukan pengetikan,
-                    peserta dapat
-                    <strong>mengangkat tangan dari keyboard</strong>
-                    dan membiarkan halaman tetap berada pada
-                    <strong>halaman hasil</strong>.
-                </li>
-
-                <li>
-                    Apabila peserta tidak sengaja keluar dari
-                    <strong>halaman hasil</strong>,
-                    peserta akan
-                    <strong>didiskualifikasi</strong>.
-                </li>
-
-                <li>
-                    Pada babak penyisihan akan dilakukan dengan
-                    <strong>sistem gugur</strong>
-                    dan akan dipilih
-                    <strong>5 peserta</strong>
-                    dengan nilai rata-rata terbaik.
-                </li>
-
-                <li>
-                    Babak final akan dilakukan dalam
-                    <strong>3 sesi</strong>.
-                    Penilaian akan dilihat berdasarkan
-                    <strong>nilai rata-rata peserta dari 3 sesi</strong>
-                    tersebut.
-                </li>
-
-            </ul>
-
+          <h2>GAMBARAN UMUM</h2>
+          <div class="info-grid">
+            <div class="info-box">
+              <div class="val">3</div>
+              <div class="lbl">Anggota Tim</div>
+            </div>
+            <div class="info-box">
+              <div class="val">SMP/MTS</div>
+              <div class="lbl">Kategori</div>
+            </div>
+            <div class="info-box">
+              <div class="val">Kelompok</div>
+              <div class="lbl">Sistem</div>
+            </div>
+            <div class="info-box">
+              <div class="val">3 Babak</div>
+              <div class="lbl">Format</div>
+            </div>
+          </div>
         </section>
 
-
-        <!-- ==================================================
-             HADIAH
-        ================================================== -->
-
+        <!-- KETENTUAN -->
         <section class="card">
+          <h2>KETENTUAN LOMBA</h2>
+          <ul>
+            <li>
+              Setiap tim beranggotakan
+              <strong
+                >3 orang siswa/i aktif kelas VII, VIII, dan IX SMP/MTs/Sederajat
+                se-Bali</strong
+              >, terdiri dari <strong>1 Juru Bicara dan 2 Anggota</strong>.
+            </li>
+            <li>
+              Babak penyisihan dilaksanakan secara
+              <strong>online (Zoom &amp; Quizizz)</strong> untuk menentukan
+              <strong>Top 4 Tim</strong> yang berhak melaju ke Babak Final.
+            </li>
+            <li>
+              Pertandingan Babak Final terdiri dari beberapa tahap, yaitu
+              <strong>babak wajib, babak lemparan, dan babak rebutan</strong>.
+            </li>
+            <li>
+              Cakupan materi soal meliputi
+              <strong
+                >Bahasa Indonesia, PPKn, Informatika, IPS, Matematika, dan
+                IPA</strong
+              >.
+            </li>
+            <li>
+              Setiap peserta/tim wajib membawa
+              <strong>alat tulis sendiri</strong> dan hadir
+              <strong>15 menit sebelum lomba</strong>.
+            </li>
+            <li>
+              Selama pertandingan berlangsung, tim
+              <strong>dilarang keras menggunakan alat bantu elektronik</strong>
+              maupun catatan tersembunyi.
+            </li>
+            <li>
+              Penonton/supporter dilarang memberi isyarat atau membocorkan
+              jawaban. Pelanggaran akan dikenakan
+              <strong>pengurangan 200 poin</strong>.
+            </li>
+            <li>
+              Keputusan dan kebijakan
+              <strong
+                >Dewan Juri bersifat mutlak, mengikat, dan tidak dapat diganggu
+                gugat</strong
+              >.
+            </li>
+            <li>
+              Tim dengan
+              <strong>akumulasi skor tertinggi pada Babak Final</strong> akan
+              keluar sebagai pemenang.
+            </li>
+          </ul>
+        </section>
 
-            <h2>
-                <span class="dot">•</span>
-                HADIAH
-            </h2>
+        <!-- HADIAH -->
+        <section class="card">
+          <h2>HADIAH</h2>
+          <div class="info-grid">
+            <div class="info-box">
+              <div class="val">Juara 1</div>
+            </div>
+            <div class="info-box">
+              <div class="val">Juara 2</div>
+            </div>
+            <div class="info-box">
+              <div class="val">Juara 3</div>
+            </div>
+            <div class="info-box">
+              <div class="val">Sertifikat</div>
+            </div>
+          </div>
+        </section>
 
-            <div class="info-grid">
+        <!-- FORM UTAMA -->
+        <form
+          id="registrationForm"
+          data-submit
+          data-competition="cerdas_cermat"
+          enctype="multipart/form-data"
+        >
+          <!-- DATA TIM -->
+          <section class="card">
+            <h2>DATA TIM</h2>
+            <div class="form-grid">
+              <div class="form-group full">
+                <label for="team_name">Nama Tim <span>*</span></label>
+                <input
+                  id="team_name"
+                  type="text"
+                  name="team_name"
+                  placeholder="Masukkan nama tim"
+                  required
+                />
+              </div>
 
-                <div class="info-box">
-                    <div class="val">🏆</div>
-                    <div class="lbl">Juara 1</div>
+              <div class="form-group">
+                <label for="school_name">Nama Sekolah <span>*</span></label>
+                <input
+                  id="school_name"
+                  type="text"
+                  name="school_name"
+                  placeholder="Nama SMP/MTs"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="school_class"
+                  >Kelas Juru Bicara <span>*</span></label
+                >
+                <select id="school_class" name="school_class" required>
+                  <option value="">Pilih kelas</option>
+                  <option value="VII">VII</option>
+                  <option value="VIII">VIII</option>
+                  <option value="IX">IX</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="name">Nama Juru Bicara <span>*</span></label>
+                <input
+                  id="name"
+                  type="text"
+                  name="name"
+                  placeholder="Nama lengkap"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="student_id"
+                  >NIS/NISN Juru Bicara <span>*</span></label
+                >
+                <input
+                  id="student_id"
+                  type="text"
+                  name="student_id"
+                  placeholder="NIS/NISN"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email <span>*</span></label>
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  placeholder="email@example.com"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Nomor WhatsApp <span>*</span></label>
+                <input
+                  id="phone"
+                  type="tel"
+                  name="phone"
+                  placeholder="08xxxxxxxxxx"
+                  required
+                />
+              </div>
+            </div>
+          </section>
+
+          <!-- ANGGOTA TIM -->
+          <section class="card">
+            <h2>DATA ANGGOTA TIM</h2>
+
+            <div class="member-card">
+              <div class="member-title">Anggota 1 / Juru Bicara</div>
+              <div class="member-grid">
+                <div class="form-group">
+                  <label>Nama Lengkap <span>*</span></label
+                  ><input type="text" name="member1_name" required />
                 </div>
-
-                <div class="info-box">
-                    <div class="val">🥈</div>
-                    <div class="lbl">Juara 2</div>
+                <div class="form-group">
+                  <label>NIS/NISN <span>*</span></label
+                  ><input type="text" name="member1_student_id" required />
                 </div>
-
-                <div class="info-box">
-                    <div class="val">🥉</div>
-                    <div class="lbl">Juara 3</div>
+                <div class="form-group">
+                  <label>Kelas <span>*</span></label
+                  ><select name="member1_class" required>
+                    <option value="">Pilih kelas</option>
+                    <option>VII</option>
+                    <option>VIII</option>
+                    <option>IX</option>
+                  </select>
                 </div>
-
-                <div class="info-box">
-                    <div class="val">📜</div>
-                    <div class="lbl">Sertifikat</div>
-                </div>
-
+              </div>
             </div>
 
-        </section>
-
-
-        <!-- ==================================================
-             FORM PENDAFTARAN
-        ================================================== -->
-
-        <form
-            id="speedTypingForm"
-            data-submit
-            data-competition="speed_typing"
-            enctype="multipart/form-data"
-        >
-
-            <!-- ==================================================
-                 DATA PESERTA
-            ================================================== -->
-
-            <section class="card">
-
-                <h2>
-                    <span class="dot">•</span>
-                    FORM PENDAFTARAN
-                </h2>
-
-                <p class="form-description">
-                    Isi data peserta dengan lengkap dan benar.
-                </p>
-
-                <div class="form-grid">
-
-                    <div class="form-group">
-
-                        <label>
-                            Nama Lengkap
-                            <span>*</span>
-                        </label>
-
-                        <input
-                            type="text"
-                            name="name"
-                            required
-                            placeholder="Nama lengkap peserta"
-                        >
-
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label>
-                            Student ID / NISN
-                            <span>*</span>
-                        </label>
-
-                        <input
-                            type="text"
-                            name="student_id"
-                            required
-                            placeholder="NIS / NISN"
-                        >
-
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label>
-                            Asal Instansi / Sekolah
-                            <span>*</span>
-                        </label>
-
-                        <input
-                            type="text"
-                            name="school_name"
-                            required
-                            placeholder="Nama SMP / MTS / Sederajat"
-                        >
-
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label>
-                            Kelas
-                            <span>*</span>
-                        </label>
-
-                        <input
-                            type="text"
-                            name="class"
-                            required
-                            placeholder="Contoh: VIII A"
-                        >
-
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label>
-                            Email
-                            <span>*</span>
-                        </label>
-
-                        <input
-                            type="email"
-                            name="email"
-                            required
-                            placeholder="contoh@email.com"
-                        >
-
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label>
-                            Nomor WhatsApp
-                            <span>*</span>
-                        </label>
-
-                        <input
-                            type="tel"
-                            name="phone"
-                            required
-                            placeholder="08xxxxxxxxxx"
-                        >
-
-                    </div>
-
+            <div class="member-card">
+              <div class="member-title">Anggota 2</div>
+              <div class="member-grid">
+                <div class="form-group">
+                  <label>Nama Lengkap <span>*</span></label
+                  ><input type="text" name="member2_name" required />
                 </div>
-
-            </section>
-
-
-            <!-- ==================================================
-                 KARTU PELAJAR
-            ================================================== -->
-
-            <section class="card">
-
-                <h2>
-                    <span class="dot">•</span>
-                    KARTU PELAJAR
-                </h2>
-
-                <p>
-                    Peserta wajib mengunggah Kartu Pelajar
-                    sebagai bukti identitas peserta.
-                </p>
-
-                <div class="form-grid">
-
-                    <div class="form-group full">
-
-                        <label for="studentCard">
-                            Kartu Pelajar
-                            <span>*</span>
-                        </label>
-
-                        <input
-                            id="studentCard"
-                            type="file"
-                            name="student_card"
-                            accept=".jpg,.jpeg,.png,.webp,.pdf"
-                            required
-                        >
-
-                        <small>
-                            Format: JPG, PNG, WEBP, PDF · Maksimal 2MB
-                        </small>
-
-                    </div>
-
+                <div class="form-group">
+                  <label>NIS/NISN <span>*</span></label
+                  ><input type="text" name="member2_student_id" required />
                 </div>
-
-            </section>
-
-
-            <!-- ==================================================
-                 FOLLOW INSTAGRAM
-            ================================================== -->
-
-            <section class="card">
-
-                <h2>
-                    <span class="dot">•</span>
-                    FOLLOW INSTAGRAM (WAJIB)
-                </h2>
-
-                <p>
-                    Peserta wajib mengikuti Instagram sekolah
-                    dan Instagram STC 2026.
-                </p>
-
-                <input
-                    type="hidden"
-                    name="instagram_school"
-                    value="@smktibgjimbaran"
-                >
-
-                <input
-                    type="hidden"
-                    name="instagram_stc"
-                    value="@stcstibajraa"
-                >
-
-
-                <div class="instagram-follow-grid">
-
-                    <div class="instagram-follow-box">
-
-                        <label>
-                            Instagram Sekolah
-                            <span>*</span>
-                        </label>
-
-                        <p class="instagram-username">
-                            @smktibgjimbaran
-                        </p>
-
-                        <a
-                            href="https://www.instagram.com/smktibgjimbaran/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="instagram-btn btn-primary"
-                        >
-                            Buka Instagram
-                        </a>
-
-                    </div>
-
-
-                    <div class="instagram-follow-box">
-
-                        <label>
-                            Instagram STC
-                            <span>*</span>
-                        </label>
-
-                        <p class="instagram-username">
-                            @stcstibajraa
-                        </p>
-
-                        <a
-                            href="https://www.instagram.com/stcstibajraa/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="instagram-btn btn-primary"
-                        >
-                            Buka Instagram
-                        </a>
-
-                    </div>
-
+                <div class="form-group">
+                  <label>Kelas <span>*</span></label
+                  ><select name="member2_class" required>
+                    <option value="">Pilih kelas</option>
+                    <option>VII</option>
+                    <option>VIII</option>
+                    <option>IX</option>
+                  </select>
                 </div>
+              </div>
+            </div>
 
-
-                <div class="form-grid">
-
-                    <div class="form-group">
-
-                        <label>
-                            Bukti Follow IG Sekolah
-                            <span>*</span>
-                        </label>
-
-                        <input
-                            type="file"
-                            name="instagram_school_proof"
-                            accept=".jpg,.jpeg,.png,.webp"
-                            required
-                        >
-
-                        <small>
-                            Format: JPG, PNG, WEBP · Maksimal 2MB
-                        </small>
-
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label>
-                            Bukti Follow IG STC
-                            <span>*</span>
-                        </label>
-
-                        <input
-                            type="file"
-                            name="instagram_stc_proof"
-                            accept=".jpg,.jpeg,.png,.webp"
-                            required
-                        >
-
-                        <small>
-                            Format: JPG, PNG, WEBP · Maksimal 2MB
-                        </small>
-
-                    </div>
-
+            <div class="member-card">
+              <div class="member-title">Anggota 3</div>
+              <div class="member-grid">
+                <div class="form-group">
+                  <label>Nama Lengkap <span>*</span></label
+                  ><input type="text" name="member3_name" required />
                 </div>
-
-            </section>
-
-
-            <!-- ==================================================
-                 DATA PEMBAYARAN
-            ================================================== -->
-
-            <section class="card">
-
-                <h2>
-                    <span class="dot">•</span>
-                    DATA PEMBAYARAN
-                </h2>
-
-                <p>
-                    Isi data dan unggah bukti pembayaran
-                    pendaftaran lomba.
-                </p>
-
-                <div class="form-grid">
-
-                    <div class="form-group">
-
-                        <label>
-                            Metode Pembayaran
-                            <span>*</span>
-                        </label>
-
-                        <select
-                            name="payment_method"
-                            required
-                        >
-
-                            <option value="">
-                                Pilih metode
-                            </option>
-
-                            <option value="transfer_bank">
-                                Transfer Bank
-                            </option>
-
-                            <option value="qris">
-                                QRIS
-                            </option>
-
-                            <option value="cash">
-                                Cash
-                            </option>
-
-                        </select>
-
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label>
-                            Jumlah Bayar
-                            <span>*</span>
-                        </label>
-
-                        <input
-                            type="number"
-                            name="amount"
-                            min="0"
-                            placeholder="Contoh: 50000"
-                            required
-                        >
-
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label>
-                            Tanggal Pembayaran
-                            <span>*</span>
-                        </label>
-
-                        <input
-                            type="date"
-                            name="transaction_date"
-                            required
-                        >
-
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label>
-                            Upload Bukti Pembayaran
-                            <span>*</span>
-                        </label>
-
-                        <input
-                            type="file"
-                            name="payment_proof"
-                            accept=".jpg,.jpeg,.png,.webp,.pdf"
-                            required
-                        >
-
-                        <small>
-                            Format: JPG, PNG, WEBP, PDF · Maksimal 2MB
-                        </small>
-
-                    </div>
-
+                <div class="form-group">
+                  <label>NIS/NISN <span>*</span></label
+                  ><input type="text" name="member3_student_id" required />
                 </div>
-
-            </section>
-
-
-            <!-- ==================================================
-                 PERNYATAAN PESERTA
-            ================================================== -->
-
-            <section class="card">
-
-                <h2>
-                    <span class="dot">•</span>
-                    PERNYATAAN PESERTA
-                </h2>
-
-                <div class="agreement">
-
-                    <label>
-
-                        <input
-                            type="checkbox"
-                            name="agree_data"
-                            required
-                        >
-
-                        <span>
-                            Data yang saya isi sudah benar
-                            dan dapat dipertanggungjawabkan.
-                        </span>
-
-                    </label>
-
-
-                    <label>
-
-                        <input
-                            type="checkbox"
-                            name="agree_rules"
-                            required
-                        >
-
-                        <span>
-                            Saya menyetujui seluruh ketentuan
-                            lomba Speed Typing STC 2026.
-                        </span>
-
-                    </label>
-
-
-                    <label>
-
-                        <input
-                            type="checkbox"
-                            name="agree_payment"
-                            required
-                        >
-
-                        <span>
-                            Saya sudah melakukan pembayaran
-                            biaya pendaftaran lomba.
-                        </span>
-
-                    </label>
-
-
-                    <label>
-
-                        <input
-                            type="checkbox"
-                            name="agree_instagram"
-                            required
-                        >
-
-                        <span>
-                            Saya sudah mengikuti Instagram
-                            sekolah dan Instagram STC 2026.
-                        </span>
-
-                    </label>
-
+                <div class="form-group">
+                  <label>Kelas <span>*</span></label
+                  ><select name="member3_class" required>
+                    <option value="">Pilih kelas</option>
+                    <option>VII</option>
+                    <option>VIII</option>
+                    <option>IX</option>
+                  </select>
                 </div>
+              </div>
+            </div>
+          </section>
 
-
-                <div class="form-actions">
-
-                    <button
-                        type="submit"
-                        class="btn-submit"
-                    >
-                        SUBMIT PENDAFTARAN ☁
-                    </button>
-
-                </div>
-
-
-                <div
-                    id="submitResult"
-                    class="submission-result"
-                    aria-live="polite"
-                >
-
-                    <h3>
-                        PENDAFTARAN BERHASIL
-                    </h3>
-
-                    <div>
-                        Kode Pendaftaran:
-                    </div>
-
-                    <div
-                        id="resultCode"
-                        class="code-display"
-                    >
-                        -
-                    </div>
-
-                    <p>
-                        Status: MENUNGGU VERIFIKASI
-                    </p>
-
-                </div>
-
-            </section>
-
-        </form>
-
-    </div>
-
-</main>
-
-
-<!-- ==================================================
-     FOOTER
-================================================== -->
-
-<footer>
-
-    <div class="footer-container">
-
-        <div class="footer-brand">
-
-            <img
-                src="../foto/LOGOSTC.png"
-                alt="STC Logo"
-            >
-
+          <!-- KARTU PELAJAR -->
+          <section class="card">
+            <h2>KARTU PELAJAR / SURAT KETERANGAN</h2>
             <p>
-                STIBAJRA Technology Competition (STC) 2026 —
-                wadah bagi generasi muda untuk berinovasi,
-                berkolaborasi, dan mengejar masa depan
-                melalui teknologi.
+              Setiap anggota tim wajib mengunggah Kartu Pelajar atau Surat
+              Keterangan resmi dari kepala sekolah.
             </p>
 
-        </div>
+            <div class="form-grid">
+              <div class="form-group full">
+                <label>Kartu Pelajar Anggota 1 <span>*</span></label>
+                <input
+                  type="file"
+                  name="student_card"
+                  accept=".jpg,.jpeg,.png,.webp,.pdf"
+                  required
+                />
+                <small>Format: JPG, PNG, WEBP, PDF · Maksimal 2MB</small>
+              </div>
+              <div class="form-group full">
+                <label>Kartu Pelajar Anggota 2 <span>*</span></label>
+                <input
+                  type="file"
+                  name="member2_student_card"
+                  accept=".jpg,.jpeg,.png,.webp,.pdf"
+                  required
+                />
+                <small>Format: JPG, PNG, WEBP, PDF · Maksimal 2MB</small>
+              </div>
+              <div class="form-group full">
+                <label>Kartu Pelajar Anggota 3 <span>*</span></label>
+                <input
+                  type="file"
+                  name="member3_student_card"
+                  accept=".jpg,.jpeg,.png,.webp,.pdf"
+                  required
+                />
+                <small>Format: JPG, PNG, WEBP, PDF · Maksimal 2MB</small>
+              </div>
+            </div>
+          </section>
 
+          <!-- INSTAGRAM -->
+          <section class="card">
+            <h2>FOLLOW INSTAGRAM (WAJIB)</h2>
+            <p>
+              Peserta wajib mengikuti Instagram sekolah dan Instagram STC 2026.
+            </p>
+
+            <input
+              type="hidden"
+              name="instagram_school"
+              value="@smktibgjimbaran"
+            />
+            <input type="hidden" name="instagram_stc" value="@stcstibajraa" />
+
+            <div class="instagram-follow-grid">
+              <div class="instagram-follow-box">
+                <label>Instagram Sekolah <span>*</span></label>
+                <p class="instagram-username">@smktibgjimbaran</p>
+                <a
+                  href="https://www.instagram.com/smktibgjimbaran/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="instagram-btn btn-primary"
+                  >Buka Instagram</a
+                >
+              </div>
+
+              <div class="instagram-follow-box">
+                <label>Instagram STC <span>*</span></label>
+                <p class="instagram-username">@stcstibajraa</p>
+                <a
+                  href="https://www.instagram.com/stcstibajraa/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="instagram-btn btn-primary"
+                  >Buka Instagram</a
+                >
+              </div>
+            </div>
+
+            <div class="form-grid" style="margin-top: 22px">
+              <div class="form-group">
+                <label>Bukti Follow IG Sekolah <span>*</span></label>
+                <input
+                  type="file"
+                  name="school_instagram_proof"
+                  accept=".jpg,.jpeg,.png,.webp"
+                  required
+                />
+                <small>Format: JPG, PNG, WEBP · Maksimal 2MB</small>
+              </div>
+              <div class="form-group">
+                <label>Bukti Follow IG STC <span>*</span></label>
+                <input
+                  type="file"
+                  name="stc_instagram_proof"
+                  accept=".jpg,.jpeg,.png,.webp"
+                  required
+                />
+                <small>Format: JPG, PNG, WEBP · Maksimal 2MB</small>
+              </div>
+            </div>
+          </section>
+
+          <!-- PEMBAYARAN -->
+          <section class="card">
+            <h2>DATA PEMBAYARAN</h2>
+            <p>Isi data dan unggah bukti pembayaran pendaftaran lomba.</p>
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label>Metode Pembayaran <span>*</span></label>
+                <select name="payment_method" required>
+                  <option value="">Pilih metode</option>
+                  <option value="transfer_bank">Transfer Bank</option>
+                  <option value="qris">QRIS</option>
+                  <option value="cash">Cash</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>Jumlah Bayar <span>*</span></label>
+                <input
+                  type="number"
+                  name="amount"
+                  min="0"
+                  placeholder="Contoh: 50000"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label>Tanggal Pembayaran <span>*</span></label>
+                <input type="date" name="transaction_date" required />
+              </div>
+
+              <div class="form-group">
+                <label>Upload Bukti Pembayaran <span>*</span></label>
+                <input
+                  type="file"
+                  name="payment_proof"
+                  accept=".jpg,.jpeg,.png,.webp,.pdf"
+                  required
+                />
+                <small>Format: JPG, PNG, WEBP, PDF · Maksimal 2MB</small>
+              </div>
+            </div>
+          </section>
+
+          <!-- PERNYATAAN -->
+          <section class="card">
+            <h2>PERNYATAAN PESERTA</h2>
+            <div class="agreement">
+              <label
+                ><input type="checkbox" name="statement_data" required /><span
+                  >Data yang saya isi sudah benar dan dapat
+                  dipertanggungjawabkan.</span
+                ></label
+              >
+              <label
+                ><input type="checkbox" name="statement_rules" required /><span
+                  >Saya menyetujui seluruh ketentuan lomba Cerdas Cermat STC
+                  2026.</span
+                ></label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="statement_payment"
+                  required
+                /><span
+                  >Saya sudah melakukan pembayaran biaya pendaftaran
+                  lomba.</span
+                ></label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="statement_instagram"
+                  required
+                /><span
+                  >Saya sudah mengikuti Instagram sekolah dan Instagram STC
+                  2026.</span
+                ></label
+              >
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn-submit">
+                SUBMIT PENDAFTARAN ☁
+              </button>
+            </div>
+
+            <div id="submitResult" class="submission-result" aria-live="polite">
+              <h3>PENDAFTARAN BERHASIL</h3>
+              <div>Kode Pendaftaran:</div>
+              <div id="resultCode" class="code-display">-</div>
+              <p>Status: MENUNGGU VERIFIKASI</p>
+            </div>
+          </section>
+        </form>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-brand">
+          <img src="../foto/LOGOSTC.png" alt="STC Logo" />
+          <p>
+            STIBAJRA Technology Competition (STC) 2026 — wadah bagi generasi
+            muda untuk berinovasi, berkolaborasi, dan mengejar masa depan
+            melalui teknologi.
+          </p>
+        </div>
 
         <div class="footer-col">
-
-            <h4>
-                Quick Links
-            </h4>
-
-            <ul>
-
-                <li>
-                    <a href="../Landing_page/Index.html">
-                        Home
-                    </a>
-                </li>
-
-                <li>
-                    <a href="../multi_page/gallery.html">
-                        Gallery
-                    </a>
-                </li>
-
-                <li>
-                    <a href="../multi_page/Login.html">
-                        Login
-                    </a>
-                </li>
-
-            </ul>
-
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="../Landing_page/Index.html">Home</a></li>
+            <li><a href="../multi_page/gallery.html">Gallery</a></li>
+            <li><a href="../multi_page/Login.html">Login</a></li>
+          </ul>
         </div>
-
 
         <div class="footer-col">
-
-            <h4>
-                Competitions
-            </h4>
-
-            <ul>
-
-                <li>
-                    <a href="web Design.html">
-                        Web Design
-                    </a>
-                </li>
-
-                <li>
-                    <a href="Infografis.html">
-                        Infografis
-                    </a>
-                </li>
-
-                <li>
-                    <a href="excel.html">
-                        Microsoft Excel
-                    </a>
-                </li>
-
-                <li>
-                    <a
-                        href="speed typing.html"
-                        class="active"
-                    >
-                        Speed Typing
-                    </a>
-                </li>
-
-                <li>
-                    <a href="mobile legend.html">
-                        Mobile Legends
-                    </a>
-                </li>
-
-                <li>
-                    <a href="free fire.html">
-                        Free Fire
-                    </a>
-                </li>
-
-                <li>
-                    <a href="Cerdas cermat.html">
-                        Cerdas Cermat
-                    </a>
-                </li>
-
-            </ul>
-
+          <h4>Competitions</h4>
+          <ul>
+            <li><a href="web Design.html">Web Design</a></li>
+            <li><a href="Infografis.html">Infografis</a></li>
+            <li><a href="excel.html">Microsoft Excel</a></li>
+            <li><a href="speed typing.html">Speed Typing</a></li>
+            <li><a href="mobile legend.html">Mobile Legends</a></li>
+            <li><a href="free fire.html">Free Fire</a></li>
+            <li><a href="Cerdas cermat.html">Cerdas Cermat</a></li>
+          </ul>
         </div>
-
 
         <div class="footer-col footer-newsletter">
-
-            <h4>
-                Newsletter
-            </h4>
-
-            <p>
-                Dapatkan info terbaru tentang STC
-                langsung ke email-mu.
-            </p>
-
-            <form
-                class="newsletter-form"
-                onsubmit="return false;"
-            >
-
-                <input
-                    type="email"
-                    placeholder="Masukkan email"
-                >
-
-                <button type="button">
-                    Kirim
-                </button>
-
-            </form>
-
+          <h4>Newsletter</h4>
+          <p>Dapatkan info terbaru tentang STC langsung ke email-mu.</p>
+          <form class="newsletter-form" onsubmit="return false;">
+            <input type="email" placeholder="Masukkan email" />
+            <button type="button">Kirim</button>
+          </form>
         </div>
+      </div>
 
-    </div>
-
-
-    <div class="footer-bottom">
-
-        <span>
-            © 2026 STIBAJRA Technology Competition.
-            All rights reserved.
-        </span>
+      <div class="footer-bottom">
+        <span
+          >© 2026 STIBAJRA Technology Competition. All rights reserved.</span
+        >
 
         <div class="social-links">
+          <a
+            href="https://www.instagram.com/stcstibajraa/"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Instagram"
+            aria-label="Instagram"
+          >
+            <i class="bx bxl-instagram"></i>
+          </a>
 
-            <a href="#" title="Instagram">
-                📷
-            </a>
+          <a href="#" title="YouTube" aria-label="YouTube">
+            <i class="bx bxl-youtube"></i>
+          </a>
 
-            <a href="#" title="YouTube">
-                ▶
-            </a>
+          <a href="#" title="WhatsApp" aria-label="WhatsApp">
+            <i class="bx bxl-whatsapp"></i>
+          </a>
 
-            <a href="#" title="WhatsApp">
-                💬
-            </a>
-
-            <a href="#" title="Email">
-                ✉
-            </a>
-
+          <a href="#" title="Email" aria-label="Email">
+            <i class="bx bx-envelope"></i>
+          </a>
         </div>
+      </div>
+    </footer>
 
-    </div>
-
-</footer>
-
-
-<!-- ==================================================
-     JAVASCRIPT
-================================================== -->
-
-<script src="../JavaScript/hamburger.js"></script>
-<script src="../JavaScript/submission.js"></script>
-
-</body>
+    <!-- JAVASCRIPT -->
+    <script src="../JavaScript/hamburger.js"></script>
+    <script src="../JavaScript/submission.js"></script>
+  </body>
 </html>

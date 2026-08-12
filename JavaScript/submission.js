@@ -602,17 +602,26 @@ function showResult(data) {
 /* =====================================================
    TEAM MEMBERS
    =====================================================
-   
+
    FREE FIRE
    4 PEMAIN INTI + 1 CADANGAN = 5
-   
+
    MOBILE LEGENDS
    5 PEMAIN INTI + 1 CADANGAN = 6
-   
-   ===================================================== */
+
+   FIELD ANGGOTA:
+   - Nama Lengkap
+   - NIS / NISN
+   - Game ID
+   - Nickname
+
+   TIDAK ADA:
+   - Role
+   - Hero Andalan
+   - Karakter Andalan
+===================================================== */
 
 function initTeamMembers() {
-
 
     /*
        Cari form Mobile Legends atau Free Fire.
@@ -665,6 +674,7 @@ function initTeamMembers() {
         form.dataset.competition;
 
 
+
     /* =================================================
        KONFIGURASI LOMBA
     ================================================= */
@@ -674,7 +684,7 @@ function initTeamMembers() {
 
         /* =============================================
            MOBILE LEGENDS
-           5 INTI + 1 CADANGAN
+           5 INTI + 1 CADANGAN = 6
         ============================================= */
 
         mobile_legends: {
@@ -682,29 +692,6 @@ function initTeamMembers() {
             maxPlayers: 6,
 
             corePlayers: 5,
-
-            roles: [
-
-                'EXP Lane',
-
-                'Jungle',
-
-                'Mid Lane',
-
-                'Gold Lane',
-
-                'Roam'
-
-            ],
-
-            extraLabel:
-                'Hero Andalan',
-
-            extraName:
-                'hero',
-
-            extraPlaceholder:
-                'Contoh: Chou, Lunox',
 
             gameIdPlaceholder:
                 'ID Mobile Legends',
@@ -717,7 +704,7 @@ function initTeamMembers() {
 
         /* =============================================
            FREE FIRE
-           4 INTI + 1 CADANGAN
+           4 INTI + 1 CADANGAN = 5
         ============================================= */
 
         free_fire: {
@@ -725,27 +712,6 @@ function initTeamMembers() {
             maxPlayers: 5,
 
             corePlayers: 4,
-
-            roles: [
-
-                'Rusher',
-
-                'Support',
-
-                'Sniper',
-
-                'IGL'
-
-            ],
-
-            extraLabel:
-                'Karakter Andalan',
-
-            extraName:
-                'character',
-
-            extraPlaceholder:
-                'Contoh: Alok, Hayato',
 
             gameIdPlaceholder:
                 'ID Free Fire',
@@ -756,6 +722,7 @@ function initTeamMembers() {
         }
 
     };
+
 
 
     /*
@@ -771,6 +738,7 @@ function initTeamMembers() {
     }
 
 
+
     /*
        Hitung anggota yang sudah ada.
     */
@@ -779,6 +747,7 @@ function initTeamMembers() {
         memberList.querySelectorAll(
             '[data-member]'
         ).length;
+
 
 
     /* =================================================
@@ -791,7 +760,7 @@ function initTeamMembers() {
 
 
         /*
-           Tentukan pemain cadangan.
+           Tentukan apakah cadangan.
         */
 
         const isReserve =
@@ -837,26 +806,9 @@ function initTeamMembers() {
         }
 
 
-        /*
-           Buat pilihan role.
-        */
-
-        const roleOptions =
-            settings.roles
-                .map(function (role) {
-
-                    return `
-                        <option value="${role}">
-                            ${role}
-                        </option>
-                    `;
-
-                })
-                .join('');
-
 
         /*
-           Buat card.
+           Buat card anggota.
         */
 
         const card =
@@ -881,8 +833,15 @@ function initTeamMembers() {
         );
 
 
+
         /* =================================================
-           ISI CARD
+           HTML ANGGOTA
+
+           SAMA UNTUK:
+           - MOBILE LEGENDS
+           - FREE FIRE
+
+           HANYA 4 FIELD
         ================================================= */
 
         card.innerHTML = `
@@ -897,7 +856,9 @@ function initTeamMembers() {
             <div class="member-grid">
 
 
-                <!-- NAMA -->
+                <!-- =====================================
+                     NAMA LENGKAP
+                ====================================== -->
 
                 <div class="form-group">
 
@@ -920,7 +881,10 @@ function initTeamMembers() {
                 </div>
 
 
-                <!-- NIS -->
+
+                <!-- =====================================
+                     NIS / NISN
+                ====================================== -->
 
                 <div class="form-group">
 
@@ -943,7 +907,10 @@ function initTeamMembers() {
                 </div>
 
 
-                <!-- GAME ID -->
+
+                <!-- =====================================
+                     GAME ID
+                ====================================== -->
 
                 <div class="form-group">
 
@@ -966,7 +933,10 @@ function initTeamMembers() {
                 </div>
 
 
-                <!-- NICKNAME -->
+
+                <!-- =====================================
+                     NICKNAME
+                ====================================== -->
 
                 <div class="form-group">
 
@@ -989,55 +959,6 @@ function initTeamMembers() {
                 </div>
 
 
-                <!-- ROLE -->
-
-                <div class="form-group">
-
-                    <label>
-
-                        Role
-
-                        <span>*</span>
-
-                    </label>
-
-
-                    <select
-                        name="player${playerNumber}_role"
-                        required
-                    >
-
-                        <option value="">
-                            Pilih role
-                        </option>
-
-                        ${roleOptions}
-
-                    </select>
-
-                </div>
-
-
-                <!-- HERO / KARAKTER -->
-
-                <div class="form-group">
-
-                    <label>
-
-                        ${settings.extraLabel}
-
-                    </label>
-
-
-                    <input
-                        type="text"
-                        name="player${playerNumber}_${settings.extraName}"
-                        placeholder="${settings.extraPlaceholder}"
-                    >
-
-                </div>
-
-
             </div>
 
         `;
@@ -1048,8 +969,9 @@ function initTeamMembers() {
     }
 
 
+
     /* =================================================
-       UPDATE TOMBOL
+       UPDATE TOMBOL TAMBAH ANGGOTA
     ================================================= */
 
     function updateButton() {
@@ -1066,8 +988,9 @@ function initTeamMembers() {
             currentPlayers;
 
 
+
         /*
-           Jika sudah maksimal.
+           Sudah mencapai batas maksimal.
         */
 
         if (
@@ -1088,8 +1011,9 @@ function initTeamMembers() {
         }
 
 
+
         /*
-           Tombol masih bisa digunakan.
+           Masih bisa menambah anggota.
         */
 
         addMemberBtn.disabled =
@@ -1102,6 +1026,7 @@ function initTeamMembers() {
     }
 
 
+
     /* =================================================
        TOMBOL TAMBAH ANGGOTA
     ================================================= */
@@ -1111,14 +1036,19 @@ function initTeamMembers() {
         function () {
 
 
+            /*
+               Hitung anggota saat ini.
+            */
+
             const currentPlayers =
                 memberList.querySelectorAll(
                     '[data-member]'
                 ).length;
 
 
+
             /*
-               Cegah lebih dari maksimal.
+               Jangan melewati batas.
             */
 
             if (
@@ -1133,6 +1063,7 @@ function initTeamMembers() {
             }
 
 
+
             /*
                Nomor anggota berikutnya.
             */
@@ -1141,8 +1072,9 @@ function initTeamMembers() {
                 currentPlayers + 1;
 
 
+
             /*
-               Buat anggota.
+               Buat card anggota baru.
             */
 
             const newMember =
@@ -1151,8 +1083,9 @@ function initTeamMembers() {
                 );
 
 
+
             /*
-               Masukkan ke member list.
+               Masukkan card ke daftar.
             */
 
             memberList.appendChild(
@@ -1160,11 +1093,13 @@ function initTeamMembers() {
             );
 
 
+
             /*
                Update tombol.
             */
 
             updateButton();
+
 
 
             /*
@@ -1183,10 +1118,470 @@ function initTeamMembers() {
     );
 
 
-    /*
-       Update tombol saat halaman dibuka.
-    */
+
+    /* =================================================
+       INITIAL BUTTON
+    ================================================= */
 
     updateButton();
 
 }
+
+/* =========================================================
+   TEAM MEMBER SYSTEM
+   STC 2026
+   ---------------------------------------------------------
+   MOBILE LEGENDS
+   5 PEMAIN INTI + 1 CADANGAN = 6
+
+   FREE FIRE
+   4 PEMAIN INTI + 1 CADANGAN = 5
+========================================================= */
+
+function initTeamMembers() {
+
+    /* =====================================================
+       CARI FORM
+    ===================================================== */
+
+    const forms = document.querySelectorAll(
+        '#mobileLegendsForm, #freeFireForm'
+    );
+
+    if (!forms.length) {
+        return;
+    }
+
+
+    forms.forEach(function (form) {
+
+        const memberList = form.querySelector('#memberList');
+
+        if (!memberList) {
+            return;
+        }
+
+
+        /* =================================================
+           CEK JENIS LOMBA
+        ================================================= */
+
+        const competition =
+            form.dataset.competition;
+
+
+        /* =================================================
+           KONFIGURASI
+        ================================================= */
+
+        const config = {
+
+            mobile_legends: {
+                maxPlayers: 6,
+                corePlayers: 5,
+
+                gameIdPlaceholder:
+                    'ID Mobile Legends',
+
+                nicknamePlaceholder:
+                    'Nickname Mobile Legends',
+
+                memberLabel:
+                    'Daftar Anggota Tim (5 Inti + Maks. 1 Cadangan)'
+            },
+
+
+            free_fire: {
+                maxPlayers: 5,
+                corePlayers: 4,
+
+                gameIdPlaceholder:
+                    'ID Free Fire',
+
+                nicknamePlaceholder:
+                    'Nickname Free Fire',
+
+                memberLabel:
+                    'Daftar Anggota Squad (4 Inti + Maks. 1 Cadangan)'
+            }
+
+        };
+
+
+        const settings = config[competition];
+
+
+        if (!settings) {
+            return;
+        }
+
+
+        /* =================================================
+           CARI SEMUA TOMBOL TAMBAH
+           -------------------------------------------------
+           Kita hapus SEMUA tombol duplikat terlebih dahulu.
+        ================================================= */
+
+        const allAddButtons =
+            form.querySelectorAll('.add-member');
+
+
+        let addMemberBtn = null;
+
+
+        allAddButtons.forEach(function (button, index) {
+
+            if (index === 0) {
+
+                /*
+                   Tombol pertama dipertahankan.
+                */
+
+                addMemberBtn = button;
+
+            } else {
+
+                /*
+                   Tombol berikutnya adalah duplikat.
+                */
+
+                button.remove();
+
+            }
+
+        });
+
+
+        /* =================================================
+           JIKA TOMBOL BELUM ADA
+        ================================================= */
+
+        if (!addMemberBtn) {
+
+            addMemberBtn =
+                document.createElement('button');
+
+            addMemberBtn.type = 'button';
+
+            addMemberBtn.className =
+                'add-member';
+
+            addMemberBtn.id =
+                'addMemberBtn';
+
+            /*
+               Masukkan setelah memberList.
+            */
+
+            memberList.after(addMemberBtn);
+        }
+
+
+        /*
+           Pastikan ID benar.
+        */
+
+        addMemberBtn.id =
+            'addMemberBtn';
+
+
+        /* =================================================
+           PINDAHKAN TOMBOL KE TEMPAT YANG BENAR
+           -------------------------------------------------
+           Ini penting untuk mengatasi tombol FF yang
+           keluar dari card / muncul di bawah card.
+        ================================================= */
+
+        const teamSection =
+            memberList.closest('.team-section');
+
+
+        if (teamSection) {
+
+            /*
+               Tombol harus menjadi anak langsung
+               dari team-section.
+            */
+
+            teamSection.appendChild(addMemberBtn);
+        }
+
+
+        /* =================================================
+           HITUNG MEMBER YANG SUDAH ADA
+        ================================================= */
+
+        let memberCount =
+            memberList.querySelectorAll(
+                '[data-member]'
+            ).length;
+
+
+        /*
+           Jika belum ada member,
+           buat Anggota 1.
+        */
+
+        if (memberCount === 0) {
+
+            createMember(
+                form,
+                memberList,
+                settings,
+                1,
+                true
+            );
+
+            memberCount = 1;
+        }
+
+
+        /* =================================================
+           UPDATE TOMBOL
+        ================================================= */
+
+        updateAddButton(
+            addMemberBtn,
+            memberCount,
+            settings.maxPlayers
+        );
+
+
+        /* =================================================
+           HINDARI EVENT LISTENER DOBEL
+        ================================================= */
+
+        addMemberBtn.onclick = function () {
+
+            const currentMembers =
+                memberList.querySelectorAll(
+                    '[data-member]'
+                ).length;
+
+
+            /*
+               Sudah penuh
+            */
+
+            if (
+                currentMembers >=
+                settings.maxPlayers
+            ) {
+
+                return;
+            }
+
+
+            const nextNumber =
+                currentMembers + 1;
+
+
+            /*
+               Buat member baru
+            */
+
+            createMember(
+                form,
+                memberList,
+                settings,
+                nextNumber,
+                false
+            );
+
+
+            /*
+               Update jumlah member
+            */
+
+            const newCount =
+                memberList.querySelectorAll(
+                    '[data-member]'
+                ).length;
+
+
+            updateAddButton(
+                addMemberBtn,
+                newCount,
+                settings.maxPlayers
+            );
+        };
+
+    });
+}
+
+
+/* =========================================================
+   CREATE MEMBER
+========================================================= */
+
+function createMember(
+    form,
+    memberList,
+    settings,
+    number,
+    isCaptain
+) {
+
+    const memberCard =
+        document.createElement('div');
+
+
+    memberCard.className =
+        'member-card';
+
+
+    memberCard.dataset.member =
+        '';
+
+
+    /*
+       Nama member
+    */
+
+    const title =
+        isCaptain
+            ? `Anggota ${number} (Kapten)`
+            : `Anggota ${number}`;
+
+
+    memberCard.innerHTML = `
+
+        <div class="member-title">
+            ${title}
+        </div>
+
+
+        <div class="member-grid">
+
+            <!-- NAMA -->
+
+            <div class="form-group">
+
+                <label>
+                    Nama Lengkap
+                    <span>*</span>
+                </label>
+
+                <input
+                    type="text"
+                    name="player${number}_name"
+                    required
+                    placeholder="Nama pemain"
+                >
+
+            </div>
+
+
+            <!-- NIS / NISN -->
+
+            <div class="form-group">
+
+                <label>
+                    NIS / NISN
+                    <span>*</span>
+                </label>
+
+                <input
+                    type="text"
+                    name="player${number}_student_id"
+                    required
+                    placeholder="NIS / NISN"
+                >
+
+            </div>
+
+
+            <!-- GAME ID -->
+
+            <div class="form-group">
+
+                <label>
+                    Game ID
+                    <span>*</span>
+                </label>
+
+                <input
+                    type="text"
+                    name="player${number}_game_id"
+                    required
+                    placeholder="${settings.gameIdPlaceholder}"
+                >
+
+            </div>
+
+
+            <!-- NICKNAME -->
+
+            <div class="form-group">
+
+                <label>
+                    Nickname
+                    <span>*</span>
+                </label>
+
+                <input
+                    type="text"
+                    name="player${number}_nickname"
+                    required
+                    placeholder="${settings.nicknamePlaceholder}"
+                >
+
+            </div>
+
+        </div>
+    `;
+
+
+    /*
+       Masukkan member ke list
+    */
+
+    memberList.appendChild(memberCard);
+}
+
+
+/* =========================================================
+   UPDATE TOMBOL
+========================================================= */
+
+function updateAddButton(
+    button,
+    currentCount,
+    maxPlayers
+) {
+
+    const remaining =
+        maxPlayers - currentCount;
+
+
+    if (remaining <= 0) {
+
+        button.textContent =
+            '✓ Slot Sudah Penuh';
+
+        button.disabled = true;
+
+        return;
+    }
+
+
+    button.disabled = false;
+
+
+    button.textContent =
+        `+ Tambah Anggota (${remaining} slot tersisa)`;
+}
+
+
+/* =========================================================
+   AUTO INIT
+========================================================= */
+
+document.addEventListener(
+    'DOMContentLoaded',
+    function () {
+
+        initTeamMembers();
+
+    }
+);

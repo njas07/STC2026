@@ -379,25 +379,32 @@ main.competition-container {
 }
 
 /* =========================================================
-    10. TEAM / MEMBER
-    ========================================================= */
+   10. TEAM / MEMBER
+   ---------------------------------------------------------
+   Shared by:
+   - Mobile Legends
+   - Free Fire
+   - Cerdas Cermat
+   ========================================================= */
 
 .competition-container .team-section {
   width: 100%;
   margin-top: 10px;
 }
 
+/* Team section heading */
 .competition-container .team-section h3 {
   display: flex;
   align-items: center;
   gap: 10px;
 
-  margin: 0 0 20px;
+  width: 100%;
+  margin: 0 0 24px;
 
   color: #3857c8;
-
   font-size: 19px;
   font-weight: 800;
+  line-height: 1.4;
 }
 
 .competition-container .team-section h3 span {
@@ -405,41 +412,281 @@ main.competition-container {
   align-items: center;
   justify-content: center;
 
+  flex: 0 0 32px;
   width: 32px;
   height: 32px;
 
   background: #4169d8;
   color: #ffffff;
-
   border-radius: 50%;
 
   font-size: 14px;
+  font-weight: 700;
 }
 
+/* Member list */
+.competition-container #memberList {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+
+  width: 100%;
+}
+
+/* Member card */
 .competition-container .member-card {
-  margin-bottom: 20px;
-  padding: 22px;
+  position: relative;
+
+  width: 100%;
+  margin: 0;
+  padding: 30px 32px;
 
   background: #f5f8ff;
+  border: 2px solid #c7ddfa;
+  border-radius: 16px;
 
-  border: 1.5px solid #c7ddfa;
-  border-radius: 12px;
+  box-sizing: border-box;
 }
 
+/* Jarak antar kotak anggota saat HTML memakai member-card langsung di dalam card */
+.competition-container .card:has(> .member-card) > .member-card + .member-card {
+  margin-top: 22px;
+}
+
+/* Jika ada elemen lain di antara member-card, tetap beri jarak */
+.competition-container .card:has(> .member-card) > .member-card {
+  margin-bottom: 0;
+}
+
+/* Cards with member data directly inside them */
+.competition-container .card:has(> .member-card) {
+  padding: 55px 70px 65px;
+}
+
+.competition-container .card:has(> .member-card) > h2 {
+  margin-bottom: 45px;
+}
+
+/* Member title */
 .competition-container .member-title {
-  margin-bottom: 18px;
+  display: block;
+
+  margin: 0 0 26px;
 
   color: #3857c8;
-
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 800;
+  line-height: 1.4;
 }
 
+/* Member grid */
 .competition-container .member-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 
-  gap: 16px;
+  gap: 26px 24px;
+  width: 100%;
+}
+
+/* Member form group */
+.competition-container .member-grid .form-group {
+  width: 100%;
+  min-width: 0;
+}
+
+.competition-container .member-grid .form-group label {
+  display: block;
+  margin-bottom: 10px;
+
+  color: #1e293b;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.competition-container .member-grid .form-group label span {
+  color: #ef4444;
+}
+
+/* Member input / select */
+.competition-container .member-grid input,
+.competition-container .member-grid select {
+  display: block;
+
+  width: 100%;
+  min-width: 0;
+  min-height: 52px;
+
+  padding: 12px 16px;
+
+  background: #ffffff;
+  border: 2px solid #bfdbfe;
+  border-radius: 12px;
+
+  outline: none;
+  box-sizing: border-box;
+
+  color: #334155;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.competition-container .member-grid input::placeholder {
+  color: #94a3b8;
+}
+
+.competition-container .member-grid input:focus,
+.competition-container .member-grid select:focus {
+  border-color: #5b82e8;
+  box-shadow: 0 0 0 4px rgba(65, 105, 216, 0.1);
+}
+
+/* Add member button */
+.competition-container .add-member {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: auto;
+  min-width: 300px;
+  min-height: 58px;
+
+  margin: 28px 0 0;
+  padding: 15px 30px;
+
+  border: 0;
+  border-radius: 50px;
+
+  background: linear-gradient(135deg, #3f5bd8, #4f73e8);
+  color: #ffffff;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.35;
+  text-align: center;
+
+  cursor: pointer;
+
+  box-shadow: 0 12px 30px rgba(63, 91, 216, 0.25);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.competition-container .add-member:hover {
+  transform: translateY(-3px) scale(1.02);
+  background: linear-gradient(135deg, #3150d0, #4169e8);
+  box-shadow: 0 16px 35px rgba(63, 91, 216, 0.35);
+}
+
+.competition-container .add-member:active {
+  transform: translateY(0);
+  box-shadow: 0 8px 18px rgba(63, 91, 216, 0.22);
+}
+
+.competition-container .add-member:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+
+/* Team/member responsive */
+@media (max-width: 900px) {
+  .competition-container .member-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 20px;
+  }
+
+  .competition-container .card:has(> .member-card) {
+    padding: 45px 40px 50px;
+  }
+
+  .competition-container .member-card {
+    padding: 28px 26px;
+  }
+}
+
+@media (max-width: 650px) {
+  .competition-container .card:has(> .member-card) > .member-card + .member-card {
+    margin-top: 18px;
+  }
+
+  .competition-container .team-section h3 {
+    gap: 8px;
+    font-size: 16px;
+  }
+
+  .competition-container .team-section h3 span {
+    flex: 0 0 30px;
+    width: 30px;
+    height: 30px;
+    font-size: 13px;
+  }
+
+  .competition-container .member-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .competition-container .member-card {
+    padding: 24px 20px;
+    border-radius: 14px;
+  }
+
+  .competition-container .member-title {
+    margin-bottom: 20px;
+    font-size: 17px;
+  }
+
+  .competition-container .member-grid input,
+  .competition-container .member-grid select {
+    min-height: 50px;
+  }
+
+  .competition-container .add-member {
+    width: 100%;
+    min-width: 0;
+    min-height: 54px;
+    margin-top: 24px;
+    padding: 14px 20px;
+    font-size: 14px;
+  }
+
+  .competition-container .card:has(> .member-card) {
+    padding: 35px 20px 40px;
+  }
+
+  .competition-container .card:has(> .member-card) > h2 {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 400px) {
+  .competition-container .member-card {
+    padding: 20px 15px;
+  }
+
+  .competition-container .team-section h3 {
+    font-size: 15px;
+  }
+
+  .competition-container .add-member {
+    min-height: 52px;
+    padding: 13px 16px;
+    font-size: 13px;
+  }
+
+  .competition-container .card:has(> .member-card) {
+    padding: 30px 14px 35px;
+  }
 }
 
 /* =========================================================
@@ -877,6 +1124,7 @@ footer > p:only-child strong {
 @media (max-width: 900px) {
   main.competition-container {
     width: min(700px, calc(100% - 32px));
+    max-width: 700px;
     padding-top: 125px;
   }
 
@@ -910,6 +1158,7 @@ footer > p:only-child strong {
 @media (max-width: 650px) {
   main.competition-container {
     width: calc(100% - 24px);
+    max-width: none;
 
     padding-top: 105px;
     padding-bottom: 45px;
@@ -1048,6 +1297,7 @@ footer > p:only-child strong {
 @media (max-width: 400px) {
   main.competition-container {
     width: calc(100% - 18px);
+    max-width: none;
     padding-top: 95px;
   }
 
@@ -1088,57 +1338,21 @@ footer > p:only-child strong {
 }
 
 /* =========================================================
-    FINAL FOOTER / CARD GAP FIX
-    ---------------------------------------------------------
-    Card terakhir tidak diberi margin tambahan.
-    Jarak menuju footer diatur dari competition-container
-    agar konsisten dan tidak menempel.
+    CARD / FOOTER SPACING
     ========================================================= */
 
 main.competition-container {
-  padding-bottom: 70px !important;
+  padding-bottom: 70px;
 }
 
 main.competition-container .wrap {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 main.competition-container .card:last-child,
 main.competition-container .wrap > .card:last-child {
-  margin-bottom: 0 !important;
-}
-
-/* Mobile */
-@media (max-width: 650px) {
-  main.competition-container {
-    padding-bottom: 45px !important;
-  }
-}
-
-/* =========================================================
-21. RESPONSIVE
-========================================================= */
-
-@media (max-width: 900px) {
-  main.competition-container {
-    width: min(700px, calc(100% - 32px));
-    max-width: 700px;
-  }
-}
-
-@media (max-width: 650px) {
-  main.competition-container {
-    width: calc(100% - 24px);
-    max-width: none;
-  }
-}
-
-@media (max-width: 400px) {
-  main.competition-container {
-    width: calc(100% - 18px);
-    max-width: none;
-  }
+  margin-bottom: 0;
 }
 
 /* =========================================================
@@ -1361,79 +1575,8 @@ lain dari halaman competition.
     color: #1d4ed8;
     transform: translateX(3px);
 }/* =========================================================
-   INSTAGRAM SECTION
+   11. INSTAGRAM / FOLLOW COMPONENTS
    ========================================================= */
-
-.instagram-section {
-    width: 100%;
-    margin-top: 30px;
-    padding-top: 10px;
-}
-
-.instagram-title {
-    margin: 0 0 8px;
-    color: #475569;
-    font-size: 16px;
-    font-weight: 700;
-}
-
-.instagram-note {
-    margin: 0 0 20px;
-    color: #64748b;
-    font-size: 13px;
-    line-height: 1.6;
-}
-
-.instagram-item {
-    margin-bottom: 22px;
-}
-
-.instagram-item label {
-    display: block;
-    margin-bottom: 8px;
-    color: #475569;
-    font-size: 14px;
-    font-weight: 600;
-}
-
-.instagram-item label span {
-    color: #ef4444;
-}
-
-.instagram-link {
-    display: inline-block;
-    color: #2563eb;
-    font-size: 16px;
-    font-weight: 500;
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    transition:
-        color 0.25s ease,
-        transform 0.25s ease;
-}
-
-.instagram-link:hover {
-    color: #1d4ed8;
-    transform: translateX(3px);
-}
-
-/* =========================================================
-   FREE FIRE / SHARED FORM COMPONENTS
-   ---------------------------------------------------------
-   Layout tambahan untuk komponen yang dipakai halaman lomba.
-   Tidak menggunakan inline style di HTML.
-   ========================================================= */
-
-.competition-container .add-member {
-  margin-top: 4px;
-  border: 0;
-  font-family: "Poppins", sans-serif;
-  cursor: pointer;
-}
-
-.competition-container .add-member:hover {
-  transform: translateY(-3px) scale(1.02);
-}
 
 .competition-container .instagram-intro {
   margin: -8px 0 28px;

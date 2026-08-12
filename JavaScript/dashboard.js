@@ -6,11 +6,13 @@
 const API_BASE = 'http://localhost/stc2026/api';
 
 document.addEventListener('DOMContentLoaded', function () {
-    const user = getStoredUser();
-    if (!user) {
-        window.location.href = 'multi_page/Login.html';
-        return;
-    }
+    /* Identitas diambil dari session server, bukan localStorage. */
+    STCGuard.requireLogin().then(mulai).catch(function () {
+        /* STCGuard sudah mengalihkan ke halaman login. */
+    });
+});
+
+function mulai(user) {
 
     // Tampilkan info user
     document.getElementById('welcomeName').textContent = 'Selamat datang, ' + user.name + '!';
@@ -23,20 +25,11 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('iEmail').textContent = user.email;
 
     loadRegistrations(user.id, user.name);
-});
-
-function getStoredUser() {
-    try {
-        const raw = localStorage.getItem('stc_user');
-        return raw ? JSON.parse(raw) : null;
-    } catch (e) {
-        return null;
-    }
 }
 
 function logout() {
-    localStorage.removeItem('stc_user');
-    window.location.href = 'multi_page/Login.html';
+    /* Session di server ikut dihapus, bukan cuma localStorage. */
+    STCGuard.logout();
 }
 
 async function loadRegistrations(userId, userName) {

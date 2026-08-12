@@ -1,0 +1,14 @@
+# Folder ini hanya untuk berkas unggahan peserta.
+# Jangan pernah dijalankan sebagai skrip.
+
+php_flag engine off
+
+<FilesMatch "\.(php|php3|php4|php5|php7|phtml|phar|pl|py|cgi|asp|aspx|sh|htaccess)$">
+    Require all denied
+</FilesMatch>
+
+# Paksa unduh, jangan render di browser (cegah XSS lewat SVG/HTML)
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set Content-Disposition "attachment"
+</IfModule>

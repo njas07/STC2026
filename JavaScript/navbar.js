@@ -46,6 +46,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
             navMenu.classList.toggle("active");
 
+            hamburger.setAttribute(
+                "aria-expanded",
+                navMenu.classList.contains("active") ? "true" : "false"
+            );
+
         });
 
 
@@ -62,9 +67,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 if (window.innerWidth <= 900) {
 
+                    // "Competitions" hanya membuka sub-menu,
+                    // jadi menu utama jangan ikut tertutup.
+                    if (link.closest(".dropdown")) {
+                        return;
+                    }
+
                     hamburger.classList.remove("active");
 
                     navMenu.classList.remove("active");
+
+                    hamburger.setAttribute("aria-expanded", "false");
 
                 }
 

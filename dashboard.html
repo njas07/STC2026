@@ -11,11 +11,11 @@
 
     <!-- SIDEBAR -->
     <aside class="dash-side">
-        <img src="foto/Logo STC.svg" alt="STC" class="logo">
+        <img src="foto/LOGOSTC.png" alt="STC" class="logo" decoding="async">
         <div class="brand">STC 2026<small>Dashboard Peserta</small></div>
         <nav class="side-nav">
             <a href="#" class="active">🏠 Beranda</a>
-            <a href="Landing_page/Index.html">🌐 Beranda Website</a>
+            <a href="index.html">🌐 Beranda Website</a>
         </nav>
         <div class="side-user">
             <div class="avatar" id="avatarIni">P</div>
@@ -27,7 +27,7 @@
     <!-- MAIN -->
     <main class="dash-main">
         <div class="dash-topbar">
-            <h2 id="greet">Dashboard<small id="subGreet">Peserta</small></h2>
+            <h2><span id="greet">Dashboard</span><small id="subGreet">Peserta</small></h2>
             <button class="btn-logout" onclick="logout()">Logout</button>
         </div>
 
@@ -75,6 +75,7 @@
     </div>
 </div>
 
+<script src="JavaScript/auth-guard.js"></script>
 <script src="JavaScript/dashboard.js"></script>
 </body>
 </html>

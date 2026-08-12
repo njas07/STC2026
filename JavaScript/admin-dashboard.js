@@ -6,11 +6,14 @@ const API_BASE = 'http://localhost/stc2026/api';
 let _regsCache = [];
 
 document.addEventListener('DOMContentLoaded', function () {
-    const user = getStoredUser();
-    if (!user || (user.role !== 'admin' && user.role !== 'panitia')) {
-        window.location.href = 'multi_page/Login.html';
-        return;
-    }
+    /* Hak akses ditentukan server (session PHP + tabel users),
+       bukan localStorage yang bisa dipalsukan dari console. */
+    STCGuard.requireAdmin().then(mulai).catch(function () {
+        /* STCGuard sudah mengalihkan ke halaman login. */
+    });
+});
+
+function mulai(user) {
 
     document.getElementById('sideName').textContent = user.name;
     document.getElementById('sideEmail').textContent = user.email;
@@ -35,16 +38,11 @@ document.addEventListener('DOMContentLoaded', function () {
         e.preventDefault();
         saveAnnouncement();
     });
-});
-
-function getStoredUser() {
-    try { const raw = localStorage.getItem('stc_user'); return raw ? JSON.parse(raw) : null; }
-    catch (e) { return null; }
 }
 
 function logout() {
-    localStorage.removeItem('stc_user');
-    window.location.href = 'multi_page/Login.html';
+    /* Session di server ikut dihapus, bukan cuma localStorage. */
+    STCGuard.logout();
 }
 
 /* ================= REGISTRATIONS ================= */

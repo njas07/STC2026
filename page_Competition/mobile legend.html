@@ -1,972 +1,812 @@
-<!doctype html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mobile Legends - STC 2026</title>
+    <!doctype html>
+    <html lang="id">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Legends - STC 2026</title>
 
-  <!-- GOOGLE FONT -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  >
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
 
-  <!-- CSS SAMA DENGAN CERDAS CERMAT -->
-  <link rel="stylesheet" href="../desain/navbar.css">
-  <link rel="stylesheet" href="../desain/Home/competition.css">
-  <link rel="stylesheet" href="../desain/components/Button.css">
+    <!-- CSS SAMA DENGAN CERDAS CERMAT -->
+    <link rel="stylesheet" href="../desain/global.css">
+    <link rel="stylesheet" href="../desain/navbar.css">
+    <link rel="stylesheet" href="../desain/Home/competition.css">
+    <link rel="stylesheet" href="../desain/components/Button.css">
 
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-</head>
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    </head>
 
-<body>
+    <body>
 
-  <!-- NAVBAR -->
-  <header class="header">
-    <nav class="navbar">
+    <!-- NAVBAR -->
+    <header class="header">
+        <nav class="navbar">
 
-      <a href="../Landing_page/Index.html" class="logo">
-        <img src="../foto/LOGOSTC.png" alt="STC Logo">
-      </a>
+        <a href="../index.html" class="logo">
+            <img src="../foto/LOGOSTC.png" alt="STC Logo" decoding="async">
+        </a>
 
-      <ul class="nav-menu" id="navMenu">
-        <li>
-          <a href="../Landing_page/Index.html" class="nav-link">Home</a>
-        </li>
+        <ul class="nav-menu" id="navMenu">
+            <li>
+            <a href="../index.html" class="nav-link">Home</a>
+            </li>
 
-        <li class="dropdown">
-          <a href="#" class="nav-link active">
-            Competitions <span class="arrow">▼</span>
-          </a>
+            <li class="dropdown">
+            <a href="#" class="nav-link active">
+                Competitions <span class="arrow">▼</span>
+            </a>
 
-          <ul class="dropdown-menu">
-            <li><a href="web Design.html">Web Design</a></li>
-            <li><a href="Infografis.html">Infografis</a></li>
-            <li><a href="Cerdas cermat.html">Cerdas Cermat</a></li>
-            <li><a href="excel.html">Microsoft Excel</a></li>
-            <li><a href="speed typing.html">Speed Typing</a></li>
-            <li><a href="mobile legend.html">Mobile Legends</a></li>
-            <li><a href="free fire.html" class="active">Free Fire</a></li>
-          </ul>
-        </li>
+            <ul class="dropdown-menu">
+                <li><a href="web Design.html">Web Design</a></li>
+                <li><a href="Infografis.html">Infografis</a></li>
+                <li><a href="Cerdas cermat.html">Cerdas Cermat</a></li>
+                <li><a href="excel.html">Microsoft Excel</a></li>
+                <li><a href="speed typing.html">Speed Typing</a></li>
+                <li><a href="mobile legend.html">Mobile Legends</a></li>
+                <li><a href="free fire.html" class="active">Free Fire</a></li>
+            </ul>
+            </li>
 
-        <li>
-          <a href="../multi_page/gallery.html" class="nav-link">Gallery</a>
-        </li>
-      </ul>
+            <li>
+            <a href="../multi_page/gallery.html" class="nav-link">Gallery</a>
+            </li>
+          <li class="nav-login-item">
+            <a href="../multi_page/Login.html" class="login-btn">Login</a>
+          </li>
+        </ul>
 
-      <a href="../multi_page/Login.html" class="login-btn">Login</a>
+        <a href="../multi_page/Login.html" class="login-btn">Login</a>
 
-      <button
-        type="button"
-        class="hamburger"
-        id="hamburger"
-        aria-label="Buka menu"
-        aria-controls="navMenu"
-        aria-expanded="false"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-    </nav>
-  </header>
-
-  <main class="competition-container">
-
-    <!-- HERO -->
-    <section class="hero">
-      <img src="../foto/LOGOSTC.png" alt="STC" class="hero-logo">
-
-      <h1>MOBILE LEGENDS</h1>
-
-      <p class="sub">STIBAJRA Technology Competition 2026</p>
-
-      <span class="competition-badge">MOBILE LEGENDS · SQUAD</span>
-
-      <p class="desc">
-        Tunjukkan strategi, kekompakan, dan kemampuan bermain tim dalam
-        pertandingan Mobile Legends STC 2026.
-      </p>
-    </section>
-
-    <div class="wrap">
-
-      <!-- KETENTUAN LOMBA -->
-      <section class="card">
-        <h2>KETENTUAN LOMBA</h2>
-        <ul>
-
-        <li>
-            Peserta adalah pelajar
-            <strong>SMP/MTS/Sederajat</strong>
-            yang terdaftar sebagai satu tim beranggotakan
-            <strong>5 pemain inti</strong>
-            dan maksimal
-            <strong>1 pemain cadangan</strong>.
-        </li>
-
-        <li>
-            Pertandingan dimainkan dalam mode
-            <strong>5 vs 5</strong>
-            dengan sistem
-            <strong>draft pick (Ban &amp; Pick Hero)</strong>.
-        </li>
-
-        <li>
-            Setiap tim wajib menggunakan akun
-            <strong>Mobile Legends</strong>
-            masing-masing.
-            Minimal level akun
-            <strong>15</strong>
-            dan memiliki setidaknya
-            <strong>20 hero</strong>.
-        </li>
-
-        <li>
-            Peserta dilarang menggunakan
-            <strong>cheat, bug, map hack</strong>,
-            atau tindakan tidak sportif lainnya.
-        </li>
-
-        <li>
-            Panitia berhak memberikan
-            <strong>diskualifikasi</strong>
-            kepada tim yang melakukan kecurangan.
-        </li>
-
-        <li>
-            Keputusan juri dan panitia bersifat
-            <strong>mutlak</strong>
-            dan tidak dapat diganggu gugat.
-        </li>
-
-    </ul>
-      </section>
-
-      <!-- HADIAH -->
-      <section class="card">
-        <h2>HADIAH</h2>
-        <div class="info-grid">
-          <div class="info-box">
-            <div class="val">Juara 1</div>
-          </div>
-          <div class="info-box">
-            <div class="val">Juara 2</div>
-          </div>
-          <div class="info-box">
-            <div class="val">Juara 3</div>
-          </div>
-        </div>
-
-        </div>
-      </section>
-
-              <form
-          id="freeFireForm"
-          data-submit
-          data-competition="mobile_legends"
-          enctype="multipart/form-data"
+        <button
+            type="button"
+            class="hamburger"
+            id="hamburger"
+            aria-label="Buka menu"
+            aria-controls="navMenu"
+            aria-expanded="false"
         >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
-          <section class="card">
-            <h2>DATA TIM</h2>
-            <div class="form-grid">
+        </nav>
+    </header>
 
+    <main class="competition-container">
 
-            <!-- NAMA KAPTEN -->
+        <!-- HERO -->
+        <section class="hero">
+        <img src="../foto/LOGOSTC.png" alt="STC" class="hero-logo" decoding="async">
 
-            <div class="form-group">
+        <h1>MOBILE LEGENDS</h1>
 
-                <label>
-                    Nama Kapten
-                    <span>*</span>
-                </label>
+        <p class="sub">STIBAJRA Technology Competition 2026</p>
 
-                <input
-                    type="text"
-                    name="captain_name"
-                    required
-                    placeholder="Nama lengkap kapten"
-                >
+        <span class="competition-badge">MOBILE LEGENDS · SQUAD</span>
 
+        <p class="desc">
+            Tunjukkan strategi, kekompakan, dan kemampuan bermain tim dalam
+            pertandingan Mobile Legends STC 2026.
+        </p>
+        </section>
+
+        <div class="wrap">
+
+        <!-- KETENTUAN LOMBA -->
+        <section class="card">
+            <h2>KETENTUAN LOMBA</h2>
+            <ul>
+
+            <li>
+                Peserta adalah pelajar
+                <strong>SMP/MTS/Sederajat</strong>
+                yang terdaftar sebagai satu tim beranggotakan
+                <strong>5 pemain inti</strong>
+                dan maksimal
+                <strong>1 pemain cadangan</strong>.
+            </li>
+
+            <li>
+                Pertandingan dimainkan dalam mode
+                <strong>5 vs 5</strong>
+                dengan sistem
+                <strong>draft pick (Ban &amp; Pick Hero)</strong>.
+            </li>
+
+            <li>
+                Setiap tim wajib menggunakan akun
+                <strong>Mobile Legends</strong>
+                masing-masing.
+                Minimal level akun
+                <strong>15</strong>
+                dan memiliki setidaknya
+                <strong>20 hero</strong>.
+            </li>
+
+            <li>
+                Peserta dilarang menggunakan
+                <strong>cheat, bug, map hack</strong>,
+                atau tindakan tidak sportif lainnya.
+            </li>
+
+            <li>
+                Panitia berhak memberikan
+                <strong>diskualifikasi</strong>
+                kepada tim yang melakukan kecurangan.
+            </li>
+
+            <li>
+                Keputusan juri dan panitia bersifat
+                <strong>mutlak</strong>
+                dan tidak dapat diganggu gugat.
+            </li>
+
+        </ul>
+        </section>
+
+        <!-- HADIAH -->
+        <section class="card">
+            <h2>HADIAH</h2>
+            <div class="info-grid">
+            <div class="info-box">
+                <div class="val">Juara 1</div>
+            </div>
+            <div class="info-box">
+                <div class="val">Juara 2</div>
+            </div>
+            <div class="info-box">
+                <div class="val">Juara 3</div>
+            </div>
             </div>
 
+            </div>
+        </section>
 
-            <!-- NIS/NISN KAPTEN -->
+                <form
+            id="mobileLegendsForm"
+            data-submit
+            data-competition="mobile_legends"
+            enctype="multipart/form-data"
+            >
 
-            <div class="form-group">
+            <section class="card">
+                <h2>DATA TIM</h2>
+                <div class="form-grid">
 
-                <label>
-                    Student ID / NISN Kapten
-                    <span>*</span>
-                </label>
 
-                <input
-                    type="text"
-                    name="captain_student_id"
-                    required
-                    placeholder="NIS / NISN kapten"
-                >
+                <!-- NAMA KAPTEN -->
+
+                <div class="form-group">
+
+                    <label>
+                        Nama Kapten
+                        <span>*</span>
+                    </label>
+
+                    <input
+                        type="text"
+                        name="captain_name"
+                        required
+                        placeholder="Nama lengkap kapten"
+                    >
+
+                </div>
+
+
+                <!-- NIS/NISN KAPTEN -->
+
+                <div class="form-group">
+
+                    <label>
+                        Student ID / NISN Kapten
+                        <span>*</span>
+                    </label>
+
+                    <input
+                        type="text"
+                        name="captain_student_id"
+                        required
+                        placeholder="NIS / NISN kapten"
+                    >
+
+                </div>
+
+
+                <!-- SEKOLAH -->
+
+                <div class="form-group">
+
+                    <label>
+                        Asal Instansi / Sekolah
+                        <span>*</span>
+                    </label>
+
+                    <input
+                        type="text"
+                        name="school_name"
+                        required
+                        placeholder="Nama SMP / MTS / Sederajat"
+                    >
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="form-group">
+
+                    <label>
+                        Email
+                        <span>*</span>
+                    </label>
+
+                    <input
+                        type="email"
+                        name="email"
+                        required
+                        placeholder="contoh@email.com"
+                    >
+
+                </div>
+
+
+                <!-- NOMOR WA -->
+
+                <div class="form-group">
+
+                    <label>
+                        Nomor WhatsApp Kapten
+                        <span>*</span>
+                    </label>
+
+                    <input
+                        type="tel"
+                        name="phone"
+                        required
+                        placeholder="08xxxxxxxxxx"
+                    >
+
+                </div>
+
+
+                <!-- NAMA SQUAD -->
+
+                <div class="form-group">
+
+                    <label>
+                        Nama Tim
+                        <span>*</span>
+                    </label>
+
+                    <input
+                        type="text"
+                        name="team_name"
+                        required
+                        placeholder="Nama tim kamu"
+                    >
+
+                </div>
 
             </div>
+            </section>
+
+            <section class="card">
+                <h2>DATA ANGGOTA SQUAD</h2>
+    <div class="team-section">
+
+                <h3>
+                    <span>5</span>
+                    Daftar Anggota Tim
+                    (5 Inti + Maks. 1 Cadangan)
+                </h3>
 
 
-            <!-- SEKOLAH -->
-
-            <div class="form-group">
-
-                <label>
-                    Asal Instansi / Sekolah
-                    <span>*</span>
-                </label>
-
-                <input
-                    type="text"
-                    name="school_name"
-                    required
-                    placeholder="Nama SMP / MTS / Sederajat"
-                >
-
-            </div>
+                <div id="memberList">
 
 
-            <!-- EMAIL -->
+                    <!-- =================================================
+                        ANGGOTA 1
+                    ================================================== -->
 
-            <div class="form-group">
+                    <div
+                        class="member-card"
+                        data-member
+                        data-player="1"
+                    >
 
-                <label>
-                    Email
-                    <span>*</span>
-                </label>
-
-                <input
-                    type="email"
-                    name="email"
-                    required
-                    placeholder="contoh@email.com"
-                >
-
-            </div>
+                        <div class="member-title">
+                            Anggota 1 (Kapten)
+                        </div>
 
 
-            <!-- NOMOR WA -->
-
-            <div class="form-group">
-
-                <label>
-                    Nomor WhatsApp Kapten
-                    <span>*</span>
-                </label>
-
-                <input
-                    type="tel"
-                    name="phone"
-                    required
-                    placeholder="08xxxxxxxxxx"
-                >
-
-            </div>
+                        <div class="member-grid">
 
 
-            <!-- NAMA SQUAD -->
+                            <!-- NAMA -->
 
-            <div class="form-group">
+                            <div class="form-group">
 
-                <label>
-                    Nama Tim
-                    <span>*</span>
-                </label>
+                                <label>
+                                    Nama Lengkap
+                                    <span>*</span>
+                                </label>
 
-                <input
-                    type="text"
-                    name="team_name"
-                    required
-                    placeholder="Nama tim kamu"
-                >
+                                <input
+                                    type="text"
+                                    name="player1_name"
+                                    required
+                                    placeholder="Nama pemain"
+                                >
 
-            </div>
-
-        </div>
-          </section>
-
-          <section class="card">
-            <h2>DATA ANGGOTA SQUAD</h2>
-<div class="team-section">
-
-            <h3>
-                <span>5</span>
-                Daftar Anggota Tim
-                (5 Inti + Maks. 1 Cadangan)
-            </h3>
+                            </div>
 
 
-            <div id="memberList">
+                            <!-- NIS/NISN -->
+
+                            <div class="form-group">
+
+                                <label>
+                                    NIS / NISN
+                                    <span>*</span>
+                                </label>
+
+                                <input
+                                    type="text"
+                                    name="player1_student_id"
+                                    required
+                                    placeholder="NIS / NISN"
+                                >
+
+                            </div>
+
+
+                            <!-- GAME ID -->
+
+                            <div class="form-group">
+
+                                <label>
+                                    Game ID
+                                    <span>*</span>
+                                </label>
+
+                                <input
+                                    type="text"
+                                    name="player1_game_id"
+                                    required
+                                    placeholder="ID Mobile Legends"
+                                >
+
+                            </div>
+
+
+                            <!-- NICKNAME -->
+
+                            <div class="form-group">
+
+                                <label>
+                                    Nickname
+                                    <span>*</span>
+                                </label>
+
+                                <input
+                                    type="text"
+                                    name="player1_nickname"
+                                    required
+                                    placeholder="Nickname Mobile Legends"
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
 
 
                 <!-- =================================================
-                     ANGGOTA 1
+                    TAMBAH ANGGOTA
                 ================================================== -->
 
-                <div
-                    class="member-card"
-                    data-member
-                    data-player="1"
+                <button
+                    type="button"
+                    class="btn-primary add-member"
+                    id="addMemberBtn"
                 >
-
-                    <div class="member-title">
-                        Anggota 1 (Kapten)
-                    </div>
-
-
-                    <div class="member-grid">
-
-
-                        <!-- NAMA -->
-
-                        <div class="form-group">
-
-                            <label>
-                                Nama Lengkap
-                                <span>*</span>
-                            </label>
-
-                            <input
-                                type="text"
-                                name="player1_name"
-                                required
-                                placeholder="Nama pemain"
-                            >
-
-                        </div>
-
-
-                        <!-- NIS/NISN -->
-
-                        <div class="form-group">
-
-                            <label>
-                                NIS / NISN
-                                <span>*</span>
-                            </label>
-
-                            <input
-                                type="text"
-                                name="player1_student_id"
-                                required
-                                placeholder="NIS / NISN"
-                            >
-
-                        </div>
-
-
-                        <!-- GAME ID -->
-
-                        <div class="form-group">
-
-                            <label>
-                                Game ID
-                                <span>*</span>
-                            </label>
-
-                            <input
-                                type="text"
-                                name="player1_game_id"
-                                required
-                                placeholder="ID Mobile Legends"
-                            >
-
-                        </div>
-
-
-                        <!-- NICKNAME -->
-
-                        <div class="form-group">
-
-                            <label>
-                                Nickname
-                                <span>*</span>
-                            </label>
-
-                            <input
-                                type="text"
-                                name="player1_nickname"
-                                required
-                                placeholder="Nickname Mobile Legends"
-                            >
-
-                        </div>
-
-
-                        <!-- ROLE -->
-
-                        <div class="form-group">
-
-                            <label>
-                                Role
-                                <span>*</span>
-                            </label>
-
-                            <select
-                                name="player1_role"
-                                required
-                            >
-
-                                <option value="">
-                                    Pilih role
-                                </option>
-
-                                <option value="Rusher">
-                                    Rusher
-                                </option>
-
-                                <option value="Support">
-                                    Support
-                                </option>
-
-                                <option value="Sniper">
-                                    Sniper
-                                </option>
-
-                                <option value="IGL">
-                                    IGL
-                                </option>
-
-                            </select>
-
-                        </div>
-
-
-                        <!-- KARAKTER -->
-
-                        <div class="form-group">
-
-                            <label>
-                                Hero Andalan
-                            </label>
-
-                            <input
-                                type="text"
-                                name="player1_hero"
-                                placeholder="Contoh: Chou, Lunox"
-                            >
-
-                        </div>
-
-                    </div>
-
-                </div>
+                    + Tambah Anggota
+                </button>
 
             </div>
 
 
-            <!-- =================================================
-                 TAMBAH ANGGOTA
-            ================================================== -->
 
-            <button
-                type="button"
-                class="btn-primary add-member"
-                id="addMemberBtn"
-            >
-                + Tambah Anggota
-            </button>
+            
+            </section>
 
-        </div>
+            <section class="card">
+                <h2>KARTU PELAJAR</h2>
+    <div >
 
+                <h4>
+                    Kartu Pelajar
+                </h4>
 
-
-        
-          </section>
-
-          <section class="card">
-            <h2>KARTU PELAJAR</h2>
-<div >
-
-            <h4>
-                Kartu Pelajar
-            </h4>
-
-            <p>
-                Unggah kartu pelajar anggota tim sesuai
-                ketentuan panitia.
-            </p>
+                <p>
+                    Unggah kartu pelajar anggota tim sesuai
+                    ketentuan panitia.
+                </p>
 
 
-            <!-- KAPTEN -->
-
-            <div class="upload-group">
-
-                <label>
-                    Kartu Pelajar Kapten
-                    <span>*</span>
-                </label>
-
-                <input
-                    type="file"
-                    class="file-input"
-                    name="captain_student_card"
-                    accept=".jpg,.jpeg,.png,.webp,.pdf"
-                    required
-                >
-
-                <div class="file-info">
-
-                    Format:
-                    <strong>JPG, PNG, WEBP, PDF</strong>.
-                    Maksimal ukuran
-                    <strong>2MB</strong>.
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-
-        
-          </section>
-
-          <section class="card">
-            <h2>FOLLOW INSTAGRAM (WAJIB)</h2>
-
-            <p class="instagram-intro">
-              Peserta wajib mengikuti Instagram sekolah dan Instagram STC 2026.
-            </p>
-
-            <div class="instagram-follow-grid">
-
-              <!-- INSTAGRAM SEKOLAH -->
-              <div class="instagram-follow-column">
-                <div class="instagram-follow-box">
-                  <label>
-                    Instagram Sekolah
-                    <span>*</span>
-                  </label>
-
-                  <a
-                    href="https://www.instagram.com/smktibgjimbaran/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="instagram-username"
-                  >
-                    @smktibgjimbaran
-                  </a>
-
-                  <a
-                    href="https://www.instagram.com/smktibgjimbaran/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn-primary instagram-btn"
-                  >
-                    Buka Instagram
-                  </a>
-                </div>
+                <!-- KAPTEN -->
 
                 <div class="upload-group">
-                  <label>
-                    Bukti Follow IG Sekolah
-                    <span>*</span>
-                  </label>
-
-                  <input
-                    type="file"
-                    class="file-input"
-                    name="proof_instagram_school"
-                    accept=".jpg,.jpeg,.png,.webp"
-                    required
-                  >
-
-                  <div class="file-info">
-                    Format: <strong>JPG, PNG, WEBP</strong> · Maksimal ukuran <strong>2MB</strong>
-                  </div>
-                </div>
-              </div>
-
-              <!-- INSTAGRAM STC -->
-              <div class="instagram-follow-column">
-                <div class="instagram-follow-box">
-                  <label>
-                    Instagram STC
-                    <span>*</span>
-                  </label>
-
-                  <a
-                    href="https://www.instagram.com/stcstibajraa/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="instagram-username"
-                  >
-                    @stcstibajraa
-                  </a>
-
-                  <a
-                    href="https://www.instagram.com/stcstibajraa/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn-primary instagram-btn"
-                  >
-                    Buka Instagram
-                  </a>
-                </div>
-
-                <div class="upload-group">
-                  <label>
-                    Bukti Follow IG STC
-                    <span>*</span>
-                  </label>
-
-                  <input
-                    type="file"
-                    class="file-input"
-                    name="proof_instagram_stc"
-                    accept=".jpg,.jpeg,.png,.webp"
-                    required
-                  >
-
-                  <div class="file-info">
-                    Format: <strong>JPG, PNG, WEBP</strong> · Maksimal ukuran <strong>2MB</strong>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </section>
-
-          <section class="card">
-            <h2>DATA PEMBAYARAN</h2>
-<div >
-
-            <h4>
-                Data Pembayaran
-            </h4>
-
-            <p>
-                Isi data pembayaran dan unggah bukti
-                pembayaran pendaftaran tim.
-            </p>
-
-
-            <div class="form-grid">
-
-
-                <!-- METODE -->
-
-                <div class="form-group">
 
                     <label>
-                        Metode Pembayaran
-                        <span>*</span>
-                    </label>
-
-                    <select
-                        name="payment_method"
-                        required
-                    >
-
-                        <option value="">
-                            Pilih metode
-                        </option>
-
-                        <option value="transfer">
-                            Transfer Bank
-                        </option>
-
-                        <option value="qris">
-                            QRIS
-                        </option>
-
-                    </select>
-
-                </div>
-
-
-                <!-- JUMLAH -->
-
-                <div class="form-group">
-
-                    <label>
-                        Jumlah Bayar
-                        <span>*</span>
-                    </label>
-
-                    <input
-                        type="number"
-                        name="payment_amount"
-                        min="0"
-                        required
-                        placeholder="Contoh: 50000"
-                    >
-
-                </div>
-
-
-                <!-- TANGGAL -->
-
-                <div class="form-group">
-
-                    <label>
-                        Tanggal Pembayaran
-                        <span>*</span>
-                    </label>
-
-                    <input
-                        type="date"
-                        name="payment_date"
-                        required
-                    >
-
-                </div>
-
-
-                <!-- BUKTI -->
-
-                <div class="form-group">
-
-                    <label>
-                        Upload Bukti Pembayaran
+                        Kartu Pelajar Kapten
                         <span>*</span>
                     </label>
 
                     <input
                         type="file"
                         class="file-input"
-                        name="payment_proof"
+                        name="captain_student_card"
                         accept=".jpg,.jpeg,.png,.webp,.pdf"
                         required
                     >
+
+                    <div class="file-info">
+
+                        Format:
+                        <strong>JPG, PNG, WEBP, PDF</strong>.
+                        Maksimal ukuran
+                        <strong>2MB</strong>.
+
+                    </div>
 
                 </div>
 
             </div>
 
-        </div>
 
+
+            
+            </section>
+
+            <section class="card">
+     
+            <section class="card">
+                <h2>DATA PEMBAYARAN</h2>
+    <div >
+
+                <h4>
+                    Data Pembayaran
+                </h4>
+
+                <p>
+                    Isi data pembayaran dan unggah bukti
+                    pembayaran pendaftaran tim.
+                </p>
+
+
+                <div class="form-grid">
+
+
+                    <!-- METODE -->
+
+                    <div class="form-group">
+
+                        <label>
+                            Metode Pembayaran
+                            <span>*</span>
+                        </label>
+
+                        <select
+                            name="payment_method"
+                            required
+                        >
+
+                            <option value="">
+                                Pilih metode
+                            </option>
+
+                            <option value="transfer">
+                                Transfer Bank
+                            </option>
+
+                            <option value="qris">
+                                QRIS
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- JUMLAH -->
+
+                    <div class="form-group">
+
+                        <label>
+                            Jumlah Bayar
+                            <span>*</span>
+                        </label>
+
+                        <input
+                            type="number"
+                            name="payment_amount"
+                            min="0"
+                            required
+                            placeholder="Contoh: 50000"
+                        >
+
+                    </div>
+
+
+                    <!-- TANGGAL -->
+
+                    <div class="form-group">
+
+                        <label>
+                            Tanggal Pembayaran
+                            <span>*</span>
+                        </label>
+
+                        <input
+                            type="date"
+                            name="payment_date"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- BUKTI -->
+
+                    <div class="form-group">
+
+                        <label>
+                            Upload Bukti Pembayaran
+                            <span>*</span>
+                        </label>
+
+                        <input
+                            type="file"
+                            class="file-input"
+                            name="payment_proof"
+                            accept=".jpg,.jpeg,.png,.webp,.pdf"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            
+            </section>
+
+            <section class="card">
+                <h2>PERNYATAAN PESERTA</h2>
+    <div class="agreement">
+
+
+                <label >
+
+                    <input
+                        type="checkbox"
+                        name="agree_data"
+                        required
+                    >
+
+                    <span>
+                        Data yang saya isi sudah benar
+                        dan dapat dipertanggungjawabkan.
+                    </span>
+
+                </label>
+
+
+                <label >
+
+                    <input
+                        type="checkbox"
+                        name="agree_rules"
+                        required
+                    >
+
+                    <span>
+                        Saya menyetujui seluruh ketentuan
+                        lomba Mobile Legends STC 2026.
+                    </span>
+
+                </label>
+
+
+                <label >
+
+                    <input
+                        type="checkbox"
+                        name="agree_payment"
+                        required
+                    >
+
+                    <span>
+                        Saya sudah melakukan pembayaran
+                        biaya pendaftaran tim.
+                    </span>
+
+                </label>
+
+
+                <label >
+
+                    <input
+                        type="checkbox"
+                        name="agree_instagram"
+                        required
+                    >
+
+                    <span>
+                        Tim saya sudah mengikuti Instagram
+                        sekolah dan Instagram STC 2026.
+                    </span>
+
+                </label>
+
+            </div>
+
+
+
+            <!-- =================================================
+                SUBMIT
+            ================================================== -->
+
+            <button
+                type="submit"
+                class="btn-submit"
+            >
+                SUBMIT PENDAFTARAN ☁
+            </button>
+
+
+            <p class="note">
+
+                * Semua data wajib diisi.
+                Setelah submit, squad akan mendapatkan
+                kode pendaftaran.
+
+            </p>
+
+
+
+            <!-- =================================================
+                HASIL PENDAFTARAN
+            ================================================== -->
+
+            <div
+                class="submission-result"
+                id="submitResult"
+            >
+
+                <span class="icon">
+                    ✅
+                </span>
+
+                <h3>
+                    PENDAFTARAN BERHASIL
+                </h3>
+
+                <p>
+                    Kode Pendaftaran:
+                </p>
+
+                <div
+                    class="code-display"
+                    id="resultCode"
+                >
+                    -
+                </div>
+
+                <p>
+                    Status: MENUNGGU VERIFIKASI
+                </p>
+
+            </div>
 
 
         
-          </section>
+            </section>
 
-          <section class="card">
-            <h2>PERNYATAAN PESERTA</h2>
-<div class="agreement">
+            </form>
 
-
-            <label >
-
-                <input
-                    type="checkbox"
-                    name="agree_data"
-                    required
-                >
-
-                <span>
-                    Data yang saya isi sudah benar
-                    dan dapat dipertanggungjawabkan.
-                </span>
-
-            </label>
-
-
-            <label >
-
-                <input
-                    type="checkbox"
-                    name="agree_rules"
-                    required
-                >
-
-                <span>
-                    Saya menyetujui seluruh ketentuan
-                    lomba Mobile Legends STC 2026.
-                </span>
-
-            </label>
-
-
-            <label >
-
-                <input
-                    type="checkbox"
-                    name="agree_payment"
-                    required
-                >
-
-                <span>
-                    Saya sudah melakukan pembayaran
-                    biaya pendaftaran tim.
-                </span>
-
-            </label>
-
-
-            <label >
-
-                <input
-                    type="checkbox"
-                    name="agree_instagram"
-                    required
-                >
-
-                <span>
-                    Tim saya sudah mengikuti Instagram
-                    sekolah dan Instagram STC 2026.
-                </span>
-
-            </label>
 
         </div>
+    </main>
 
+    <!-- FOOTER -->
+    <footer>
+    <div class="footer-container">
 
-
-        <!-- =================================================
-             SUBMIT
-        ================================================== -->
-
-        <button
-            type="submit"
-            class="btn-submit"
-        >
-            SUBMIT PENDAFTARAN ☁
-        </button>
-
-
-        <p class="note">
-
-            * Semua data wajib diisi.
-            Setelah submit, squad akan mendapatkan
-            kode pendaftaran.
-
+        <div class="footer-brand">
+        <img src="../foto/LOGOSTC.png" alt="STC Logo" decoding="async">
+        <p>
+            STIBAJRA Technology Competition (STC) 2026 — wadah bagi generasi
+            muda untuk berinovasi, berkolaborasi, dan mengejar masa depan
+            melalui teknologi.
         </p>
-
-
-
-        <!-- =================================================
-             HASIL PENDAFTARAN
-        ================================================== -->
-
-        <div
-            class="submission-result"
-            id="submitResult"
-        >
-
-            <span class="icon">
-                ✅
-            </span>
-
-            <h3>
-                PENDAFTARAN BERHASIL
-            </h3>
-
-            <p>
-                Kode Pendaftaran:
-            </p>
-
-            <div
-                class="code-display"
-                id="resultCode"
-            >
-                -
-            </div>
-
-            <p>
-                Status: MENUNGGU VERIFIKASI
-            </p>
-
         </div>
 
+        <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../multi_page/gallery.html">Gallery</a></li>
+            <li><a href="../multi_page/Login.html">Login</a></li>
+        </ul>
+        </div>
 
-    
-          </section>
+        <div class="footer-col">
+        <h4>Competitions</h4>
+        <ul>
+            <li><a href="web Design.html">Web Design</a></li>
+            <li><a href="Infografis.html">Infografis</a></li>
+            <li><a href="excel.html">Microsoft Excel</a></li>
+            <li><a href="speed typing.html">Speed Typing</a></li>
+            <li><a href="mobile legend.html">Mobile Legends</a></li>
+            <li><a href="free fire.html">Free Fire</a></li>
+            <li><a href="Cerdas cermat.html">Cerdas Cermat</a></li>
+        </ul>
+        </div>
 
+        <div class="footer-col footer-newsletter">
+        <h4>Newsletter</h4>
+        <p>Dapatkan info terbaru tentang STC langsung ke email-mu.</p>
+        <form class="newsletter-form" onsubmit="return false;">
+            <input type="email" placeholder="Masukkan email">
+            <button type="button">Kirim</button>
         </form>
-
+        </div>
 
     </div>
-  </main>
 
-  <!-- FOOTER -->
-  <footer>
-  <div class="footer-container">
+    <div class="footer-bottom">
+        <span>© 2026 STIBAJRA Technology Competition. All rights reserved.</span>
 
-    <div class="footer-brand">
-      <img src="../foto/LOGOSTC.png" alt="STC Logo">
-      <p>
-        STIBAJRA Technology Competition (STC) 2026 — wadah bagi generasi
-        muda untuk berinovasi, berkolaborasi, dan mengejar masa depan
-        melalui teknologi.
-      </p>
+        <div class="social-links">
+        <a
+            href="https://www.instagram.com/stcstibajraa/"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Instagram"
+            aria-label="Instagram"
+        >
+            <i class="bx bxl-instagram"></i>
+        </a>
+
+        <a href="#" title="WhatsApp" aria-label="WhatsApp">
+            <i class="bx bxl-whatsapp"></i>
+        </a>
+
+        <a href="#" title="Email" aria-label="Email">
+            <i class="bx bx-envelope"></i>
+        </a>
+        </div>
     </div>
+    </footer>
 
-    <div class="footer-col">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="../Landing_page/Index.html">Home</a></li>
-        <li><a href="../multi_page/gallery.html">Gallery</a></li>
-        <li><a href="../multi_page/Login.html">Login</a></li>
-      </ul>
-    </div>
+    <!-- JAVASCRIPT SAMA -->
+    <script src="../JavaScript/hamburger.js"></script>
+    <script src="../JavaScript/submission.js"></script>
 
-    <div class="footer-col">
-      <h4>Competitions</h4>
-      <ul>
-        <li><a href="web Design.html">Web Design</a></li>
-        <li><a href="Infografis.html">Infografis</a></li>
-        <li><a href="excel.html">Microsoft Excel</a></li>
-        <li><a href="speed typing.html">Speed Typing</a></li>
-        <li><a href="mobile legend.html">Mobile Legends</a></li>
-        <li><a href="free fire.html">Free Fire</a></li>
-        <li><a href="Cerdas cermat.html">Cerdas Cermat</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-col footer-newsletter">
-      <h4>Newsletter</h4>
-      <p>Dapatkan info terbaru tentang STC langsung ke email-mu.</p>
-      <form class="newsletter-form" onsubmit="return false;">
-        <input type="email" placeholder="Masukkan email">
-        <button type="button">Kirim</button>
-      </form>
-    </div>
-
-  </div>
-
-  <div class="footer-bottom">
-    <span>© 2026 STIBAJRA Technology Competition. All rights reserved.</span>
-
-    <div class="social-links">
-      <a
-        href="https://www.instagram.com/stcstibajraa/"
-        target="_blank"
-        rel="noopener noreferrer"
-        title="Instagram"
-        aria-label="Instagram"
-      >
-        <i class="bx bxl-instagram"></i>
-      </a>
-
-      <a href="#" title="YouTube" aria-label="YouTube">
-        <i class="bx bxl-youtube"></i>
-      </a>
-
-      <a href="#" title="WhatsApp" aria-label="WhatsApp">
-        <i class="bx bxl-whatsapp"></i>
-      </a>
-
-      <a href="#" title="Email" aria-label="Email">
-        <i class="bx bx-envelope"></i>
-      </a>
-    </div>
-  </div>
-</footer>
-
-  <!-- JAVASCRIPT SAMA -->
-  <script src="../JavaScript/hamburger.js"></script>
-  <script src="../JavaScript/submission.js"></script>
-
-</body>
-</html>
+    </body>
+    </html>

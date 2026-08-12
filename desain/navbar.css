@@ -578,3 +578,103 @@
     }
 
 }
+/* =========================================================
+   MOBILE NAVBAR
+   Sumber tunggal aturan navbar layar kecil — dipakai semua
+   halaman (navbar.css selalu dimuat, responsive.css tidak).
+   Breakpoint 900px disamakan dengan JavaScript navbar/hamburger.
+========================================================= */
+
+/* Login versi dalam menu: hanya untuk layar kecil */
+.nav-login-item {
+  display: none;
+}
+
+@media (max-width: 900px) {
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* Menu jadi panel yang turun dari header */
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 4px;
+    padding: 14px 20px 22px;
+
+    background: #ffffff;
+    border-top: 1px solid rgba(124, 185, 232, 0.35);
+    box-shadow: 0 18px 40px rgba(31, 62, 108, 0.12);
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu > li {
+    width: 100%;
+  }
+
+  .nav-menu > li > .nav-link {
+    display: block;
+    padding: 12px 4px;
+    font-size: 16px;
+  }
+
+  /* Dropdown Competitions: menumpuk, bukan melayang */
+  .nav-menu .dropdown-menu {
+    position: static;
+    display: none;
+
+    width: 100%;
+    margin: 2px 0 6px;
+    padding: 6px 0 6px 14px;
+
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+
+    border-left: 2px solid rgba(124, 185, 232, 0.5);
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .nav-menu .dropdown.active .dropdown-menu {
+    display: block;
+  }
+
+  .nav-menu .dropdown-menu li a {
+    display: block;
+    padding: 10px 6px;
+    font-size: 15px;
+  }
+
+  /* Tombol Login berdiri sendiri disembunyikan… */
+  .navbar > .login-btn {
+    display: none;
+  }
+
+  /* …dan muncul sebagai item terakhir di dalam hamburger */
+  .nav-login-item {
+    display: block;
+
+    margin-top: 10px;
+    padding-top: 14px;
+
+    border-top: 1px solid rgba(124, 185, 232, 0.35);
+  }
+
+  .nav-login-item .login-btn {
+    display: flex;
+    width: 100%;
+  }
+
+}

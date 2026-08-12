@@ -14,6 +14,7 @@
   >
 
   <!-- CSS -->
+  <link rel="stylesheet" href="../desain/global.css">
   <link rel="stylesheet" href="../desain/navbar.css">
   <link rel="stylesheet" href="../desain/Home/competition.css">
   <link rel="stylesheet" href="../desain/components/Button.css">
@@ -29,13 +30,13 @@
   <header class="header">
     <nav class="navbar">
 
-      <a href="../Landing_page/Index.html" class="logo">
-        <img src="../foto/LOGOSTC.png" alt="STC Logo">
+      <a href="../index.html" class="logo">
+        <img src="../foto/LOGOSTC.png" alt="STC Logo" decoding="async">
       </a>
 
       <ul class="nav-menu" id="navMenu">
         <li>
-          <a href="../Landing_page/Index.html" class="nav-link">Home</a>
+          <a href="../index.html" class="nav-link">Home</a>
         </li>
 
         <li class="dropdown">
@@ -57,7 +58,10 @@
         <li>
           <a href="../multi_page/gallery.html" class="nav-link">Gallery</a>
         </li>
-      </ul>
+        <li class="nav-login-item">
+            <a href="../multi_page/Login.html" class="login-btn">Login</a>
+          </li>
+        </ul>
 
       <a href="../multi_page/Login.html" class="login-btn">Login</a>
 
@@ -85,7 +89,7 @@
 
     <!-- HERO -->
     <section class="hero">
-      <img src="../foto/LOGOSTC.png" alt="STC" class="hero-logo">
+      <img src="../foto/LOGOSTC.png" alt="STC" class="hero-logo" decoding="async">
 
       <h1>MICROSOFT EXCEL</h1>
 
@@ -303,77 +307,6 @@
           </div>
         </section>
 
-
-        <!-- ==================================================
-             FOLLOW INSTAGRAM
-        ================================================== -->
-        <section class="card">
-          <h2>FOLLOW INSTAGRAM (WAJIB)</h2>
-          <p>
-            Peserta wajib mengikuti Instagram sekolah dan Instagram STC 2026.
-          </p>
-
-          <input
-            type="hidden"
-            name="instagram_school"
-            value="@smktibgjimbaran"
-          />
-          <input
-            type="hidden"
-            name="instagram_stc"
-            value="@stcstibajraa"
-          />
-
-          <div class="instagram-follow-grid">
-            <div class="instagram-follow-box">
-              <label>Instagram Sekolah <span>*</span></label>
-              <p class="instagram-username">@smktibgjimbaran</p>
-              <a
-                href="https://www.instagram.com/smktibgjimbaran/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="instagram-btn btn-primary"
-              >Buka Instagram</a>
-            </div>
-
-            <div class="instagram-follow-box">
-              <label>Instagram STC <span>*</span></label>
-              <p class="instagram-username">@stcstibajraa</p>
-              <a
-                href="https://www.instagram.com/stcstibajraa/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="instagram-btn btn-primary"
-              >Buka Instagram</a>
-            </div>
-          </div>
-
-          <div class="form-grid">
-            <div class="form-group">
-              <label>Bukti Follow IG Sekolah <span>*</span></label>
-              <input
-                type="file"
-                name="instagram_school_proof"
-                accept=".jpg,.jpeg,.png,.webp"
-                required
-              />
-              <small>Format: JPG, PNG, WEBP · Maksimal 2MB</small>
-            </div>
-
-            <div class="form-group">
-              <label>Bukti Follow IG STC <span>*</span></label>
-              <input
-                type="file"
-                name="instagram_stc_proof"
-                accept=".jpg,.jpeg,.png,.webp"
-                required
-              />
-              <small>Format: JPG, PNG, WEBP · Maksimal 2MB</small>
-            </div>
-          </div>
-        </section>
-
-
         <!-- ==================================================
              DATA PEMBAYARAN
         ================================================== -->
@@ -477,7 +410,7 @@
   <div class="footer-container">
 
     <div class="footer-brand">
-      <img src="../foto/LOGOSTC.png" alt="STC Logo">
+      <img src="../foto/LOGOSTC.png" alt="STC Logo" decoding="async">
       <p>
         STIBAJRA Technology Competition (STC) 2026 — wadah bagi generasi
         muda untuk berinovasi, berkolaborasi, dan mengejar masa depan
@@ -488,7 +421,7 @@
     <div class="footer-col">
       <h4>Quick Links</h4>
       <ul>
-        <li><a href="../Landing_page/Index.html">Home</a></li>
+        <li><a href="../index.html">Home</a></li>
         <li><a href="../multi_page/gallery.html">Gallery</a></li>
         <li><a href="../multi_page/Login.html">Login</a></li>
       </ul>
@@ -530,10 +463,6 @@
         aria-label="Instagram"
       >
         <i class="bx bxl-instagram"></i>
-      </a>
-
-      <a href="#" title="YouTube" aria-label="YouTube">
-        <i class="bx bxl-youtube"></i>
       </a>
 
       <a href="#" title="WhatsApp" aria-label="WhatsApp">

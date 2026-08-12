@@ -16,6 +16,7 @@
     />
 
     <!-- CSS -->
+    <link rel="stylesheet" href="../desain/global.css">
     <link rel="stylesheet" href="../desain/navbar.css" />
     <link rel="stylesheet" href="../desain/Home/competition.css" />
     <link rel="stylesheet" href="../desain/components/Button.css" />
@@ -30,13 +31,13 @@
     ====================================================== -->
     <header class="header">
       <nav class="navbar">
-        <a href="../Landing_page/Index.html" class="logo">
-          <img src="../foto/LOGOSTC.png" alt="STC Logo" />
+        <a href="../index.html" class="logo">
+          <img src="../foto/LOGOSTC.png" alt="STC Logo" decoding="async">
         </a>
 
         <ul class="nav-menu" id="navMenu">
           <li>
-            <a href="../Landing_page/Index.html" class="nav-link"> Home </a>
+            <a href="../index.html" class="nav-link"> Home </a>
           </li>
 
           <li class="dropdown">
@@ -72,6 +73,9 @@
           <li>
             <a href="../multi_page/gallery.html" class="nav-link"> Gallery </a>
           </li>
+          <li class="nav-login-item">
+            <a href="../multi_page/Login.html" class="login-btn">Login</a>
+          </li>
         </ul>
 
         <a href="../multi_page/Login.html" class="login-btn"> Login </a>
@@ -101,7 +105,7 @@
         ================================================== -->
 
       <section class="hero">
-        <img src="../foto/LOGOSTC.png" alt="STC" class="hero-logo" />
+        <img src="../foto/LOGOSTC.png" alt="STC" class="hero-logo" decoding="async">
 
         <h1>WEB DESIGN</h1>
 
@@ -231,8 +235,8 @@
 
         <form
           id="registrationForm"
-          action="#"
-          method="POST"
+          data-submit
+          data-competition="web_design"
           enctype="multipart/form-data"
         >
           <!-- =========================================
@@ -245,12 +249,12 @@
             <div class="form-grid">
               <!-- Nama -->
               <div class="form-group">
-                <label for="nama"> Nama Lengkap <span>*</span> </label>
+                <label for="name"> Nama Lengkap <span>*</span> </label>
 
                 <input
                   type="text"
-                  id="nama"
-                  name="nama"
+                  id="name"
+                  name="name"
                   placeholder="Nama lengkap peserta"
                   required
                 />
@@ -258,12 +262,12 @@
 
               <!-- NIS / NISN -->
               <div class="form-group">
-                <label for="nisn"> NIS / NISN <span>*</span> </label>
+                <label for="student_id"> NIS / NISN <span>*</span> </label>
 
                 <input
                   type="text"
-                  id="nisn"
-                  name="nisn"
+                  id="student_id"
+                  name="student_id"
                   placeholder="NIS / NISN peserta"
                   required
                 />
@@ -271,15 +275,15 @@
 
               <!-- Sekolah -->
               <div class="form-group">
-                <label for="sekolah">
+                <label for="school_name">
                   Asal Instansi / Sekolah
                   <span>*</span>
                 </label>
 
                 <input
                   type="text"
-                  id="sekolah"
-                  name="sekolah"
+                  id="school_name"
+                  name="school_name"
                   placeholder="Nama sekolah"
                   required
                 />
@@ -287,9 +291,9 @@
 
               <!-- Kelas -->
               <div class="form-group">
-                <label for="kelas"> Kelas <span>*</span> </label>
+                <label for="class"> Kelas <span>*</span> </label>
 
-                <select id="kelas" name="kelas" required>
+                <select id="class" name="class" required>
                   <option value="">Pilih kelas</option>
 
                   <option value="X">X</option>
@@ -315,12 +319,12 @@
 
               <!-- WhatsApp -->
               <div class="form-group">
-                <label for="whatsapp"> Nomor WhatsApp <span>*</span> </label>
+                <label for="phone"> Nomor WhatsApp <span>*</span> </label>
 
                 <input
                   type="tel"
-                  id="whatsapp"
-                  name="whatsapp"
+                  id="phone"
+                  name="phone"
                   placeholder="08xxxxxxxxxx"
                   required
                 />
@@ -341,103 +345,20 @@
             </p>
 
             <div class="form-group">
-              <label for="kartu_pelajar">
+              <label for="student_card">
                 Kartu Pelajar / Surat Keterangan
                 <span>*</span>
               </label>
 
               <input
                 type="file"
-                id="kartu_pelajar"
-                name="kartu_pelajar"
+                id="student_card"
+                name="student_card"
                 accept=".jpg,.jpeg,.png,.webp,.pdf"
                 required
               />
 
               <small> Format JPG, PNG, WEBP, atau PDF. Maksimal 2MB. </small>
-            </div>
-          </div>
-
-          <!-- =========================================
-     INSTAGRAM WAJIB
-========================================== -->
-
-          <div class="form-section">
-            <h3>Follow Instagram (Wajib)</h3>
-
-            <p>
-              Peserta wajib mengikuti akun Instagram sekolah dan Instagram STC
-              2026.
-            </p>
-
-            <div class="instagram-follow-grid">
-              <!-- Instagram Sekolah -->
-              <div class="instagram-follow-box">
-                <label> Instagram Sekolah <span>*</span> </label>
-
-                <p class="instagram-username">@smktibgjimbaran</p>
-
-                <a
-                  href="https://www.instagram.com/smktibgjimbaran/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="btn-primary instagram-btn"
-                >
-                  Buka Instagram Sekolah
-                </a>
-              </div>
-
-              <!-- Bukti Follow Sekolah -->
-              <div class="instagram-follow-box">
-                <label for="bukti_follow_sekolah">
-                  Bukti Follow IG Sekolah <span>*</span>
-                </label>
-
-                <input
-                  type="file"
-                  id="bukti_follow_sekolah"
-                  name="bukti_follow_sekolah"
-                  accept=".jpg,.jpeg,.png,.webp"
-                  required
-                />
-
-                <small>
-                  Upload screenshot bukti follow Instagram sekolah.
-                </small>
-              </div>
-
-              <!-- Instagram STC -->
-              <div class="instagram-follow-box">
-                <label> Instagram STC <span>*</span> </label>
-
-                <p class="instagram-username">@stcstibajraa</p>
-
-                <a
-                  href="https://www.instagram.com/stcstibajraa/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="btn-primary instagram-btn"
-                >
-                  Buka Instagram STC
-                </a>
-              </div>
-
-              <!-- Bukti Follow STC -->
-              <div class="instagram-follow-box">
-                <label for="bukti_follow_stc">
-                  Bukti Follow IG STC <span>*</span>
-                </label>
-
-                <input
-                  type="file"
-                  id="bukti_follow_stc"
-                  name="bukti_follow_stc"
-                  accept=".jpg,.jpeg,.png,.webp"
-                  required
-                />
-
-                <small> Upload screenshot bukti follow Instagram STC. </small>
-              </div>
             </div>
           </div>
 
@@ -453,11 +374,11 @@
             <!-- Metode Pembayaran -->
 
             <div class="form-group">
-              <label for="metode_pembayaran">
+              <label for="payment_method">
                 Metode Pembayaran <span>*</span>
               </label>
 
-              <select id="metode_pembayaran" name="metode_pembayaran" required>
+              <select id="payment_method" name="payment_method" required>
                 <option value="">Pilih metode</option>
 
                 <option value="transfer_bank">Transfer Bank</option>
@@ -469,12 +390,12 @@
             <!-- Jumlah Bayar -->
 
             <div class="form-group">
-              <label for="jumlah_bayar"> Jumlah Bayar <span>*</span> </label>
+              <label for="amount"> Jumlah Bayar <span>*</span> </label>
 
               <input
                 type="number"
-                id="jumlah_bayar"
-                name="jumlah_bayar"
+                id="amount"
+                name="amount"
                 placeholder="Contoh: 50000"
                 min="0"
                 required
@@ -484,14 +405,14 @@
             <!-- Tanggal Pembayaran -->
 
             <div class="form-group">
-              <label for="tanggal_pembayaran">
+              <label for="transaction_date">
                 Tanggal Pembayaran <span>*</span>
               </label>
 
               <input
                 type="date"
-                id="tanggal_pembayaran"
-                name="tanggal_pembayaran"
+                id="transaction_date"
+                name="transaction_date"
                 required
               />
             </div>
@@ -499,15 +420,15 @@
             <!-- Bukti Pembayaran -->
 
             <div class="form-group">
-              <label for="bukti_pembayaran">
+              <label for="payment_proof">
                 Upload Bukti Pembayaran
                 <span>*</span>
               </label>
 
               <input
                 type="file"
-                id="bukti_pembayaran"
-                name="bukti_pembayaran"
+                id="payment_proof"
+                name="payment_proof"
                 accept=".jpg,.jpeg,.png,.webp"
                 required
               />
@@ -522,7 +443,7 @@
 
           <div class="form-check">
             <label>
-              <input type="checkbox" name="data_benar" required />
+              <input type="checkbox" name="agree_data" required />
 
               <span>
                 Data yang saya isi sudah benar dan dapat dipertanggungjawabkan.
@@ -532,7 +453,7 @@
 
           <div class="form-check">
             <label>
-              <input type="checkbox" name="setuju_ketentuan" required />
+              <input type="checkbox" name="agree_rules" required />
 
               <span> Saya menyetujui seluruh ketentuan lomba. </span>
             </label>
@@ -540,7 +461,7 @@
 
           <div class="form-check">
             <label>
-              <input type="checkbox" name="sudah_bayar" required />
+              <input type="checkbox" name="agree_payment" required />
 
               <span> Saya sudah melakukan pembayaran. </span>
             </label>
@@ -548,7 +469,7 @@
 
           <div class="form-check">
             <label>
-              <input type="checkbox" name="sudah_follow" required />
+              <input type="checkbox" name="agree_instagram" required />
 
               <span> Saya sudah mengikuti Instagram yang diwajibkan. </span>
             </label>
@@ -558,7 +479,7 @@
                      SUBMIT
                 ========================================== -->
 
-          <button type="submit" class="submit-btn">SUBMIT PENDAFTARAN ☁</button>
+          <button type="submit" class="btn-submit">SUBMIT PENDAFTARAN ☁</button>
 
           <p class="form-note">
             * Semua data wajib diisi. Setelah submit, Anda akan mendapat kode
@@ -571,12 +492,12 @@
              HASIL PENDAFTARAN
         ================================================== -->
 
-      <div class="card registration-result" id="registrationResult">
+      <div class="card submission-result" id="submitResult">
         <h2>PENDAFTARAN BERHASIL</h2>
 
         <p>Kode Pendaftaran:</p>
 
-        <strong id="registrationCode"> - </strong>
+        <strong id="resultCode" class="code-display"> - </strong>
 
         <p>
           Status:
@@ -592,7 +513,7 @@
   <div class="footer-container">
 
     <div class="footer-brand">
-      <img src="../foto/LOGOSTC.png" alt="STC Logo">
+      <img src="../foto/LOGOSTC.png" alt="STC Logo" decoding="async">
       <p>
         STIBAJRA Technology Competition (STC) 2026 — wadah bagi generasi
         muda untuk berinovasi, berkolaborasi, dan mengejar masa depan
@@ -603,7 +524,7 @@
     <div class="footer-col">
       <h4>Quick Links</h4>
       <ul>
-        <li><a href="../Landing_page/Index.html">Home</a></li>
+        <li><a href="../index.html">Home</a></li>
         <li><a href="../multi_page/gallery.html">Gallery</a></li>
         <li><a href="../multi_page/Login.html">Login</a></li>
       </ul>
@@ -645,10 +566,6 @@
         aria-label="Instagram"
       >
         <i class="bx bxl-instagram"></i>
-      </a>
-
-      <a href="#" title="YouTube" aria-label="YouTube">
-        <i class="bx bxl-youtube"></i>
       </a>
 
       <a href="#" title="WhatsApp" aria-label="WhatsApp">

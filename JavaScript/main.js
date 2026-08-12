@@ -27,9 +27,11 @@ if (preloader) {
                     preloader.remove();
                 }
 
-            }, 700);
+            }, 400);
 
-        }, 1400);
+            // Jeda ditahan singkat: cukup untuk memperlihatkan animasi,
+            // tanpa membuat perpindahan halaman terasa lambat.
+        }, 600);
 
     });
 

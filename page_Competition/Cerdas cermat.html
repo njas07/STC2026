@@ -13,6 +13,7 @@
     />
 
     <!-- CSS -->
+    <link rel="stylesheet" href="../desain/global.css">
     <link rel="stylesheet" href="../desain/navbar.css" />
     <link rel="stylesheet" href="../desain/Home/competition.css" />
     <link rel="stylesheet" href="../desain/components/Button.css" />
@@ -27,13 +28,13 @@
     <!-- NAVBAR -->
     <header class="header">
       <nav class="navbar">
-        <a href="/index.html" class="logo">
-          <img src="../foto/LOGOSTC.png" alt="STC Logo" />
+        <a href="../index.html" class="logo">
+          <img src="../foto/LOGOSTC.png" alt="STC Logo" decoding="async">
         </a>
 
         <ul class="nav-menu" id="navMenu">
           <li>
-            <a href="../Landing_page/Index.html" class="nav-link">Home</a>
+            <a href="../index.html" class="nav-link">Home</a>
           </li>
 
           <li class="dropdown">
@@ -56,6 +57,9 @@
           <li>
             <a href="../multi_page/gallery.html" class="nav-link">Gallery</a>
           </li>
+          <li class="nav-login-item">
+            <a href="../multi_page/Login.html" class="login-btn">Login</a>
+          </li>
         </ul>
 
         <a href="../multi_page/Login.html" class="login-btn">Login</a>
@@ -76,7 +80,7 @@
     <main class="competition-container">
       <!-- HERO -->
       <section class="hero">
-        <img src="../foto/LOGOSTC.png" alt="STC" class="hero-logo" />
+        <img src="../foto/LOGOSTC.png" alt="STC" class="hero-logo" decoding="async">
         <h1>CERDAS CERMAT</h1>
         <p class="sub">STIBAJRA Technology Competition 2026</p>
         <span class="competition-badge">QUIZ · TIM 3 ORANG</span>
@@ -194,165 +198,323 @@
           data-competition="cerdas_cermat"
           enctype="multipart/form-data"
         >
-          <!-- DATA TIM -->
-          <section class="card">
-            <h2>DATA TIM</h2>
-            <div class="form-grid">
-              <div class="form-group full">
-                <label for="team_name">Nama Tim <span>*</span></label>
-                <input
-                  id="team_name"
-                  type="text"
-                  name="team_name"
-                  placeholder="Masukkan nama tim"
-                  required
-                />
-              </div>
+          <!-- ==================================================
+     DATA TIM
+================================================== -->
+<section class="card">
 
-              <div class="form-group">
-                <label for="school_name">Nama Sekolah <span>*</span></label>
-                <input
-                  id="school_name"
-                  type="text"
-                  name="school_name"
-                  placeholder="Nama SMP/MTs"
-                  required
-                />
-              </div>
+    <h2>DATA TIM</h2>
 
-              <div class="form-group">
-                <label for="school_class"
-                  >Kelas Juru Bicara <span>*</span></label
+    <div class="form-grid">
+
+        <!-- NAMA TIM -->
+        <div class="form-group full">
+            <label for="team_name">
+                Nama Tim <span>*</span>
+            </label>
+
+            <input
+                id="team_name"
+                type="text"
+                name="team_name"
+                placeholder="Masukkan nama tim"
+                required
+            >
+        </div>
+
+
+        <!-- NAMA SEKOLAH -->
+        <div class="form-group">
+            <label for="school_name">
+                Nama Sekolah <span>*</span>
+            </label>
+
+            <input
+                id="school_name"
+                type="text"
+                name="school_name"
+                placeholder="Nama SMP/MTs"
+                required
+            >
+        </div>
+
+
+        <!-- NAMA KETUA -->
+        <div class="form-group">
+            <label for="name">
+                Nama Ketua <span>*</span>
+            </label>
+
+            <input
+                id="name"
+                type="text"
+                name="name"
+                placeholder="Nama lengkap ketua"
+                required
+            >
+        </div>
+
+
+        <!-- NIS / NISN KETUA -->
+        <div class="form-group">
+            <label for="student_id">
+                NIS/NISN Ketua <span>*</span>
+            </label>
+
+            <input
+                id="student_id"
+                type="text"
+                name="student_id"
+                placeholder="NIS / NISN ketua"
+                required
+            >
+        </div>
+
+
+        <!-- EMAIL -->
+        <div class="form-group">
+            <label for="email">
+                Email <span>*</span>
+            </label>
+
+            <input
+                id="email"
+                type="email"
+                name="email"
+                placeholder="email@example.com"
+                required
+            >
+        </div>
+
+
+        <!-- WHATSAPP -->
+        <div class="form-group">
+            <label for="phone">
+                Nomor WhatsApp <span>*</span>
+            </label>
+
+            <input
+                id="phone"
+                type="tel"
+                name="phone"
+                placeholder="08xxxxxxxxxx"
+                required
+            >
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     DATA ANGGOTA TIM
+================================================== -->
+<section class="card">
+
+    <h2>DATA ANGGOTA TIM</h2>
+
+
+    <!-- =================================================
+         ANGGOTA 1
+    ================================================== -->
+    <div class="member-card">
+
+        <div class="member-title">
+            Anggota 1
+        </div>
+
+        <div class="member-grid">
+
+            <!-- NAMA -->
+            <div class="form-group">
+
+                <label>
+                    Nama Lengkap <span>*</span>
+                </label>
+
+                <input
+                    type="text"
+                    name="member1_name"
+                    placeholder="Nama lengkap anggota 1"
+                    required
                 >
-                <select id="school_class" name="school_class" required>
-                  <option value="">Pilih kelas</option>
-                  <option value="VII">VII</option>
-                  <option value="VIII">VIII</option>
-                  <option value="IX">IX</option>
-                </select>
-              </div>
 
-              <div class="form-group">
-                <label for="name">Nama Juru Bicara <span>*</span></label>
+            </div>
+
+
+            <!-- NIS / NISN -->
+            <div class="form-group">
+
+                <label>
+                    NIS/NISN <span>*</span>
+                </label>
+
                 <input
-                  id="name"
-                  type="text"
-                  name="name"
-                  placeholder="Nama lengkap"
-                  required
-                />
-              </div>
-
-              <div class="form-group">
-                <label for="student_id"
-                  >NIS/NISN Juru Bicara <span>*</span></label
+                    type="text"
+                    name="member1_student_id"
+                    placeholder="NIS / NISN anggota 1"
+                    required
                 >
+
+            </div>
+
+
+            <!-- ASAL SEKOLAH -->
+            <div class="form-group">
+
+                <label>
+                    Asal Sekolah <span>*</span>
+                </label>
+
                 <input
-                  id="student_id"
-                  type="text"
-                  name="student_id"
-                  placeholder="NIS/NISN"
-                  required
-                />
-              </div>
+                    type="text"
+                    name="member1_school_name"
+                    placeholder="Nama sekolah anggota 1"
+                    required
+                >
 
-              <div class="form-group">
-                <label for="email">Email <span>*</span></label>
+            </div>
+
+
+            <!-- EMAIL -->
+            <div class="form-group">
+
+                <label>
+                    Email <span>*</span>
+                </label>
+
                 <input
-                  id="email"
-                  type="email"
-                  name="email"
-                  placeholder="email@example.com"
-                  required
-                />
-              </div>
+                    type="email"
+                    name="member1_email"
+                    placeholder="email anggota 1"
+                    required
+                >
 
-              <div class="form-group">
-                <label for="phone">Nomor WhatsApp <span>*</span></label>
+            </div>
+
+
+            <!-- WHATSAPP -->
+            <div class="form-group">
+
+                <label>
+                    Nomor WhatsApp <span>*</span>
+                </label>
+
                 <input
-                  id="phone"
-                  type="tel"
-                  name="phone"
-                  placeholder="08xxxxxxxxxx"
-                  required
-                />
-              </div>
-            </div>
-          </section>
+                    type="tel"
+                    name="member1_phone"
+                    placeholder="08xxxxxxxxxx"
+                    required
+                >
 
-          <!-- ANGGOTA TIM -->
-          <section class="card">
-            <h2>DATA ANGGOTA TIM</h2>
-
-            <div class="member-card">
-              <div class="member-title">Anggota 1 / Juru Bicara</div>
-              <div class="member-grid">
-                <div class="form-group">
-                  <label>Nama Lengkap <span>*</span></label
-                  ><input type="text" name="member1_name" required />
-                </div>
-                <div class="form-group">
-                  <label>NIS/NISN <span>*</span></label
-                  ><input type="text" name="member1_student_id" required />
-                </div>
-                <div class="form-group">
-                  <label>Kelas <span>*</span></label
-                  ><select name="member1_class" required>
-                    <option value="">Pilih kelas</option>
-                    <option>VII</option>
-                    <option>VIII</option>
-                    <option>IX</option>
-                  </select>
-                </div>
-              </div>
             </div>
 
-            <div class="member-card">
-              <div class="member-title">Anggota 2</div>
-              <div class="member-grid">
-                <div class="form-group">
-                  <label>Nama Lengkap <span>*</span></label
-                  ><input type="text" name="member2_name" required />
-                </div>
-                <div class="form-group">
-                  <label>NIS/NISN <span>*</span></label
-                  ><input type="text" name="member2_student_id" required />
-                </div>
-                <div class="form-group">
-                  <label>Kelas <span>*</span></label
-                  ><select name="member2_class" required>
-                    <option value="">Pilih kelas</option>
-                    <option>VII</option>
-                    <option>VIII</option>
-                    <option>IX</option>
-                  </select>
-                </div>
-              </div>
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         ANGGOTA 2
+    ================================================== -->
+    <div class="member-card">
+
+        <div class="member-title">
+            Anggota 2
+        </div>
+
+        <div class="member-grid">
+
+            <!-- NAMA -->
+            <div class="form-group">
+
+                <label>
+                    Nama Lengkap <span>*</span>
+                </label>
+
+                <input
+                    type="text"
+                    name="member2_name"
+                    placeholder="Nama lengkap anggota 2"
+                    required
+                >
+
             </div>
 
-            <div class="member-card">
-              <div class="member-title">Anggota 3</div>
-              <div class="member-grid">
-                <div class="form-group">
-                  <label>Nama Lengkap <span>*</span></label
-                  ><input type="text" name="member3_name" required />
-                </div>
-                <div class="form-group">
-                  <label>NIS/NISN <span>*</span></label
-                  ><input type="text" name="member3_student_id" required />
-                </div>
-                <div class="form-group">
-                  <label>Kelas <span>*</span></label
-                  ><select name="member3_class" required>
-                    <option value="">Pilih kelas</option>
-                    <option>VII</option>
-                    <option>VIII</option>
-                    <option>IX</option>
-                  </select>
-                </div>
-              </div>
+
+            <!-- NIS / NISN -->
+            <div class="form-group">
+
+                <label>
+                    NIS/NISN <span>*</span>
+                </label>
+
+                <input
+                    type="text"
+                    name="member2_student_id"
+                    placeholder="NIS / NISN anggota 2"
+                    required
+                >
+
             </div>
-          </section>
+
+
+            <!-- ASAL SEKOLAH -->
+            <div class="form-group">
+
+                <label>
+                    Asal Sekolah <span>*</span>
+                </label>
+
+                <input
+                    type="text"
+                    name="member2_school_name"
+                    placeholder="Nama sekolah anggota 2"
+                    required
+                >
+
+            </div>
+
+
+            <!-- EMAIL -->
+            <div class="form-group">
+
+                <label>
+                    Email <span>*</span>
+                </label>
+
+                <input
+                    type="email"
+                    name="member2_email"
+                    placeholder="email anggota 2"
+                    required
+                >
+
+            </div>
+
+
+            <!-- WHATSAPP -->
+            <div class="form-group">
+
+                <label>
+                    Nomor WhatsApp <span>*</span>
+                </label>
+
+                <input
+                    type="tel"
+                    name="member2_phone"
+                    placeholder="08xxxxxxxxxx"
+                    required
+                >
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
           <!-- KARTU PELAJAR -->
           <section class="card">
@@ -392,70 +554,6 @@
                   required
                 />
                 <small>Format: JPG, PNG, WEBP, PDF · Maksimal 2MB</small>
-              </div>
-            </div>
-          </section>
-
-          <!-- INSTAGRAM -->
-          <section class="card">
-            <h2>FOLLOW INSTAGRAM (WAJIB)</h2>
-            <p>
-              Peserta wajib mengikuti Instagram sekolah dan Instagram STC 2026.
-            </p>
-
-            <input
-              type="hidden"
-              name="instagram_school"
-              value="@smktibgjimbaran"
-            />
-            <input type="hidden" name="instagram_stc" value="@stcstibajraa" />
-
-            <div class="instagram-follow-grid">
-              <div class="instagram-follow-box">
-                <label>Instagram Sekolah <span>*</span></label>
-                <p class="instagram-username">@smktibgjimbaran</p>
-                <a
-                  href="https://www.instagram.com/smktibgjimbaran/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="instagram-btn btn-primary"
-                  >Buka Instagram</a
-                >
-              </div>
-
-              <div class="instagram-follow-box">
-                <label>Instagram STC <span>*</span></label>
-                <p class="instagram-username">@stcstibajraa</p>
-                <a
-                  href="https://www.instagram.com/stcstibajraa/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="instagram-btn btn-primary"
-                  >Buka Instagram</a
-                >
-              </div>
-            </div>
-
-            <div class="form-grid" style="margin-top: 22px">
-              <div class="form-group">
-                <label>Bukti Follow IG Sekolah <span>*</span></label>
-                <input
-                  type="file"
-                  name="school_instagram_proof"
-                  accept=".jpg,.jpeg,.png,.webp"
-                  required
-                />
-                <small>Format: JPG, PNG, WEBP · Maksimal 2MB</small>
-              </div>
-              <div class="form-group">
-                <label>Bukti Follow IG STC <span>*</span></label>
-                <input
-                  type="file"
-                  name="stc_instagram_proof"
-                  accept=".jpg,.jpeg,.png,.webp"
-                  required
-                />
-                <small>Format: JPG, PNG, WEBP · Maksimal 2MB</small>
               </div>
             </div>
           </section>
@@ -564,7 +662,7 @@
     <footer>
       <div class="footer-container">
         <div class="footer-brand">
-          <img src="../foto/LOGOSTC.png" alt="STC Logo" />
+          <img src="../foto/LOGOSTC.png" alt="STC Logo" decoding="async">
           <p>
             STIBAJRA Technology Competition (STC) 2026 — wadah bagi generasi
             muda untuk berinovasi, berkolaborasi, dan mengejar masa depan
@@ -575,7 +673,7 @@
         <div class="footer-col">
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="../Landing_page/Index.html">Home</a></li>
+            <li><a href="../index.html">Home</a></li>
             <li><a href="../multi_page/gallery.html">Gallery</a></li>
             <li><a href="../multi_page/Login.html">Login</a></li>
           </ul>
@@ -618,10 +716,6 @@
             aria-label="Instagram"
           >
             <i class="bx bxl-instagram"></i>
-          </a>
-
-          <a href="#" title="YouTube" aria-label="YouTube">
-            <i class="bx bxl-youtube"></i>
           </a>
 
           <a href="#" title="WhatsApp" aria-label="WhatsApp">

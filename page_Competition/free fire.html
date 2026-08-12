@@ -14,6 +14,7 @@
   >
 
   <!-- CSS SAMA DENGAN CERDAS CERMAT -->
+  <link rel="stylesheet" href="../desain/global.css">
   <link rel="stylesheet" href="../desain/navbar.css">
   <link rel="stylesheet" href="../desain/Home/competition.css">
   <link rel="stylesheet" href="../desain/components/Button.css">
@@ -27,13 +28,13 @@
   <header class="header">
     <nav class="navbar">
 
-      <a href="../Landing_page/Index.html" class="logo">
-        <img src="../foto/LOGOSTC.png" alt="STC Logo">
+      <a href="../index.html" class="logo">
+        <img src="../foto/LOGOSTC.png" alt="STC Logo" decoding="async">
       </a>
 
       <ul class="nav-menu" id="navMenu">
         <li>
-          <a href="../Landing_page/Index.html" class="nav-link">Home</a>
+          <a href="../index.html" class="nav-link">Home</a>
         </li>
 
         <li class="dropdown">
@@ -55,7 +56,10 @@
         <li>
           <a href="../multi_page/gallery.html" class="nav-link">Gallery</a>
         </li>
-      </ul>
+        <li class="nav-login-item">
+            <a href="../multi_page/Login.html" class="login-btn">Login</a>
+          </li>
+        </ul>
 
       <a href="../multi_page/Login.html" class="login-btn">Login</a>
 
@@ -79,7 +83,7 @@
 
     <!-- HERO -->
     <section class="hero">
-      <img src="../foto/LOGOSTC.png" alt="STC" class="hero-logo">
+      <img src="../foto/LOGOSTC.png" alt="STC" class="hero-logo" decoding="async">
 
       <h1>FREE FIRE</h1>
 
@@ -279,176 +283,112 @@
 
         </div>
           </section>
+<!-- DATA ANGGOTA SQUAD -->
+<div class="card">
+    <h2>
+        <span class="dot">•</span>
+        DATA ANGGOTA SQUAD
+    </h2>
 
-          <section class="card">
-            <h2>DATA ANGGOTA SQUAD</h2>
-<div class="team-section">
+    <div class="team-section">
 
-            <h3>
-                <span>4</span>
-                Daftar Anggota Squad
-                (4 Inti + Maks. 1 Cadangan)
-            </h3>
+        <h3>
+            <span>4</span>
+            Daftar Anggota Squad (4 Inti + Maks. 1 Cadangan)
+        </h3>
 
+        <!-- DAFTAR ANGGOTA -->
+        <div id="memberList">
 
-            <div id="memberList">
+            <div class="member-card" data-member>
 
+                <div class="member-title">
+                    Anggota 1 (Kapten)
+                </div>
 
-                <!-- =================================================
-                     ANGGOTA 1
-                ================================================== -->
+                <div class="member-grid">
 
-                <div
-                    class="member-card"
-                    data-member
-                    data-player="1"
-                >
+                    <!-- NAMA -->
+                    <div class="form-group">
+                        <label>
+                            Nama Lengkap <span>*</span>
+                        </label>
 
-                    <div class="member-title">
-                        Anggota 1 (Kapten)
+                        <input
+                            type="text"
+                            name="player1_name"
+                            required
+                            placeholder="Nama pemain"
+                        >
                     </div>
 
 
-                    <div class="member-grid">
+                    <!-- NIS / NISN -->
+                    <div class="form-group">
+                        <label>
+                            NIS / NISN <span>*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            name="player1_student_id"
+                            required
+                            placeholder="NIS / NISN"
+                        >
+                    </div>
 
 
-                        <!-- NAMA -->
+                    <!-- GAME ID -->
+                    <div class="form-group">
+                        <label>
+                            Game ID <span>*</span>
+                        </label>
 
-                        <div class="form-group">
-
-                            <label>
-                                Nama Lengkap
-                                <span>*</span>
-                            </label>
-
-                            <input
-                                type="text"
-                                name="player1_name"
-                                required
-                                placeholder="Nama pemain"
-                            >
-
-                        </div>
+                        <input
+                            type="text"
+                            name="player1_game_id"
+                            required
+                            placeholder="ID Free Fire"
+                        >
+                    </div>
 
 
-                        <!-- NIS/NISN -->
+                    <!-- NICKNAME -->
+                    <div class="form-group">
+                        <label>
+                            Nickname <span>*</span>
+                        </label>
 
-                        <div class="form-group">
-
-                            <label>
-                                NIS / NISN
-                                <span>*</span>
-                            </label>
-
-                            <input
-                                type="text"
-                                name="player1_student_id"
-                                required
-                                placeholder="NIS / NISN"
-                            >
-
-                        </div>
-
-
-                        <!-- GAME ID -->
-
-                        <div class="form-group">
-
-                            <label>
-                                Game ID
-                                <span>*</span>
-                            </label>
-
-                            <input
-                                type="text"
-                                name="player1_game_id"
-                                required
-                                placeholder="ID Free Fire"
-                            >
-
-                        </div>
-
-
-                        <!-- NICKNAME -->
-
-                        <div class="form-group">
-
-                            <label>
-                                Nickname
-                                <span>*</span>
-                            </label>
-
-                            <input
-                                type="text"
-                                name="player1_nickname"
-                                required
-                                placeholder="Nickname Free Fire"
-                            >
-
-                        </div>
-
-
-                        <!-- ROLE -->
-
-                        <div class="form-group">
-
-                            <label>
-                                Role
-                                <span>*</span>
-                            </label>
-
-                            <select
-                                name="player1_role"
-                                required
-                            >
-
-                                <option value="">
-                                    Pilih role
-                                </option>
-
-                                <option value="Rusher">
-                                    Rusher
-                                </option>
-
-                                <option value="Support">
-                                    Support
-                                </option>
-
-                                <option value="Sniper">
-                                    Sniper
-                                </option>
-
-                                <option value="IGL">
-                                    IGL
-                                </option>
-
-                            </select>
-
-                        </div>
-
-
-                        <!-- KARAKTER -->
-
-                        <div class="form-group">
-
-                            <label>
-                                Karakter Andalan
-                            </label>
-
-                            <input
-                                type="text"
-                                name="player1_character"
-                                placeholder="Contoh: Alok, Hayato"
-                            >
-
-                        </div>
-
+                        <input
+                            type="text"
+                            name="player1_nickname"
+                            required
+                            placeholder="Nickname Free Fire"
+                        >
                     </div>
 
                 </div>
 
             </div>
 
+        </div>
+
+
+        <!-- PENTING:
+             TOMBOL HARUS DI LUAR #memberList
+        -->
+        <button
+            type="button"
+            id="addMemberBtn"
+            class="add-member"
+        >
+            + Tambah Anggota
+        </button>
+
+    </div>
+</div>
+
+                      
 
             <!-- =================================================
                  TAMBAH ANGGOTA
@@ -519,111 +459,7 @@
           </section>
 
           <section class="card">
-            <h2>FOLLOW INSTAGRAM (WAJIB)</h2>
-
-            <p class="instagram-intro">
-              Peserta wajib mengikuti Instagram sekolah dan Instagram STC 2026.
-            </p>
-
-            <div class="instagram-follow-grid">
-
-              <!-- INSTAGRAM SEKOLAH -->
-              <div class="instagram-follow-column">
-                <div class="instagram-follow-box">
-                  <label>
-                    Instagram Sekolah
-                    <span>*</span>
-                  </label>
-
-                  <a
-                    href="https://www.instagram.com/smktibgjimbaran/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="instagram-username"
-                  >
-                    @smktibgjimbaran
-                  </a>
-
-                  <a
-                    href="https://www.instagram.com/smktibgjimbaran/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn-primary instagram-btn"
-                  >
-                    Buka Instagram
-                  </a>
-                </div>
-
-                <div class="upload-group">
-                  <label>
-                    Bukti Follow IG Sekolah
-                    <span>*</span>
-                  </label>
-
-                  <input
-                    type="file"
-                    class="file-input"
-                    name="proof_instagram_school"
-                    accept=".jpg,.jpeg,.png,.webp"
-                    required
-                  >
-
-                  <div class="file-info">
-                    Format: <strong>JPG, PNG, WEBP</strong> · Maksimal ukuran <strong>2MB</strong>
-                  </div>
-                </div>
-              </div>
-
-              <!-- INSTAGRAM STC -->
-              <div class="instagram-follow-column">
-                <div class="instagram-follow-box">
-                  <label>
-                    Instagram STC
-                    <span>*</span>
-                  </label>
-
-                  <a
-                    href="https://www.instagram.com/stcstibajraa/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="instagram-username"
-                  >
-                    @stcstibajraa
-                  </a>
-
-                  <a
-                    href="https://www.instagram.com/stcstibajraa/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn-primary instagram-btn"
-                  >
-                    Buka Instagram
-                  </a>
-                </div>
-
-                <div class="upload-group">
-                  <label>
-                    Bukti Follow IG STC
-                    <span>*</span>
-                  </label>
-
-                  <input
-                    type="file"
-                    class="file-input"
-                    name="proof_instagram_stc"
-                    accept=".jpg,.jpeg,.png,.webp"
-                    required
-                  >
-
-                  <div class="file-info">
-                    Format: <strong>JPG, PNG, WEBP</strong> · Maksimal ukuran <strong>2MB</strong>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </section>
-
+  
           <section class="card">
             <h2>DATA PEMBAYARAN</h2>
 <div >
@@ -881,7 +717,7 @@
   <div class="footer-container">
 
     <div class="footer-brand">
-      <img src="../foto/LOGOSTC.png" alt="STC Logo">
+      <img src="../foto/LOGOSTC.png" alt="STC Logo" decoding="async">
       <p>
         STIBAJRA Technology Competition (STC) 2026 — wadah bagi generasi
         muda untuk berinovasi, berkolaborasi, dan mengejar masa depan
@@ -892,7 +728,7 @@
     <div class="footer-col">
       <h4>Quick Links</h4>
       <ul>
-        <li><a href="../Landing_page/Index.html">Home</a></li>
+        <li><a href="../index.html">Home</a></li>
         <li><a href="../multi_page/gallery.html">Gallery</a></li>
         <li><a href="../multi_page/Login.html">Login</a></li>
       </ul>
@@ -934,10 +770,6 @@
         aria-label="Instagram"
       >
         <i class="bx bxl-instagram"></i>
-      </a>
-
-      <a href="#" title="YouTube" aria-label="YouTube">
-        <i class="bx bxl-youtube"></i>
       </a>
 
       <a href="#" title="WhatsApp" aria-label="WhatsApp">

@@ -79,39 +79,11 @@
         width: 92%;
     }
 
-    /* NAVBAR */
+    /* NAVBAR
+       Aturan menu/hamburger mobile ada di desain/navbar.css
+       (satu sumber, dipakai semua halaman). */
     .navbar {
         padding: 12px 18px;
-    }
-
-    .nav-menu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        flex-direction: column;
-        padding: 20px;
-        gap: 15px;
-        background: #ffffff;
-    }
-
-    .nav-menu.active {
-        display: flex;
-    }
-
-    .hamburger {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        cursor: pointer;
-    }
-
-    .hamburger span {
-        width: 25px;
-        height: 3px;
-        border-radius: 5px;
-        background: currentColor;
     }
 
     /* HERO */

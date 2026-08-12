@@ -828,7 +828,28 @@ main.competition-container {
     14. SUBMISSION RESULT
     ========================================================= */
 
+/* Pratinjau berkas unggahan — kosong sampai submission.js mengisi src-nya,
+   jadi harus tersembunyi agar tidak muncul ikon gambar rusak. */
+.competition-container .preview {
+  display: none;
+
+  max-width: 260px;
+  margin-top: 14px;
+
+  border: 1.5px solid #c7ddfa;
+  border-radius: 10px;
+
+  box-shadow: 0 8px 20px rgba(65, 105, 216, 0.12);
+}
+
+.competition-container .preview.show {
+  display: block;
+}
+
+/* Disembunyikan sampai submission.js menampilkannya setelah submit berhasil. */
 .competition-container .submission-result {
+  display: none;
+
   width: 100%;
 
   margin-top: 28px;
@@ -840,6 +861,24 @@ main.competition-container {
   border-radius: 12px;
 }
 
+.competition-container .submission-result.show {
+  display: block;
+
+  animation: submitResultIn 0.45s ease;
+}
+
+@keyframes submitResultIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.competition-container .submission-result h2,
 .competition-container .submission-result h3 {
   margin: 0 0 14px;
 
@@ -847,6 +886,31 @@ main.competition-container {
 
   font-size: 18px;
   font-weight: 800;
+}
+
+.competition-container .submission-result .icon {
+  display: block;
+  margin-bottom: 10px;
+
+  font-size: 40px;
+}
+
+.competition-container .code-display {
+  display: inline-block;
+
+  margin: 6px 0 14px;
+  padding: 12px 24px;
+
+  background: #ffffff;
+
+  border: 1.5px dashed #7cb9e8;
+  border-radius: 10px;
+
+  color: #1f3e6c;
+
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 2px;
 }
 
 /* =========================================================
